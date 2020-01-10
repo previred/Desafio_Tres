@@ -2,7 +2,7 @@
 
 El desafío consiste en lo siguiente:
  - Existe un librería jar que se encuentra en un nexus y debe ser consumida en un proyecto java.
- - Para el desafío se debe consume el siguiente repositorio de Nexus:
+ - Para el desafío se debe consumir el siguiente repositorio de Nexus:
 
 ```sh
 https://gag.portalafp.cl/nexus/repository/PruebasSeleccion/
@@ -30,15 +30,15 @@ https://gag.portalafp.cl/nexus/repository/PruebasSeleccion/
 
 
 1.	Consumir la función getRango de la clase com.previred.desafio.tres.uf.Valores
-2.	Escribir un algoritmo para complementar los valores de UF para las fechas faltantes en la lista contenías en la clase Ufs que retorna getRango
+2.	Escribir un algoritmo para complementar los valores de UF para las fechas faltantes en la lista contenidas en la clase Ufs que retorna getRango
 3.	Para complementar los valores de UF se pueden utilizar los métodos getUf y getUfs de la clase com.previred.desafio.tres.uf.DatosUf.
 4.	La lista de salida debe esta ordenada de forma decendente.
 5.	Para la implementación debe elegir uno de los siguientes formatos de salida.
 
 ### Formato 1
 
-Crear un archivo CSV con todos los datos calculado, las columnas debe contemplar el siguiente formato:
- - La primera columna es de tipo contemplar tipo 1 y tipo 2
+Crear un archivo CSV con todos los datos calculados, las columnas deben contemplar el siguiente formato:
+ - La primera columna representa el tipo, tipo 1 cabecera y tipo 2 es detalle de las UFs
  - Para las filas de tipo 1 el formato es fecha de inicio y fecha de fin
  - Para las filas de tipo 2 el formato es fecha uf y valor uf
  
@@ -58,11 +58,11 @@ Crear un archivo CSV con todos los datos calculado, las columnas debe contemplar
 ### Formato 2
 Crear un archivo XML que contenga el siguiente formato:
  - Debe contener un tag general llamado valores
- - Dentro de tag valores se deben crea los tag inicio, fin y UFs
+ - Dentro de tag valores se deben crear los tag inicio, fin y UFs
  - El tag inicio debe contener la fecha de inicio recibida
- - El tag inicio debe contener la fecha de fin recibida
- - El tag UFs debe contenes un lista de tag UF con el siguiente formato
- - El tag UF debe contener el tag fecha con la fecha inicial y el tab dato con el valor de la UF
+ - El tag fin debe contener la fecha de fin recibida
+ - El tag UFs debe contener un lista de tag UF con el siguiente formato
+ - El tag UF debe contener el tag fecha con la fecha inicial y el tag dato con el valor de la UF
 
 *Ejemplo*
 
@@ -155,16 +155,16 @@ Crear un archivo JSON que contenga el siguiente formato:
 }
 ```
 
- - Se debe implementar las soluciones en Java 8 (con maven, gradle u otro).
+ - Se deben implementar las soluciones en Java (con maven, gradle u otro).
  - La solución debe ser enviada vía un pull request a este repositorio.
  - La solución debe contener un README.md con:
    - Descripción de la implementación
-   - Tecnología y librerías utilizada
+   - Tecnología y librerías utilizadas
    - Detalles de compilación y ejecución
- - El archivo de salida debe tener como nombre “valores” con su respectivaextencion y debe ser entregado junto con la solución
+ - El archivo de salida debe tener como nombre “valores” con su respectiva extensión y debe ser entregado junto con la solución
  - Por ultimo en el detalle del commit debes indicar los siguientes datos:
    - Nombre Completo.
    - Correo Electrónico.
    - Vía por la que te entérate del desafío. Estas pueden ser: Empresa de outsourcing (indicar cuál), twitter, LinkedIn, etc.
  
-`NOTA`: Todos los pull reuqests serán rechazados, esto no quiere decir que ha sido rechazada la solución.
+`NOTA`: Todos los pull requests serán rechazados, esto no quiere decir que ha sido rechazada la solución.
