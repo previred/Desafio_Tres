@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -50,7 +51,6 @@ public class UfController {
         ) throws Exception {
         //_log.info("/ufs "+input.toString());
         _log.info("/ufs ");
-        ArrayList<UF> ufsOut = new ArrayList<UF>();
 
         //SimpleDateFormat idf = new SimpleDateFormat(inputDateFormat);
         //Date inicio = idf.parse(input.getInicio());
@@ -64,8 +64,7 @@ public class UfController {
         String inicioVal = odf.format(ufs.getInicio());
         String finVal = odf.format(ufs.getFin());
 
-        List<Date> fechasRecorrer = getDiasEntre(ufs.getInicio(), ufs.getFin());
-
+        //transform to output format
         ArrayList<UF> ufsProc = new ArrayList<UF>();
         for(Uf ufData:ufs.getUfs()) {
             UF ufOut = new UF();
@@ -74,11 +73,30 @@ public class UfController {
             ufsProc.add(ufOut);
         }
 
+        //sort to process
         Collections.sort(ufsProc, (a, b) -> {
             return a.getFecha().compareTo(b.getFecha());
         });
 
+        List<UF> ufsOut = completarData(ufsProc, ufs.getInicio(), ufs.getFin(), odf);
+
+        //sort output
+        Collections.sort(ufsOut, (a, b) -> {
+            return -a.getFecha().compareTo(b.getFecha());
+        });
+
+        GetUFsOutput output = new GetUFsOutput(inicioVal, finVal, ufsOut);
+
+        return output;
+    }
+
+    private List<UF> completarData(List<UF> ufsOri, Date fechaInicio, Date fechaFin, SimpleDateFormat odf) throws ParseException {
+        ArrayList<UF> ufsOut = new ArrayList<UF>();
+
+        List<Date> fechasRecorrer = getDiasEntre(fechaInicio, fechaFin);
+
         DatosUf datosUf = DatosUf.getInstance();
+
         int posDatoLista = 0;
         String fechaAntStr = "";
         for(Date fechaAct: fechasRecorrer) {
@@ -93,8 +111,8 @@ public class UfController {
 
             UF ufAct = null;
 
-            if(posDatoLista < ufsProc.size()) {
-                UF ufOriAct = ufsProc.get(posDatoLista);
+            if(posDatoLista < ufsOri.size()) {
+                UF ufOriAct = ufsOri.get(posDatoLista);
                 if (fechaActStr.compareTo(ufOriAct.getFecha()) == 0) {
                     ufAct = ufOriAct;
                     posDatoLista++;
@@ -116,13 +134,7 @@ public class UfController {
             fechaAntStr = fechaActStr;
         }
 
-        Collections.sort(ufsOut, (a, b) -> {
-            return -a.getFecha().compareTo(b.getFecha());
-        });
-
-        GetUFsOutput output = new GetUFsOutput(inicioVal, finVal, ufsOut);
-
-        return output;
+        return ufsOut;
     }
 }
 

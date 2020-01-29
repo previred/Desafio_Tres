@@ -152,3 +152,14 @@ Crear un archivo JSON que contenga el siguiente formato:
    - Vía por la que te entérate del desafío. Estas pueden ser: Empresa de outsourcing (indicar cuál), twitter, LinkedIn, etc.
  
 `NOTA`: Todos los pull requests serán rechazados, esto no quiere decir que ha sido rechazada la solución.
+
+### Uso
+
+Para probar:
+-Importe el proyecto como proyecto gradle
+-Ejecute build
+-Ejecute el main que se encuentra en src/main/java/com/oca/Desafio_Tres/DesafioTresApplication.java
+-Importe en postman el archivo DesafioPrevired.postman_collection.json
+-Ejecute el endpoint get UFs dentro de DesafioPrevired
+
+PS: El proyecto fue originalmente desarrollado en Idea
