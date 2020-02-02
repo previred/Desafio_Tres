@@ -1,0 +1,7 @@
+Cargar la libreria del proyecto  local al pom del proyecto
+Además se uso gson 2.8.6
+
+El algoritmo consiste en obtener la fecha inicial, fecha final y listado de Ufs de valores,
+Luego revisar las fechas del intervalo anterior si encuentra el valor respetivo de la UF la guardo sino
+la obtengo del objeto Rango.
+Por ultimo imprimo el intervalo con fecha y uf respectivo en un json ocupando gson.
