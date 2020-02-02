@@ -1,154 +1,49 @@
-# Desafío 3: Complemento valores UF
+# Descripción de la implementación:
 
-El desafío consiste en lo siguiente:
- - Existe la siguiente librería en el directorio "lib\Generador_Datos_Desafio_Tres-1.0.0.jar" que se encuentra en este proyecto. Este debe ser integrado en la solución.
- - Este jar contiene 2 class que debe ser utilizadas para resolver el desafío
-    - La clase com.previred.desafio.tres.uf.Valores con el método getRango, este retorna una estructura con un rango de fechas y un listado de valores de UF
-    - El método getRango retorna el objeto UFs, este contiene fecha de inicio, fecha de fin del rango, ademas contiene un set de UF que tiene como atributos de: valor de UF y la fecha de la UF
-      - La lista de UF están dentro del rango de fechas (inicio y fin)
-      - La cantidad de valores para uf son máximo 100
-      - El listado entregado con los valores UF no son secuenciales (contiene laguna de valores) y no se encuentra ordenado
-    - La clase com.previred.desafio.tres.uf.DatosUf este es un singleton que contiene 2 métodos
-      - El método getUf retorna el valor UF para una fecha
-      - El método getUfs retorna una lista de valores de UF para un rango dado
+> **Resumen:** El algoritmo se basa en dado la lista de Uf parciales (previamente ordenada), extraer los rangos faltantes y ordenarlas al momento, para así ir agregando a la lista definitiva. 
+> Luego la lista definitiva se exporta a un archivo CSV.
 
+La solución consiste en dos procesos, el primero completar la data faltante y el segundo en generar el archivo de salida.   
+Lo primero es generar y validar el objeto **Ufs** ese mismo objeto se pasa a la clase  **CompletarUfs**.
+La clase **CompletarUfs** ordena la lista de Uf parciales, luego se valida si la misma lista está vacía, de estar vacía se generan todos los valores para el inicio y fin de la clase **Ufs**, y luego se ordenan los registros para así retornarlos.
+Si la lista de Uf parciales  posee datos se recorre de forma recursiva realizando lo siguiente.
+1. se toma la fecha de inicio del objeto Uf y se remueve de la lista el primer objeto Uf.
+2. De la fecha se comparan las mismas fechas. Si son iguales se agrega el valor de la Uf a la lista a retornar. Sino se saca el rango tomando la fecha de inicio contra la fecha del Objeto Uf, el rango se ordena y se agrega a la lista a retornar.
+3. Si la lista está vacía este caso se retorna el valor de la Uf, que para ese momento es el último registro de la lista de Uf parciales.
+4. Sobre la fecha del Objeto Uf se suma un día y se vuelve al paso 1, pero con la nueva fecha.
+el programa se vuelve a ejecutar cambiando la fecha de inicio por la nueva fecha generada.
 
-1.  Consumir la función getRango de la clase com.previred.desafio.tres.uf.Valores
-2.  Escribir un algoritmo para complementar los valores de UF para las fechas faltantes en la lista contenidas en la clase Ufs que retorna getRango
-3.  Para complementar los valores de UF se pueden utilizar los métodos getUf y getUfs de la clase com.previred.desafio.tres.uf.DatosUf.
-4.  La lista de salida debe esta ordenada de forma descendente.
-5.  Para la implementación debe elegir uno de los siguientes formatos de salida.
+Con la fecha generada se suma un dia para asi comparar  con la fecha de fin de vigencia del objeto **Ufs**, si son iguales se rescata el valor, sino se extrae el rango de fechas y se ordena.
+Con la lista de fechas completa se envia a la clase la cual aplica el formato correspondiente.
 
-### Formato 1
+#Tecnología y librerías utilizadas:
+El proyecto fue construido y compilado con maven 3.6.0 en la versión 1.8.0_181 de Java.
+	En tanto las librerías usadas para el desarrollo:
+* Generador_Datos_Desafio_Tres 1.0.0 Librería indicada en el requerimiento
+* [gson](https://github.com/google/gson "gson") - dependencia de la libreria Generador_Datos_Desafio_Tres 1.0.0
+* [commons-csv](https://commons.apache.org/proper/commons-csv/ "commons-csv") - para la generacion del archivo CSV, formato seleccionado para generar la salida
+* [commons-lang](https://commons.apache.org/proper/commons-lang/ "commons-lang") - libreria para el trabajo con las fechas. 
+* [log4j](https://logging.apache.org/log4j/2.x/ "log4j") para el manejo de excepciones y errores
 
-Crear un archivo CSV con todos los datos calculados, las columnas deben contemplar el siguiente formato:
- - La primera columna representa el tipo, tipo 1 cabecera y tipo 2 es detalle de las UFs
- - Para las filas de tipo 1 el formato es fecha de inicio y fecha de fin
- - Para las filas de tipo 2 el formato es fecha uf y valor uf
- 
- *Ejemplo*
+#Detalles de compilación y ejecución:
+Lo primero es agregar el Generador_Datos_Desafio_Tres-1.0.0.jar a maven, para eso se debe ejecutar el siguiente comando
+	
+```sh
+$ mvn install:install-file -Dfile=./lib/Generador_Datos_Desafio_Tres-1.0.0.jar -DgroupId=com.previred.desafio.tres -DartifactId=Generador_Datos_Desafio_Tres -Dversion=1.0.0 -Dpackaging=jar -DgeneratePom=true
 ```
-1; 2014-04-01; 2015-03-05
-2; 2014-01-04; 23.321,57
-2; 2014-01-05; 23.324,58
-2; 2014-01-06; 23.327,58
-2; 2014-01-07; 23.330,58
-2; 2014-01-08; 23.333,59
-2; 2014-01-09; 23.336,59
-    :
-2; 2014-04-01; 23.610,77
+Una vez ejecutado usando maven se compila y empaqueta el proyecto usando los siguientes comandos
+
+```sh
+$ mvn clean
+$ mvn compile
+$ mvn package
 ```
-
-### Formato 2
-Crear un archivo XML que contenga el siguiente formato:
- - Debe contener un tag general llamado valores
- - Dentro de tag valores se deben crear los tag inicio, fin y UFs
- - El tag inicio debe contener la fecha de inicio recibida
- - El tag fin debe contener la fecha de fin recibida
- - El tag UFs debe contener un lista de tag UF con el siguiente formato
- - El tag UF debe contener el tag fecha con la fecha inicial y el tag dato con el valor de la UF
-
-*Ejemplo*
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<valores>
-  <inicio>2014-04-01</inicio>
-  <fin>2015-03-05</fin>
-  <UFs>
-    <UF>
-      <fecha>2014-01-04</fecha>
-      <dato>23.321,57</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-05</fecha>
-      <dato>23.324,58</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-06</fecha>
-      <dato>23.327,58</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-07</fecha>
-      <dato>23.330,58</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-08</fecha>
-      <dato>23.333,59</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-09</fecha>
-      <dato>23.336,59</dato>
-    </UF>
-
-        :
-
-    <UF>
-      <fecha>2014-04-01</fecha>
-      <dato>23.610,77</dato>
-    </UF>
-  </UFs>
-</valores>
+Por último para ejecutar el programa usamos maven
+	
+```sh
+$ mvn exec:java
 ```
+Este generará el archivo de salida en el mismo directorio.	 
 
-### Formato 3
-Crear un archivo JSON que contenga el siguiente formato:
- - Debe contener la fecha de inicio “inicio”
- - Debe contener la fecha de fin “fin”
- - La lista de valores de “UFs” con los valores de fecha de uf “fecha” y valor de la uf “dato”
 
-*Ejemplo*
 
-```json
-{
-  "inicio":"2014-04-01",
-  "fin":"2015-03-05",
-  "UFs":[
-    {
-      "fecha":"2014-01-04",
-      "dato":"23.321,57"
-    },
-    {
-      "fecha":"2014-01-05",
-      "dato":"23.324,58"
-    },
-    {
-      "fecha":"2014-01-06",
-      "dato":"23.327,58"
-    },
-    {
-      "fecha":"2014-01-07",
-      "dato":"23.330,58"
-    },
-    {
-      "fecha":"2014-01-08",
-      "dato":"23.333,59"
-    },
-    {
-      "fecha":"2014-01-09",
-      "dato":"23.336,59"
-    },
-
-        :
-
-    {
-      "fecha":"2014-04-01",
-      "dato":"23.610,77"
-    }
-  ]
-}
-```
-
- - Se deben implementar las soluciones en Java (con maven, gradle u otro).
- - La solución debe ser enviada vía un pull request a este repositorio.
- - La solución debe contener un README.md con:
-   - Descripción de la implementación
-   - Tecnología y librerías utilizadas
-   - Detalles de compilación y ejecución
- - El archivo de salida debe tener como nombre “valores” con su respectiva extensión y debe ser entregado junto con la solución
- - Por ultimo en el detalle del commit debes indicar los siguientes datos:
-   - Nombre Completo.
-   - Correo Electrónico.
-   - Vía por la que te entérate del desafío. Estas pueden ser: Empresa de outsourcing (indicar cuál), twitter, LinkedIn, etc.
- 
-`NOTA`: Todos los pull requests serán rechazados, esto no quiere decir que ha sido rechazada la solución.
