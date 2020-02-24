@@ -1,4 +1,4 @@
-# DesafÃ­o 3: Complemento valores UF
+# Desafío 3: Complemento valores UF
 
 
 Descripción de Implementación:
@@ -71,6 +71,5 @@ Detalles de compilación y ejecución
 			
 	esto generara el archivo uFsDiarias.csv dentro de la misma carpeta
 	/target
-
 
 
