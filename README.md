@@ -1,3 +1,21 @@
+# DESARROLLO DEL DESAFIO
+Para el_ desarrollo de este desafio se uso las siguientes tecnologias:
+Java : 1.8.0_65
+Maven : Apache Maven 3.3.9
+Sprint Boot: 2.2.5.RELEASE
+
+Ubicarse en la raiz del porject y ejecutar el comando para agregar al repositorio local: mvn install:install-file -Dfile=lib/Generador_Datos_Desafio_Tres-1.0.0.jar -DgroupId=com.previred.desafio.tres -DartifactId=Generador_Datos_Desafio_Tres -Dversion=1.0.0 -Dpackaging=jar
+
+
+luego, desde la raiz del proyecto ejecutar el comando mvn clean install.
+Ubicarse en el directorio /target, y verificar que se encuentre la aplicacion desafiotres-1.0.0.jar
+Ejecutar comando java -jar desafiotres-1.0.0.jar
+
+Abrir cualquier navegador y colocar la siguiente URL: http://localhost:8080/devolverValores
+
+Se descargara el archivo de salida valores.json con la respuesta esperada.
+
+
 # Desafío 3: Complemento valores UF
 
 El desafío consiste en lo siguiente:
