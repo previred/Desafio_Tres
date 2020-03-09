@@ -152,3 +152,31 @@ Crear un archivo JSON que contenga el siguiente formato:
    - Vía por la que te entérate del desafío. Estas pueden ser: Empresa de outsourcing (indicar cuál), twitter, LinkedIn, etc.
  
 `NOTA`: Todos los pull requests serán rechazados, esto no quiere decir que ha sido rechazada la solución.
+
+
+### Desarrollo Carlos Barra
+
+    ##Descripción de la implementación:
+	Se realizo una clase main que contiene toda la logica corespondiente al desafio , esta clase actua como controlador del desarrollo.
+	Ademas cada una de las clases tiene su respectiva descripcion para facilitar el entendimiento.
+	Este desarrollo lo decidi hacer de esta manera , con una clase main , basicamente por que no creo necesario invertir mas recursos para el desafio , me limite a hacerlo lo mas liviano posible.
+	
+	
+    ##Tecnología y librerías utilizadas
+	Librerias com.google.code.gson que fueron usadas para la generacion del archivo json
+	Librerias one.util streamex que fueron usadas para la manipulacion de listas        
+    Librerias org.springframework.boot spring-boot-starter-log4j2 que fueron usadas para la el manejo de logs
+
+	
+    ##Detalles de compilación y ejecución
+	Para la ejecucion es necesario tener instalado maven en el pc donde se va a ejecutar.
+	
+	Manual de instalacion y ejecucion:
+	
+	1 - descargar el codigo
+	2 - posicionarse a travez de la linea de comandos en el S.O en la ruta de proyecto  Desafio_Tres\desafioPrevired , donde se encuentra el archivo pom.
+	3 - ejecutar el install de mvn (mvn install).
+	4 - si la instalacion sale bien , se debe buscar la linea :  Building jar: C:\..\..\..\Desafio_Tres\desafioPrevired\target\desafioPrevired-0.0.1.jar , ahi se crea el jar
+    5 - luego se ejecuta el jar  , java -jar desafioPrevired-0.0.1.jar.
+	
+	
