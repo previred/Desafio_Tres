@@ -1,154 +1,61 @@
-# Desafío 3: Complemento valores UF
+# Descripción de la implementación
 
-El desafío consiste en lo siguiente:
- - Existe la siguiente librería en el directorio "lib\Generador_Datos_Desafio_Tres-1.0.0.jar" que se encuentra en este proyecto. Este debe ser integrado en la solución.
- - Este jar contiene 2 class que debe ser utilizadas para resolver el desafío
-    - La clase com.previred.desafio.tres.uf.Valores con el método getRango, este retorna una estructura con un rango de fechas y un listado de valores de UF
-    - El método getRango retorna el objeto UFs, este contiene fecha de inicio, fecha de fin del rango, ademas contiene un set de UF que tiene como atributos de: valor de UF y la fecha de la UF
-      - La lista de UF están dentro del rango de fechas (inicio y fin)
-      - La cantidad de valores para uf son máximo 100
-      - El listado entregado con los valores UF no son secuenciales (contiene laguna de valores) y no se encuentra ordenado
-    - La clase com.previred.desafio.tres.uf.DatosUf este es un singleton que contiene 2 métodos
-      - El método getUf retorna el valor UF para una fecha
-      - El método getUfs retorna una lista de valores de UF para un rango dado
+- Implementación de Beans Spring Boot para la interacción entre cada componente.
+- El modo de runtime es a través de un archivo ejecutable JAR.
+- Para el formato del archivo de volcado, se utilizó el formato JSON.
+
+Clases
+--
+- Se crearon dos clases que heredan de Uf (*ValorUF.java*) y UFs (*UfsRango.java*) respectivamente para los tratamientos internos que han sido implementados en el algoritmo.
+
+Servicios
+--
+- **GestionUf.java**: Clase configurada como servicio que realiza la interacción entre la aplicación y los métodos proporcionados por la librería entregada. Además, devuelve los objetos que heredan de las clases originales de la librería.
+
+Componentes
+--
+- **?**: Implementación del algoritmo que realiza las tareas solicitadas en el requerimiento
+- **?**: Crea y exporta el String JSON que será volcado a través de un archivo en el almacenamiento permanente del sistema operativo.
+
+Utilidades
+--
+- Clase de utilidades que implementa la transformación y formateo de datos para los fines solicitados en el requerimiento.
+
+Algoritmo
+--
+- Descripción del algoritmo
+
+# Tecnología y librerías
+
+Tecnología
+--
+- Spring Boot 2.2.5
+- Java 1.8
+- Maven 3.3.9
+- IntelliJ 2017.1.5
+
+Librerías
+--
+- Gson 2.8.5 para archivo JSON
+- Generador_Datos_Desafio_Tres-1.0.0 para obtención de datos y funcionalidades
 
 
-1.  Consumir la función getRango de la clase com.previred.desafio.tres.uf.Valores
-2.  Escribir un algoritmo para complementar los valores de UF para las fechas faltantes en la lista contenidas en la clase Ufs que retorna getRango
-3.  Para complementar los valores de UF se pueden utilizar los métodos getUf y getUfs de la clase com.previred.desafio.tres.uf.DatosUf.
-4.  La lista de salida debe esta ordenada de forma descendente.
-5.  Para la implementación debe elegir uno de los siguientes formatos de salida.
+# Detalles de compilación y ejecución
+*Sintaxis Windows*
 
-### Formato 1
-
-Crear un archivo CSV con todos los datos calculados, las columnas deben contemplar el siguiente formato:
- - La primera columna representa el tipo, tipo 1 cabecera y tipo 2 es detalle de las UFs
- - Para las filas de tipo 1 el formato es fecha de inicio y fecha de fin
- - Para las filas de tipo 2 el formato es fecha uf y valor uf
- 
- *Ejemplo*
+1. Descargar el proyecto desde Github en directorio local:
+```bash
+https://github.com/previred/Desafio_Tres.git
 ```
-1; 2014-04-01; 2015-03-05
-2; 2014-01-04; 23.321,57
-2; 2014-01-05; 23.324,58
-2; 2014-01-06; 23.327,58
-2; 2014-01-07; 23.330,58
-2; 2014-01-08; 23.333,59
-2; 2014-01-09; 23.336,59
-    :
-2; 2014-04-01; 23.610,77
+2. Ingresar al directorio "uf" (raiz del proyecto uf)
+
+3. Ejecutar comando Maven en el directorio raíz del proyecto:
+```bash
+> mvn clean 
 ```
-
-### Formato 2
-Crear un archivo XML que contenga el siguiente formato:
- - Debe contener un tag general llamado valores
- - Dentro de tag valores se deben crear los tag inicio, fin y UFs
- - El tag inicio debe contener la fecha de inicio recibida
- - El tag fin debe contener la fecha de fin recibida
- - El tag UFs debe contener un lista de tag UF con el siguiente formato
- - El tag UF debe contener el tag fecha con la fecha inicial y el tag dato con el valor de la UF
-
-*Ejemplo*
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<valores>
-  <inicio>2014-04-01</inicio>
-  <fin>2015-03-05</fin>
-  <UFs>
-    <UF>
-      <fecha>2014-01-04</fecha>
-      <dato>23.321,57</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-05</fecha>
-      <dato>23.324,58</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-06</fecha>
-      <dato>23.327,58</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-07</fecha>
-      <dato>23.330,58</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-08</fecha>
-      <dato>23.333,59</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-09</fecha>
-      <dato>23.336,59</dato>
-    </UF>
-
-        :
-
-    <UF>
-      <fecha>2014-04-01</fecha>
-      <dato>23.610,77</dato>
-    </UF>
-  </UFs>
-</valores>
+4. Ejecutar archivo .jar creado en paso anterior
+```bash
+> mvn spring-boot:run
 ```
+5. Una vez ejecutado el archivo, aparecerá un archivo llamado **valores.json** en el mismo directorio raíz que contendrá la lista UFs y sus periodos tal como se describe en el requerimiento.`
 
-### Formato 3
-Crear un archivo JSON que contenga el siguiente formato:
- - Debe contener la fecha de inicio “inicio”
- - Debe contener la fecha de fin “fin”
- - La lista de valores de “UFs” con los valores de fecha de uf “fecha” y valor de la uf “dato”
-
-*Ejemplo*
-
-```json
-{
-  "inicio":"2014-04-01",
-  "fin":"2015-03-05",
-  "UFs":[
-    {
-      "fecha":"2014-01-04",
-      "dato":"23.321,57"
-    },
-    {
-      "fecha":"2014-01-05",
-      "dato":"23.324,58"
-    },
-    {
-      "fecha":"2014-01-06",
-      "dato":"23.327,58"
-    },
-    {
-      "fecha":"2014-01-07",
-      "dato":"23.330,58"
-    },
-    {
-      "fecha":"2014-01-08",
-      "dato":"23.333,59"
-    },
-    {
-      "fecha":"2014-01-09",
-      "dato":"23.336,59"
-    },
-
-        :
-
-    {
-      "fecha":"2014-04-01",
-      "dato":"23.610,77"
-    }
-  ]
-}
-```
-
- - Se deben implementar las soluciones en Java (con maven, gradle u otro).
- - La solución debe ser enviada vía un pull request a este repositorio.
- - La solución debe contener un README.md con:
-   - Descripción de la implementación
-   - Tecnología y librerías utilizadas
-   - Detalles de compilación y ejecución
- - El archivo de salida debe tener como nombre “valores” con su respectiva extensión y debe ser entregado junto con la solución
- - Por ultimo en el detalle del commit debes indicar los siguientes datos:
-   - Nombre Completo.
-   - Correo Electrónico.
-   - Vía por la que te entérate del desafío. Estas pueden ser: Empresa de outsourcing (indicar cuál), twitter, LinkedIn, etc.
- 
-`NOTA`: Todos los pull requests serán rechazados, esto no quiere decir que ha sido rechazada la solución.
