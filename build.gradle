@@ -1,0 +1,27 @@
+
+plugins {
+   	id 'org.springframework.boot' version '2.2.0.RELEASE'
+   	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java-library'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	compile 'org.springframework.boot:spring-boot-starter-web'
+	compile 'com.google.code.gson:gson'
+	compile 'com.fasterxml.jackson.core:jackson-databind'
+	compile files('libs/Generador_Datos_Desafio_Tres-1.0.0.jar')
+	
+	
+	
+ 	compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.11.2'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.11.2'
+	
+	testCompile 'com.jayway.jsonpath:json-path'
+	
+    implementation 'com.google.guava:guava:28.0-jre'
+
+}
