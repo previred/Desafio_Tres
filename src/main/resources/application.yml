@@ -1,0 +1,22 @@
+###
+# Configuracion Log
+###            
+
+logging:
+   level:
+      org:
+         hibernate:
+            SQL: DEBUG
+            type: TRACE
+
+
+###
+# Configuracion Servidor
+###            
+server:
+   port: 9000
+   
+spring:
+   jackson:
+      date-format: yyyy-MM-dd
+      

@@ -1,0 +1,34 @@
+{
+	"info": {
+		"_postman_id": "22def08b-ae31-4edb-8576-0d828f030e44",
+		"name": "previred",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getRango",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/api/v1/user/name/Juan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"name",
+						"Juan"
+					]
+				},
+				"description": "Solicita datos del usuario por nombre"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
