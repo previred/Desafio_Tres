@@ -16,7 +16,7 @@ import com.previred.desafio.tres.uf.vo.Uf;
 import com.previred.desafio.tres.uf.vo.Ufs;
 import com.previred.desafio.util.DateConverter;
 
-public class ValorUFHandler {
+public class UFValueRetriever {
 	
 	private DatosUf datosUf = DatosUf.getInstance();
 	
@@ -58,14 +58,12 @@ public class ValorUFHandler {
 	}
 
 	private Uf getUfFrom(LocalDate localDate) {
-		
 		Date date = DateConverter.convertLocalDateToDate(localDate);
-		
 		return datosUf.getUf(date);
 	}
 
 	private Map<LocalDate, Uf> convertSetToMap(Collection<Uf> setOfUfs) {
-		
+
 		Map<LocalDate,Uf> map = new HashMap<LocalDate, Uf>();
 		
 		for (Uf uf : setOfUfs) {

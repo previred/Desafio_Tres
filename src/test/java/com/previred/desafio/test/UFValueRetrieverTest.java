@@ -8,15 +8,15 @@ import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.previred.desafio.ValorUFHandler;
+import com.previred.desafio.UFValueRetriever;
 import com.previred.desafio.tres.uf.vo.Uf;
 
-public class ValorUFHandlerTest {
+public class UFValueRetrieverTest {
 
 	@Test
 	public void testGetUf() throws Exception{
 		
-		ValorUFHandler handler = new ValorUFHandler();
+		UFValueRetriever handler = new UFValueRetriever();
 		
 		List<Uf> valorUfTotal = handler.getUF();
 		assertTrue(true);
