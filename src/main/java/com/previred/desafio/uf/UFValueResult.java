@@ -1,4 +1,4 @@
-package com.previred.desafio;
+package com.previred.desafio.uf;
 
 import java.util.Date;
 import java.util.List;

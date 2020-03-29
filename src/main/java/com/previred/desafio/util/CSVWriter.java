@@ -12,8 +12,8 @@ import java.util.Locale;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
 
-import com.previred.desafio.UFValueResult;
 import com.previred.desafio.tres.uf.vo.Uf;
+import com.previred.desafio.uf.UFValueResult;
 
 public class CSVWriter {
 

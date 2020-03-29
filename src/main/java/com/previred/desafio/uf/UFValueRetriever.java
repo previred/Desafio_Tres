@@ -1,4 +1,4 @@
-package com.previred.desafio;
+package com.previred.desafio.uf;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

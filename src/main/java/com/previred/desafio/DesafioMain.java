@@ -1,5 +1,7 @@
 package com.previred.desafio;
 
+import com.previred.desafio.uf.UFValueResult;
+import com.previred.desafio.uf.UFValueRetriever;
 import com.previred.desafio.util.CSVWriter;
 
 public class DesafioMain {
