@@ -1,4 +1,4 @@
-package com.previred.challenge.util;
+package com.previred.desafio.util;
 
 import java.time.Instant;
 import java.time.LocalDate;

@@ -1,4 +1,4 @@
-package com.previred.challenge.util.test;
+package com.previred.desafio.util.test;
 
 import org.junit.Test;
 
