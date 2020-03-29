@@ -15,6 +15,9 @@ Junit: Se utilizo junit para generar test unitarios que probaran cada parte de l
 
 commons-csv: Esta biblioteca se utilizo para generar el archivo csv
 
+gson: No se utiliza directamente esta biblioteca pero es necesaria para la clase DatosUf.
+
+
 # Detalles de compilación y ejecución
 
 Para construir la aplicacion basta solo con ejecutar: 
@@ -26,22 +29,3 @@ mvn test
 Para ejecutar la aplicacion, se debe construir primero y luego ejecutar:
 mvn exec:java -Dexec.mainClass="com.previred.desafio.DesafioMain" -Dexec.classpathScope=compile
 
-
-
-
-
-
-
-
-# Detalles de compilación y ejecución
-    Para el uso de el jar del repositorio enviado utilice la ayuda de un plugin de maven
-    que permite agregarlo como repositorio local y de esa forma utilizarlo dentro del proyecto, 
-    lo cual esta configurado dentro del pom.xml.
-    Utilicé otro plugin para poder  definir la clase principal del proyecto y de esa forma
-    no tener problemas para ejecutar el jar, este plugin al final genera un fat jar con las 
-    dependencias necesarias llamado : desafio-1.0-SNAPSHOT-jar-with-dependencies.jar, el cual es 
-    el que se debe ejecutar.
-
-    Se debe ejecutar mvn clean package para regenerar el jar.
-
-    El fichero de salida se encuentra dentro de la raiz del proyecto llamado valores.json
