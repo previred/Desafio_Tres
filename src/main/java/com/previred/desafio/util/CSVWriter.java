@@ -17,11 +17,9 @@ import com.previred.desafio.uf.UFValueResult;
 
 public class CSVWriter {
 
-	private static final String SAMPLE_CSV_FILE = "valores.csv";
-
-	public void write(UFValueResult ufs) throws Exception {
+	public void write(UFValueResult ufs, String sampleCsvFile) throws Exception {
 		
-		try(BufferedWriter writer = Files.newBufferedWriter(Paths.get(SAMPLE_CSV_FILE));
+		try(BufferedWriter writer = Files.newBufferedWriter(Paths.get(sampleCsvFile));
 			CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT
 		                .withHeader("1", prettyPrint(ufs.getInicio()), prettyPrint(ufs.getFin()))
 		                .withDelimiter(';')
