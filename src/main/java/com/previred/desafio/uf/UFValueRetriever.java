@@ -25,28 +25,28 @@ public class UFValueRetriever {
 	
 		Ufs ufs = valores.getRango();
 		
-		List<Uf> valoresUf = retrieveAllUfValues(ufs);
+		List<Uf> allUfValues = retrieveAllUfValues(ufs);
 		
 		Comparator<Uf> ufcomparator = (Uf uf1, Uf uf2) -> uf1.getFecha().compareTo(uf2.getFecha()) ;
-		valoresUf.sort(ufcomparator.reversed());
+		allUfValues.sort(ufcomparator.reversed());
 		
-		UFValueResult result = new UFValueResult(ufs.getInicio(), ufs.getFin(), valoresUf);
+		UFValueResult result = new UFValueResult(ufs.getInicio(), ufs.getFin(), allUfValues);
 		return result;
 	}
 
 	private List<Uf> retrieveAllUfValues(Ufs ufs) {
-		LocalDate fechaInicial = DateConverter.convertDateToLocalDate(ufs.getInicio());
-		LocalDate fechaFinal = DateConverter.convertDateToLocalDate(ufs.getFin());
+		LocalDate initialDate = DateConverter.convertDateToLocalDate(ufs.getInicio());
+		LocalDate endDate = DateConverter.convertDateToLocalDate(ufs.getFin());
 		
 		Set<Uf> setOfUfs = ufs.getUfs();
 		
-		System.out.println("Fecha Inicial: " + fechaInicial);
-		System.out.println("Fecha Final: " + fechaFinal);
+		System.out.println("Fecha Inicial: " + initialDate);
+		System.out.println("Fecha Final: " + endDate);
 		
 		Map<LocalDate, Uf> dateUfMap = convertSetToMap(setOfUfs);
 		
 		List<Uf> valoresUf = new ArrayList<Uf>();
-		for (LocalDate date = fechaInicial; date.isBefore(fechaFinal) || date.isEqual(fechaFinal); date = date.plusDays(1))
+		for (LocalDate date = initialDate; date.isBefore(endDate) || date.isEqual(endDate); date = date.plusDays(1))
 		{
 		    if(dateUfMap.containsKey(date)) {
 		    	//obengo valor calculaado
