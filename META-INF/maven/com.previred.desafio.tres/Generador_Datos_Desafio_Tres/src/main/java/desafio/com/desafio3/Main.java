@@ -75,7 +75,7 @@ public class Main {
 			ufsTo.setUfs(listaJson);
 
 			ObjectMapper mapper = new ObjectMapper();
-			mapper.writeValue(new File("d:\\valores.json"), ufsTo);
+			mapper.writeValue(new File("Archivo Salida\\valores.json"), ufsTo);
 
 		} catch (Exception e) {
 			return "Ocurrio un Error: "+e.getMessage();

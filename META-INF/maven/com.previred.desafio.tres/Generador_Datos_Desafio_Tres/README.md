@@ -8,7 +8,7 @@ Se pasa el listado de valores de un HashSet a una lista y luego se recorre esta 
 
 Una vez se tienen todos los dias faltantes con sus respectivos valores en la lista auxiliar, se cosolidan los datos entregados por la libreria mas los faltantes que se encuentran en la lista auxiliar.
 
-Luego se genera un archivo .json con el resultado, en la ruta "d:\\valores.json".
+Luego se genera un archivo .json con el resultado, en la carpeta "Archivo Salida"..
 
 El metodo responde "Ok" en caso de excito o "Ocurrio un Error" mas el detalle de la excepcion en caso de fallo.
 
