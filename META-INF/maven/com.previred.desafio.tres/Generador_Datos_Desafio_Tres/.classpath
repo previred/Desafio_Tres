@@ -23,6 +23,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Shadow4773/eclipse-workspace/Desafio_Tres/Desafio_Tres/lib/Generador_Datos_Desafio_Tres-1.0.0.jar" sourcepath="C:/Users/Shadow4773/eclipse-workspace/Desafio_Tres/Desafio_Tres/lib/Generador_Datos_Desafio_Tres-1.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/Generador_Datos_Desafio_Tres-1.0.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
