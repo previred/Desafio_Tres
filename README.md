@@ -1,154 +1,35 @@
-# Desaf√≠o 3: Complemento valores UF
+1.- DescripciÛn de la implementaciÛn
 
-El desaf√≠o consiste en lo siguiente:
- - Existe la siguiente librer√≠a en el directorio "lib\Generador_Datos_Desafio_Tres-1.0.0.jar" que se encuentra en este proyecto. Este debe ser integrado en la soluci√≥n.
- - Este jar contiene 2 class que debe ser utilizadas para resolver el desaf√≠o
-    - La clase com.previred.desafio.tres.uf.Valores con el m√©todo getRango, este retorna una estructura con un rango de fechas y un listado de valores de UF
-    - El m√©todo getRango retorna el objeto UFs, este contiene fecha de inicio, fecha de fin del rango, ademas contiene un set de UF que tiene como atributos de: valor de UF y la fecha de la UF
-      - La lista de UF est√°n dentro del rango de fechas (inicio y fin)
-      - La cantidad de valores para uf son m√°ximo 100
-      - El listado entregado con los valores UF no son secuenciales (contiene laguna de valores) y no se encuentra ordenado
-    - La clase com.previred.desafio.tres.uf.DatosUf este es un singleton que contiene 2 m√©todos
-      - El m√©todo getUf retorna el valor UF para una fecha
-      - El m√©todo getUfs retorna una lista de valores de UF para un rango dado
+Se rescatan los datos proveidos por la clase Valores y DatosUf (ambas forman parte del Jar proveido por ustedes)
+Dentro de los datos obtenidos, se rescata la fecha de inicio y fecha de fin del periodo a procesar y un set con fechas y valores de uf.
+Se procede a convertir el objeto Set y transformarlo en un objeto de tipo List, esto para trabajar con objetos iguales, ya que la lista que se obtiene de la clase DatosUf es de tipo List.
+Luego se procede a realizar el ordenamiendo de la lista en forma descendente, seg˙n las especificaciones.
+Se procede a obtener los datos de la clase DatosUf, para el periodo (fecha inicio y fecha fin) que se obtuvo desde la clase Valores.
+Teniendo ambas listas, se procede a realizar una comparaciÛn con el fin de encontrar los datos que faltantes dentro de la lista obtenida de la clase Valores.
+Una vez identificados los datos faltantes, se proceden a agregar a la lista obtenida desde la clase Valores.
+Al finalizar el recorrido de ambas listas, la lista "inicial" (obtenida desde la clase Valores), se encuentra completa con los datos restantes, obtenidos de la segunda lista (lista clase DatosUf).
+Se procede nuevamente a ordenar la lista "inicial" (ya completa con los valores del periodo) en forma descendente.
+Luego se procede a crear una lista final sÛlo con los 100 primeros registros obtenidos de la lista "inicial" (ordenados de forma descendente), para conformar el cuerpo del archivo XML de salida.
+Finalmente, se procede a generar el archivo XML de salida, seg˙n lo indicado en las especificaciones.
 
-
-1.  Consumir la funci√≥n getRango de la clase com.previred.desafio.tres.uf.Valores
-2.  Escribir un algoritmo para complementar los valores de UF para las fechas faltantes en la lista contenidas en la clase Ufs que retorna getRango
-3.  Para complementar los valores de UF se pueden utilizar los m√©todos getUf y getUfs de la clase com.previred.desafio.tres.uf.DatosUf.
-4.  La lista de salida debe esta ordenada de forma descendente.
-5.  Para la implementaci√≥n debe elegir uno de los siguientes formatos de salida.
-
-### Formato 1
-
-Crear un archivo CSV con todos los datos calculados, las columnas deben contemplar el siguiente formato:
- - La primera columna representa el tipo, tipo 1 cabecera y tipo 2 es detalle de las UFs
- - Para las filas de tipo 1 el formato es fecha de inicio y fecha de fin
- - Para las filas de tipo 2 el formato es fecha uf y valor uf
+Nota: Todo lo anteriormente detallado, se encuentra comentado en el cÛdigo fuente.
  
- *Ejemplo*
-```
-1; 2014-04-01; 2015-03-05
-2; 2014-01-04; 23.321,57
-2; 2014-01-05; 23.324,58
-2; 2014-01-06; 23.327,58
-2; 2014-01-07; 23.330,58
-2; 2014-01-08; 23.333,59
-2; 2014-01-09; 23.336,59
-    :
-2; 2014-04-01; 23.610,77
-```
+2.- TecnologÌa y librerÌas utilizadas
 
-### Formato 2
-Crear un archivo XML que contenga el siguiente formato:
- - Debe contener un tag general llamado valores
- - Dentro de tag valores se deben crear los tag inicio, fin y UFs
- - El tag inicio debe contener la fecha de inicio recibida
- - El tag fin debe contener la fecha de fin recibida
- - El tag UFs debe contener un lista de tag UF con el siguiente formato
- - El tag UF debe contener el tag fecha con la fecha inicial y el tag dato con el valor de la UF
+TecnologÌas:
 
-*Ejemplo*
+Java versiÛn 1.8
+Springboot versiÛn 2.2.6
+Gradle
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<valores>
-  <inicio>2014-04-01</inicio>
-  <fin>2015-03-05</fin>
-  <UFs>
-    <UF>
-      <fecha>2014-01-04</fecha>
-      <dato>23.321,57</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-05</fecha>
-      <dato>23.324,58</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-06</fecha>
-      <dato>23.327,58</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-07</fecha>
-      <dato>23.330,58</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-08</fecha>
-      <dato>23.333,59</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-09</fecha>
-      <dato>23.336,59</dato>
-    </UF>
+LibrerÌas externas:
 
-        :
+Generador_Datos_Desafio_Tres-1.0.0.jar - LibrerÌa proporcionada por ustedes.
+gson-2.8.2.jar - Esta librerÌa fue necesaria incluirla para compilar el fuente proporcionado por ustedes.
 
-    <UF>
-      <fecha>2014-04-01</fecha>
-      <dato>23.610,77</dato>
-    </UF>
-  </UFs>
-</valores>
-```
-
-### Formato 3
-Crear un archivo JSON que contenga el siguiente formato:
- - Debe contener la fecha de inicio ‚Äúinicio‚Äù
- - Debe contener la fecha de fin ‚Äúfin‚Äù
- - La lista de valores de ‚ÄúUFs‚Äù con los valores de fecha de uf ‚Äúfecha‚Äù y valor de la uf ‚Äúdato‚Äù
-
-*Ejemplo*
-
-```json
-{
-  "inicio":"2014-04-01",
-  "fin":"2015-03-05",
-  "UFs":[
-    {
-      "fecha":"2014-01-04",
-      "dato":"23.321,57"
-    },
-    {
-      "fecha":"2014-01-05",
-      "dato":"23.324,58"
-    },
-    {
-      "fecha":"2014-01-06",
-      "dato":"23.327,58"
-    },
-    {
-      "fecha":"2014-01-07",
-      "dato":"23.330,58"
-    },
-    {
-      "fecha":"2014-01-08",
-      "dato":"23.333,59"
-    },
-    {
-      "fecha":"2014-01-09",
-      "dato":"23.336,59"
-    },
-
-        :
-
-    {
-      "fecha":"2014-04-01",
-      "dato":"23.610,77"
-    }
-  ]
-}
-```
-
- - Se deben implementar las soluciones en Java (con maven, gradle u otro).
- - La soluci√≥n debe ser enviada v√≠a un pull request a este repositorio.
- - La soluci√≥n debe contener un README.md con:
-   - Descripci√≥n de la implementaci√≥n
-   - Tecnolog√≠a y librer√≠as utilizadas
-   - Detalles de compilaci√≥n y ejecuci√≥n
- - El archivo de salida debe tener como nombre ‚Äúvalores‚Äù con su respectiva extensi√≥n y debe ser entregado junto con la soluci√≥n
- - Por ultimo en el detalle del commit debes indicar los siguientes datos:
-   - Nombre Completo.
-   - Correo Electr√≥nico.
-   - V√≠a por la que te ent√©rate del desaf√≠o. Estas pueden ser: Empresa de outsourcing (indicar cu√°l), twitter, LinkedIn, etc.
+TambiÈn se utilizaron librerÌas contenidas en la versiÛn Java 1.8
  
-`NOTA`: Todos los pull requests ser√°n rechazados, esto no quiere decir que ha sido rechazada la soluci√≥n.
+3.- Detalle de la compilaciÛn y ejecuciÛn
+ 
+Tanto la compilaciÛn como la ejecuciÛn se realizaron por medio de Eclipse.
+Se ejecuta la aplicaciÛn como una Spring Boot App
