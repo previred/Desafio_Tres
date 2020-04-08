@@ -9,8 +9,8 @@ Tecnología y librerías utilizadas
 Detalles de compilación y ejecución
  - Como IDE se utilizó IntelliJ, y la forma de ejecución es la siguiente:
    - java -jar {archivoJar.jar} (ej: java -jar E:/Desarrollo/Java/Desafio_Tres/target/uf-0.0.1-SNAPSHOT.jar)
-Además, se puede ejecutar con un argumento Ruta, por ejemplo:
- - java -jar {archivoJar.jar} "{ruta}" (ej: java -jar E:/Desarrollo/Java/Desafio_Tres/target/uf-0.0.1-SNAPSHOT.jar "E:/valores.json")
+ - Además, se puede ejecutar con un argumento Ruta, por ejemplo:
+   - java -jar {archivoJar.jar} "{ruta}" (ej: java -jar E:/Desarrollo/Java/Desafio_Tres/target/uf-0.0.1-SNAPSHOT.jar "E:/valores.json")
  
 
  
