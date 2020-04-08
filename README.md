@@ -152,3 +152,23 @@ Crear un archivo JSON que contenga el siguiente formato:
    - Vía por la que te entérate del desafío. Estas pueden ser: Empresa de outsourcing (indicar cuál), twitter, LinkedIn, etc.
  
 `NOTA`: Todos los pull requests serán rechazados, esto no quiere decir que ha sido rechazada la solución.
+
+descripcion
+
+se crea  desarrollo de la solicitud,para este desarrollo se utilizaron java 8 como lenguaje con el jdk-13.0.2_windows-x64_bin,las siguientes herramientas
+ Eclipse
+ tomcap
+ 
+ librerias utilizadas
+  gson
+  maven
+  libreria adjunta en el proyecto
+  java  io
+  javax
+  java time
+  
+  para ejecutar el proyecto importar a eclipse esperar a que cargen las dependencias y ejecutar, ejecutar projecto de eclipse
+  
+  en este desarrollo al ejecutarse crea 3 output correspondientes a 3 archivos uno formato csv otro en xml y el ultimo en formato json, con los formatos solicitados en el desafio
+
+ 
