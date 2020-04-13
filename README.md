@@ -43,8 +43,8 @@
 
  - $ mvn clean – borra el directorio de salida (target)
  - $ mvn install – guarda el proyecto en el repositorio
- - $ mvn compile – compila el proyecto y deja el resultado en target/classes
  - $ mvn test – compila los test y los ejecuta
+ - $ mvn compile – compila el proyecto y deja el resultado en target/classes
  - $ mvn package -P build-release – empaqueta el proyecto y lo dejará en taget/complemento-uf-0.0.1-SNAPSHOT.jar
  - $ java -cp taget/complemento-uf-0.0.1-SNAPSHOT.jar jar.ComplementoUfApplication
 
@@ -52,4 +52,4 @@
 
 > **localhost:8080/ufs**
 
-> Tambien se puede importar el proyecto complemento-uf en algun IDE como proyecto Maven y ejecutar desde este mismo.
+> Tambien se puede importar el proyecto complemento-uf en algun IDE, como un proyecto Maven y ejecutar desde este mismo, iniciandose en **localhost:8080** y acceder a la ruta **/ufs**

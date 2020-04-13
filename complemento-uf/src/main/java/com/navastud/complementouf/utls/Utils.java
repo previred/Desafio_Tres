@@ -26,4 +26,13 @@ public class Utils {
 		return Date.from(date.atStartOfDay(ZONE_ID).toInstant());
 	}
 
+	public static String doubleToString(Double valor) {
+		String string = valor.toString();
+		return string.replaceAll("^(\\d{2})(\\d{3})(.{1})(\\d{0,2})", "$1.$2,$4");
+	}
+
+	public static Double stringToDouble(String valor) {
+		return Double.valueOf(valor.replace(".", "").replace(",", "."));
+	}
+
 }

@@ -44,13 +44,14 @@ public class UfConverterTest {
 		MockitoAnnotations.initMocks(this);
 		uf = datosUf.getUf(Utils.localDateToDate(LocalDate.of(2012, 12, 01)));
 		ufDto.setFecha(LocalDate.now());
-		ufDto.setValor("23.610");
+		ufDto.setValor(Utils.doubleToString(uf.getValor()));
 	}
 
 	@Test
 	public void whenGetConverterUfToUfDto_ThenReturnUfDtoObjectTest() {
 		when(ufConverter.convertUfToUfDto(uf)).thenReturn(ufDto);
-		assertThat(ufConverter.convertUfToUfDto(uf)).isNotNull().isEqualTo(ufDto);
+		assertThat(ufConverter.convertUfToUfDto(uf)).isNotNull().isEqualTo(ufDto).hasFieldOrPropertyWithValue("valor",
+				Utils.doubleToString(uf.getValor()));
 	}
 
 	@Test

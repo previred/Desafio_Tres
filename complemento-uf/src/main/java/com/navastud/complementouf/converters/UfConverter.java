@@ -13,7 +13,7 @@ public class UfConverter {
 
 		UfDto ufDto = new UfDto();
 		ufDto.setFecha(Utils.dateToLocalDate(uf.getFecha()));
-		ufDto.setValor(uf.getValor().toString());
+		ufDto.setValor(Utils.doubleToString(uf.getValor()));
 
 		return ufDto;
 	}
@@ -22,7 +22,7 @@ public class UfConverter {
 
 		Uf uf = new Uf();
 		uf.setFecha(Utils.localDateToDate(dto.getFecha()));
-		uf.setValor(Double.valueOf(dto.getValor()));
+		uf.setValor(Utils.stringToDouble(dto.getValor()));
 
 		return uf;
 	}

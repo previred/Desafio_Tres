@@ -46,4 +46,25 @@ public class UtilsTest {
 		Date now = new Date("2021/01/01");
 		assertThat(now.getDate()).isNotNull().isEqualTo(dateToLocalDate.getDate());
 	}
+
+	@Test
+	public void getStringToDoubleTest() {
+		Double valor = 23610.77;
+		Double stringToDouble = Utils.stringToDouble("23.610,77");
+		assertThat(stringToDouble).isNotNull().isEqualTo(valor);
+	}
+
+	@Test
+	public void getDoubleToStringTest() {
+		String valor = "23.610,77";
+		String doubleToString = Utils.doubleToString(23610.77);
+		assertThat(doubleToString).isNotNull().isEqualTo(valor);
+	}
+
+	@Test
+	public void getDoubleToStringOtherNumberTest() {
+		String valor = "21.033,6";
+		String doubleToString = Utils.doubleToString(21033.6);
+		assertThat(doubleToString).isNotNull().isEqualTo(valor);
+	}
 }
