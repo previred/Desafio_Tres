@@ -48,7 +48,7 @@
  - $ mvn package -P build-release – empaqueta el proyecto y lo dejará en taget/complemento-uf-0.0.1-SNAPSHOT.jar
  - $ java -cp taget/complemento-uf-0.0.1-SNAPSHOT.jar jar.ComplementoUfApplication
 
-> Una vez iniciada la aplicación se debe consultar a las siguientes rutas:
+> Una vez iniciada la aplicación se debe consultar a las siguiente ruta:
 
 > **localhost:8080/ufs**
 
