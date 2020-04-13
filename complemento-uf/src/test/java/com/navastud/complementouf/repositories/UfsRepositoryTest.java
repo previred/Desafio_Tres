@@ -107,8 +107,8 @@ public class UfsRepositoryTest {
 		Ufs ufsRepo = ufsRepository.findUfs().get();
 		List<Uf> listUfs = ufsRepository.getListUfsOrderDescend();
 
-		assertEquals(listUfs.get(0).getFecha(), ufsRepo.getFin());
-		assertEquals(listUfs.get(listUfs.size() - 1).getFecha(), ufsRepo.getInicio());
+		assertEquals(listUfs.get(0).getFecha(), ufsRepo.getInicio());
+		assertEquals(listUfs.get(listUfs.size() - 1).getFecha(), ufsRepo.getFin());
 	}
 
 }

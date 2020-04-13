@@ -5,10 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.navastud.complementouf.dto.UfDto;
-import com.navastud.complementouf.dto.UfsDto;
 import com.previred.desafio.tres.uf.DatosUf;
-import com.previred.desafio.tres.uf.Valores;
 import com.previred.desafio.tres.uf.vo.Uf;
 import com.previred.desafio.tres.uf.vo.Ufs;
 
@@ -23,13 +20,8 @@ public class ComplementoUfApplication {
 	public class ConfigurationComplementoUfApplication {
 
 		@Bean
-		public Valores valores() {
-			return new Valores();
-		}
-
-		@Bean
 		public Ufs ufs() {
-			return valores().getRango();
+			return new Ufs();
 		}
 
 		@Bean
@@ -42,15 +34,6 @@ public class ComplementoUfApplication {
 			return DatosUf.getInstance();
 		}
 
-		@Bean
-		public UfsDto ufsDto() {
-			return new UfsDto();
-		}
-
-		@Bean
-		public UfDto ufDto() {
-			return new UfDto();
-		}
 	}
 
 }

@@ -14,32 +14,29 @@ import com.previred.desafio.tres.uf.vo.Ufs;
 public class UfsConverter {
 
 	@Autowired
-	private Ufs ufs;
-
-	@Autowired
-	private UfsDto ufsDto;
-
-	@Autowired
 	@Qualifier("UfConverter")
 	private UfConverter ufConverter;
 
 	public UfsDto convertUfsToUfsDto(Ufs ufs) {
 
-		this.ufsDto
-				.setUFs(ufs.getUfs().stream().map(uf -> ufConverter.convertUfToUfDto(uf)).collect(Collectors.toList()));
-		this.ufsDto.setInicio(Utils.dateToLocalDate(ufs.getInicio()));
-		this.ufsDto.setFin(Utils.dateToLocalDate(ufs.getFin()));
+		UfsDto ufsDto = new UfsDto();
+		ufsDto.setUFs(ufs.getUfs().stream().map(uf -> ufConverter.convertUfToUfDto(uf))
+				.sorted((uf1, uf2) -> uf1.getFecha().compareTo(uf2.getFecha())).collect(Collectors.toList()));
+		ufsDto.setInicio(Utils.dateToLocalDate(ufs.getInicio()));
+		ufsDto.setFin(Utils.dateToLocalDate(ufs.getFin()));
 
-		return this.ufsDto;
+		return ufsDto;
+
 	}
 
 	public Ufs convertUfsDtoToUfs(UfsDto dto) {
 
-		this.ufs.setUfs(dto.getUFs().stream().map(uf -> ufConverter.convertUfDtoToUf(uf)).collect(Collectors.toSet()));
-		this.ufs.setInicio(Utils.localDateToDate(dto.getInicio()));
-		this.ufs.setFin(Utils.localDateToDate(dto.getFin()));
+		Ufs ufs = new Ufs();
+		ufs.setUfs(dto.getUFs().stream().map(uf -> ufConverter.convertUfDtoToUf(uf)).collect(Collectors.toSet()));
+		ufs.setInicio(Utils.localDateToDate(dto.getInicio()));
+		ufs.setFin(Utils.localDateToDate(dto.getFin()));
 
-		return this.ufs;
+		return ufs;
 	}
 
 }

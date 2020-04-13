@@ -23,6 +23,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import com.navastud.complementouf.converters.UfConverter;
 import com.navastud.complementouf.converters.UfsConverter;
+import com.navastud.complementouf.dto.UfDto;
+import com.navastud.complementouf.dto.UfsDto;
 import com.navastud.complementouf.exception.UfsNotFoundException;
 import com.navastud.complementouf.repositories.UfsRepository;
 import com.navastud.complementouf.utls.Utils;
@@ -66,9 +68,11 @@ public class UfsServiceTest {
 	@Test
 	public void whenGetListUfs_ThenAllListUfsShouldBeFound() {
 		when(ufsRepository.getListUfsOrderDescend()).thenReturn(listUfs);
-		assertThat(ufsService.getAllUfs()).isNotNull()
-				.isEqualTo(listUfs.stream().map(uf -> ufConverter.convertUfToUfDto(uf)).collect(Collectors.toList()))
-				.hasSize(listUfs.size());
+		List<UfDto> dtos = listUfs.stream().map(uf -> ufConverter.convertUfToUfDto(uf)).collect(Collectors.toList());
+		assertThat(ufsService.getAllUfs()).isNotNull().hasSameSizeAs(dtos);
+		assertThat(ufsService.getAllUfs().get(4)).isNotNull()
+				.hasFieldOrPropertyWithValue("valor", dtos.get(4).getValor())
+				.hasFieldOrPropertyWithValue("fecha", dtos.get(4).getFecha());
 	}
 
 	@Test
@@ -81,7 +85,9 @@ public class UfsServiceTest {
 	public void whenGetUfs_ThenUfsShouldBeFound() {
 		Ufs ufs = valores.getRango();
 		when(ufsRepository.findUfs()).thenReturn(Optional.of(ufs));
-		assertThat(ufsService.getUfs()).isNotNull().isEqualTo(ufsConverter.convertUfsToUfsDto(ufs));
+		UfsDto dto = ufsConverter.convertUfsToUfsDto(ufs);
+		assertThat(ufsService.getUfs()).isNotNull().hasFieldOrPropertyWithValue("inicio", dto.getInicio())
+				.hasFieldOrPropertyWithValue("fin", dto.getFin()).hasFieldOrProperty("UFs");
 	}
 
 	@Test

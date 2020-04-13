@@ -46,8 +46,10 @@
  - $ mvn compile – compila el proyecto y deja el resultado en target/classes
  - $ mvn test – compila los test y los ejecuta
  - $ mvn package -P build-release – empaqueta el proyecto y lo dejará en taget/complemento-uf-0.0.1-SNAPSHOT.jar
- - java -cp taget/complemento-uf-0.0.1-SNAPSHOT.jar jar.ComplementoUfApplication
+ - $ java -cp taget/complemento-uf-0.0.1-SNAPSHOT.jar jar.ComplementoUfApplication
 
 > Una vez iniciada la aplicación se debe consultar a las siguientes rutas:
 
 > **localhost:8080/ufs**
+
+> Tambien se puede importar el proyecto complemento-uf en algun IDE como proyecto Maven y ejecutar desde este mismo.
