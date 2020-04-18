@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -39,30 +39,28 @@ public class GETUfController {
 		return ResponseEntity.ok().body(this.ufService.getUf());
 	}
 
-	@GetMapping(path = EndPoint.JSON, produces = { MediaType.APPLICATION_JSON_VALUE,
-			MediaType.APPLICATION_OCTET_STREAM_VALUE })
-	public ResponseEntity<Void> getFileJson(HttpServletResponse response) throws IOException {
-		response.setHeader("Content-disposition", "attachment; filename=Ufs.json");
-		response.getOutputStream().write(this.fileJsonServiceImpl.getFile(this.ufService.getUf()));
-		return new ResponseEntity<>(HttpStatus.OK);
+	@GetMapping(path = EndPoint.JSON)
+	public ResponseEntity<byte[]> getFileJson(HttpServletResponse response) throws IOException {
+		return ResponseEntity.ok()
+				.header(HttpHeaders.CONTENT_DISPOSITION,  "attachment; filename=Ufs.json")
+				.header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_OCTET_STREAM_VALUE)
+				.body(this.fileJsonServiceImpl.getFile(this.ufService.getUf()));
 	}
 
-	@GetMapping(path = EndPoint.XML, produces = { MediaType.APPLICATION_JSON_VALUE,
-			MediaType.APPLICATION_OCTET_STREAM_VALUE })
-	public ResponseEntity<Void> getFileXml(HttpServletResponse response) throws IOException {
-		response.setContentType(MediaType.APPLICATION_OCTET_STREAM_VALUE);
-		response.setHeader("Content-disposition", "attachment; filename=Ufs.xml");
-		response.getOutputStream().write(this.fileXmlServiceImpl.getFile(this.ufService.getUf()));
-		return new ResponseEntity<>(HttpStatus.OK);
+	@GetMapping(path = EndPoint.XML)
+	public ResponseEntity<byte[]> getFileXml(HttpServletResponse response) throws IOException {
+		return ResponseEntity.ok()
+				.header(HttpHeaders.CONTENT_DISPOSITION,  "attachment; filename=Ufs.xml")
+				.header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_OCTET_STREAM_VALUE)
+				.body(this.fileXmlServiceImpl.getFile(this.ufService.getUf()));
 	}
 
-	@GetMapping(path = EndPoint.CSV, produces = { MediaType.APPLICATION_JSON_VALUE,
-			MediaType.APPLICATION_OCTET_STREAM_VALUE })
+	@GetMapping(path = EndPoint.CSV)
 	public ResponseEntity<byte[]> getFileCsv(HttpServletResponse response) throws IOException {
-		response.setContentType(MediaType.APPLICATION_OCTET_STREAM_VALUE);
-		response.setHeader("Content-disposition", "attachment; filename=Ufs.csv");
-		response.getOutputStream().write(this.fileCsvServiceImpl.getFile(this.ufService.getUf()));
-		return new ResponseEntity<>(HttpStatus.OK);
+		return ResponseEntity.ok()
+				.header(HttpHeaders.CONTENT_DISPOSITION,  "attachment; filename=Ufs.csv")
+				.header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_OCTET_STREAM_VALUE)
+				.body(this.fileCsvServiceImpl.getFile(this.ufService.getUf()));
 	}
 	
 }
