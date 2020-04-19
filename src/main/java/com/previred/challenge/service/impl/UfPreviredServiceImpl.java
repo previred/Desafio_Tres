@@ -74,7 +74,7 @@ public class UfPreviredServiceImpl implements IUfPreviredService {
 					.addAll(ufComponent.getUfs(
 							Date.from(startDate.atStartOfDay(ZoneId.systemDefault()).toInstant()),
 							Date.from(endDate.atStartOfDay(ZoneId.systemDefault()).toInstant())));
-			LOGGER.debug("Finish Method: settingValueService() from class: %s", this.getClass().getName());
+			LOGGER.debug("Finish Method: fillListUfWhenListAuxIsEmpty() from class: %s", this.getClass().getName());
 			return true;
 		}else { 
 			LOGGER.debug("Finish Method: fillListUfWhenListAuxIsEmpty() from class: %s", this.getClass().getName());
