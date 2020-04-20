@@ -129,7 +129,7 @@ Crear un archivo JSON que contenga el siguiente formato:
       "dato":"23.336,59"
     },
 
-        :
+        
 
     {
       "fecha":"2014-04-01",
@@ -152,3 +152,28 @@ Crear un archivo JSON que contenga el siguiente formato:
    - Vía por la que te entérate del desafío. Estas pueden ser: Empresa de outsourcing (indicar cuál), twitter, LinkedIn, etc.
  
 `NOTA`: Todos los pull requests serán rechazados, esto no quiere decir que ha sido rechazada la solución.
+
+
+
+###Descripción de la implementación
+La implementación de la solución hace uso de las clases Collections, aprovechando la clase Set en que vienen las UFs. Luego de realizar el llamado a getRango(),  se utilizan las fechas de Inicio y Fin que vienen en la respuesta para obtener la totalidad de Ufs. Luego se agrega la Lista de UFs (Collection List) al Set de UFs obtenido anteriormente (Collection Set de retorno de getRango()), aprovechando que en la Collection Set no existen duplicados, lo que agrega las fechas faltantes al Set sin duplicar UFs.
+Una vez que se cuenta con este resultado, se debe realizar el ordenamiento y formateo de la respuesta. Para esto, primero se obtiene una List de UFs desde el Set, luego se ordena utilizando un Comparator que utiliza el método getFecha de la clase Uf, para finalmente agregarle una reversa con reversed().
+Como último paso, se utilizan dos clases para entregar el formato adecuado en valores de tipo String (UfOutputJsonFormat y ListaUfsOutputJson) y dos clases del tipo Format: SimpleDateFormat y DecimalFormat, para entregar la fecha y el valor de la UF en el formato correcto, respectivamente.  
+
+###Tecnología y librerías utilizadas
+La solución se implementó en lenguaje Java utilizando el framework Spring Boot. Para la gestión de dependencias se utiliza Gradle.
+Las librerías incorporadas en el framework Spring Boot permiten el uso de log en el proyecto sin agregar dependencias adicionales, por ejemplo.
+
+###Detalles de compilación y ejecución
+Dentro del commit se incorpora el jar generado de ejecutar el goal jar de Gradle. Se encuentra en build/libs/uf-0.0.1-SNAPSHOT.jar. Este archivo puede ser utilizado para levantar el servidor local con el microservicio REST utilizando el comando 
+```cmd
+java -jar  build/libs/uf-0.0.1-SNAPSHOT.jar (si se está en el directorio raíz del proyecto)
+java -jar  uf-0.0.1-SNAPSHOT.jar (si se está dentro del directorio build/libs)
+```
+
+Una vez el servidor Tomcat ya ha levantado localmente, se debe ir a la URL localhost utilizando el puerto informado en el log de la aplicación (por defecto se levanta en el puerto 8080). Después de localhost:puerto, se debe agregar /api/uf/completo para ver el resultado ya complementado, ordenado y formateado; o /api/uf/rango para ver el listado de UFs antes de completar, ordenar y formatear. 
+
+```html
+http://localhost:8080/api/uf/completo
+http://localhost:8080/api/uf/rango
+```
