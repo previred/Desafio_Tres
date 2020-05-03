@@ -1,154 +1,41 @@
-# Desaf√≠o 3: Complemento valores UF
+## DesafÌo 3: Complemento valores UF
 
-El desaf√≠o consiste en lo siguiente:
- - Existe la siguiente librer√≠a en el directorio "lib\Generador_Datos_Desafio_Tres-1.0.0.jar" que se encuentra en este proyecto. Este debe ser integrado en la soluci√≥n.
- - Este jar contiene 2 class que debe ser utilizadas para resolver el desaf√≠o
-    - La clase com.previred.desafio.tres.uf.Valores con el m√©todo getRango, este retorna una estructura con un rango de fechas y un listado de valores de UF
-    - El m√©todo getRango retorna el objeto UFs, este contiene fecha de inicio, fecha de fin del rango, ademas contiene un set de UF que tiene como atributos de: valor de UF y la fecha de la UF
-      - La lista de UF est√°n dentro del rango de fechas (inicio y fin)
-      - La cantidad de valores para uf son m√°ximo 100
-      - El listado entregado con los valores UF no son secuenciales (contiene laguna de valores) y no se encuentra ordenado
-    - La clase com.previred.desafio.tres.uf.DatosUf este es un singleton que contiene 2 m√©todos
-      - El m√©todo getUf retorna el valor UF para una fecha
-      - El m√©todo getUfs retorna una lista de valores de UF para un rango dado
+**Autor:** 
+- Gabriel Roades Cavalieri
+- gabrielroades@gmail.com
+- Head Hunter: Leonardo Miranda Pavez - Tech Consult - LinkedIn
 
+**Importante:** El archivo "valores.json" resultante se escribe en la raiz del proyecto y tambiÈn se retorna en la respuesta http del servicio, ambos al realizar la peticion http GET.
 
-1.  Consumir la funci√≥n getRango de la clase com.previred.desafio.tres.uf.Valores
-2.  Escribir un algoritmo para complementar los valores de UF para las fechas faltantes en la lista contenidas en la clase Ufs que retorna getRango
-3.  Para complementar los valores de UF se pueden utilizar los m√©todos getUf y getUfs de la clase com.previred.desafio.tres.uf.DatosUf.
-4.  La lista de salida debe esta ordenada de forma descendente.
-5.  Para la implementaci√≥n debe elegir uno de los siguientes formatos de salida.
+**Formato elegido para el resultado:** Formato 3 - JSON.
 
-### Formato 1
+###TecnologÌa y librerÌas utilizadas
 
-Crear un archivo CSV con todos los datos calculados, las columnas deben contemplar el siguiente formato:
- - La primera columna representa el tipo, tipo 1 cabecera y tipo 2 es detalle de las UFs
- - Para las filas de tipo 1 el formato es fecha de inicio y fecha de fin
- - Para las filas de tipo 2 el formato es fecha uf y valor uf
+La implementaciÛn de los requerimientos la construÌ mediante web service API Rest con Spring boot y estructura MVC para organizar el cÛdigo en el IDE Eclipse Version: 2020-03 (4.15.0).
+
+ConstruÌ el proyecto con Spring Boot 2.2.6 y gradle como administrador de dependencias.
+
+###DescripciÛn de la implementaciÛn
+
+El proyecto contiene dos capas, en el controlador UFontroller se encuentra la implementaciÛn del endpoint mediante el cual se realiza la peticiÛn http GET desde el cliente y retorna un ResponseEntity con un arreglo de byte (archivo), el http header y el http status 200 , en el controlador se inyecta la dependencia a la clase de la capa de servicios que implementa mediante interfaz UFService la funciÛn getUfs en donde se realizan llamadas a las funciones con el algoritmo solicitado haciendo las consultas mediante la librerÌa indicada Generador_Datos_Desafio_Tres-1.0.0.
+
+Para complementar los valores UF faltantes, llamÈ al mÈtodo getUfs de la clase DatosUf con los par·metros de Fecha de inicio y fin que retorna el metodo getRango de la clase Valores. Se debe garantizar que estas fechas son consistentes.
+
+En UfUtil implementÈ dos funciones est·ticos, dateFormat (recibe un Date y un patrÛn, devuelve un String con el formato indicado en el patrÛn) y valueFormat (recibe un valor Double, retorna un String con el formato indicado en la expresiÛn regular de la constante VALUEREGEX).
+
+En UFConstant declarÈ constantes para centralizar algunos valores reutilizables.
+
+Cree dos POJOS UF y UFSResult para crear los objetos con los datos recibidos desde la librerÌa y escribirlos en el archivo enviado al cliente. En al clase UF ademas de los setter and getter, agreguÈ un Comparator donde implementÈ la funciÛn compare para aplicar un sort con la clase de tipo Collections a la lista de UFs por el atributo fecha (String con el formato yyyy-MM-dd).
+
+UFSResult contiene un arreglo de UF.
+
+###Detalles de compilaciÛn y ejecuciÛn
+
+El proyecto compila y se ejecuta mediante el motor de eclipse para Java aplications. Una vez ejecutado, el servicio utiliza el puerto 8080 para las peticiones http y el endpoint en el contexto api/v1. 
+
+Para consultar el servicio, recomiendo utilizar el cliente API llamado Postman. crear una coleciÛn con la peticiÛn GET al endpoint localhost:8080/api/v1/uf/download estableciendo como encabezado el Content-Type: application/json. El resultado JSON se mostrar· en el cuerpo de la respuesta http y se podr· guardar el archivo valores.json usando la opcion de salvar respuesta como un archivo.
+
+Desde un cliente Web implementado en cualquier lenguaje se podrÌa descargar automaticamente el archivo json indicando el MIME application/octet-stream.
+
+**En el cÛdigo fuente no debe incluirse comentarios, pero sÛlo para este caso, escribÌ algunos de los requerimientos indicando la ubicaciÛn de la implementaciÛn.**
  
- *Ejemplo*
-```
-1; 2014-04-01; 2015-03-05
-2; 2014-01-04; 23.321,57
-2; 2014-01-05; 23.324,58
-2; 2014-01-06; 23.327,58
-2; 2014-01-07; 23.330,58
-2; 2014-01-08; 23.333,59
-2; 2014-01-09; 23.336,59
-    :
-2; 2014-04-01; 23.610,77
-```
-
-### Formato 2
-Crear un archivo XML que contenga el siguiente formato:
- - Debe contener un tag general llamado valores
- - Dentro de tag valores se deben crear los tag inicio, fin y UFs
- - El tag inicio debe contener la fecha de inicio recibida
- - El tag fin debe contener la fecha de fin recibida
- - El tag UFs debe contener un lista de tag UF con el siguiente formato
- - El tag UF debe contener el tag fecha con la fecha inicial y el tag dato con el valor de la UF
-
-*Ejemplo*
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<valores>
-  <inicio>2014-04-01</inicio>
-  <fin>2015-03-05</fin>
-  <UFs>
-    <UF>
-      <fecha>2014-01-04</fecha>
-      <dato>23.321,57</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-05</fecha>
-      <dato>23.324,58</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-06</fecha>
-      <dato>23.327,58</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-07</fecha>
-      <dato>23.330,58</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-08</fecha>
-      <dato>23.333,59</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-09</fecha>
-      <dato>23.336,59</dato>
-    </UF>
-
-        :
-
-    <UF>
-      <fecha>2014-04-01</fecha>
-      <dato>23.610,77</dato>
-    </UF>
-  </UFs>
-</valores>
-```
-
-### Formato 3
-Crear un archivo JSON que contenga el siguiente formato:
- - Debe contener la fecha de inicio ‚Äúinicio‚Äù
- - Debe contener la fecha de fin ‚Äúfin‚Äù
- - La lista de valores de ‚ÄúUFs‚Äù con los valores de fecha de uf ‚Äúfecha‚Äù y valor de la uf ‚Äúdato‚Äù
-
-*Ejemplo*
-
-```json
-{
-  "inicio":"2014-04-01",
-  "fin":"2015-03-05",
-  "UFs":[
-    {
-      "fecha":"2014-01-04",
-      "dato":"23.321,57"
-    },
-    {
-      "fecha":"2014-01-05",
-      "dato":"23.324,58"
-    },
-    {
-      "fecha":"2014-01-06",
-      "dato":"23.327,58"
-    },
-    {
-      "fecha":"2014-01-07",
-      "dato":"23.330,58"
-    },
-    {
-      "fecha":"2014-01-08",
-      "dato":"23.333,59"
-    },
-    {
-      "fecha":"2014-01-09",
-      "dato":"23.336,59"
-    },
-
-        :
-
-    {
-      "fecha":"2014-04-01",
-      "dato":"23.610,77"
-    }
-  ]
-}
-```
-
- - Se deben implementar las soluciones en Java (con maven, gradle u otro).
- - La soluci√≥n debe ser enviada v√≠a un pull request a este repositorio.
- - La soluci√≥n debe contener un README.md con:
-   - Descripci√≥n de la implementaci√≥n
-   - Tecnolog√≠a y librer√≠as utilizadas
-   - Detalles de compilaci√≥n y ejecuci√≥n
- - El archivo de salida debe tener como nombre ‚Äúvalores‚Äù con su respectiva extensi√≥n y debe ser entregado junto con la soluci√≥n
- - Por ultimo en el detalle del commit debes indicar los siguientes datos:
-   - Nombre Completo.
-   - Correo Electr√≥nico.
-   - V√≠a por la que te ent√©rate del desaf√≠o. Estas pueden ser: Empresa de outsourcing (indicar cu√°l), twitter, LinkedIn, etc.
- 
-`NOTA`: Todos los pull requests ser√°n rechazados, esto no quiere decir que ha sido rechazada la soluci√≥n.
