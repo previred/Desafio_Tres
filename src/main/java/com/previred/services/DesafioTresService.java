@@ -59,7 +59,7 @@ public class DesafioTresService {
         return gson.toJson(result).getBytes();
     }
 
-    private TreeSet<DesafioTresUF> getUfs(final Ufs ufs) {
+    public TreeSet<DesafioTresUF> getUfs(final Ufs ufs) {
         if (ufs == null || ufs.getUfs().size() == 0) {
             LOGGER.debug("Returning empty TreeSet");
             return new TreeSet<>();
