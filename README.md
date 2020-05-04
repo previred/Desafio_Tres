@@ -152,3 +152,32 @@ Crear un archivo JSON que contenga el siguiente formato:
    - Vía por la que te entérate del desafío. Estas pueden ser: Empresa de outsourcing (indicar cuál), twitter, LinkedIn, etc.
  
 `NOTA`: Todos los pull requests serán rechazados, esto no quiere decir que ha sido rechazada la solución.
+
+
+### Descripción de la implementación
+Se desarrolló un microservicio utilizando Spring Boot, éste expone las urls "/" y "/download-json" para descargar el
+archivo "valores.json" solicitado como solución.
+Además se expuso otro endpoint("/healthcheck") para el chequeo de salud del microservicio. 
+
+### Tecnología y librerías utilizadas
+Para la implementación se uso:
+ - Spring Boot 2.2.6-RELEASE (starter-web y starter-test).
+ - Versión de Java 1.8.
+ - Gson 2.8.6 para generar el json de salida.
+  
+### Detalles de compilación y ejecución
+Para empaquetar la solución ejecutar:
+```
+mvn clean install
+```
+
+Para ejecutar la solución:
+
+Opción 1:
+```
+mvn spring-boot:run
+```
+Opción 2:
+```
+java -jar target/desafio-tres-1.0.0.jar
+```
