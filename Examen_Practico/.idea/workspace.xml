@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2e13c7d8-de54-47e4-8626-41ab1ab6b240" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="examenPracticoPrevired" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="examenPracticoPrevired" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="examenPracticoPrevired" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="main" type="396b929e:GradleViewContributor$SourceSetNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="examenPracticoPrevired" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="examenPracticoPrevired" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="examenPracticoPrevired" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="documentation" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="examenPracticoPrevired" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="examenPracticoPrevired" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1bPjIfvbVAz0mNtFUzw4RhU0KDq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.4064801" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ComplementoValoresUfApplication">
+    <configuration name="ComplementoValoresUfApplication" type="Application" factoryName="Application" activateToolWindowBeforeRun="false" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ComplementoValoresUfApplication" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Examen_Practico [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Examen_Practico [build]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2e13c7d8-de54-47e4-8626-41ab1ab6b240" name="Default Changelist" comment="" />
+      <created>1588540545332</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588540545332</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1865" y="181" width="685" height="685" key="#ComplementoValoresUfApplication" timestamp="1588833271427">
+      <screen x="1366" y="0" width="1680" height="1050" />
+    </state>
+    <state x="1865" y="181" width="685" height="685" key="#ComplementoValoresUfApplication/67.27.1299.741/1366.0.1680.1050@1366.0.1680.1050" timestamp="1588833271427" />
+    <state x="2014" y="211" width="374" height="626" key="#com.intellij.ide.util.MemberChooser" timestamp="1588824925972">
+      <screen x="1366" y="0" width="1680" height="1050" />
+    </state>
+    <state x="2014" y="211" width="374" height="626" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741/1366.0.1680.1050@1366.0.1680.1050" timestamp="1588824925972" />
+    <state x="1939" y="307" width="524" height="444" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1588541865280">
+      <screen x="1366" y="0" width="1680" height="1050" />
+    </state>
+    <state x="1939" y="307" width="524" height="444" key="#com.intellij.ide.util.PackageChooserDialog/67.27.1299.741/1366.0.1680.1050@1366.0.1680.1050" timestamp="1588541865280" />
+    <state x="1913" y="193" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1588541001969">
+      <screen x="1366" y="0" width="1680" height="1050" />
+    </state>
+    <state x="1913" y="193" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/67.27.1299.741/1366.0.1680.1050@1366.0.1680.1050" timestamp="1588541001969" />
+    <state x="1959" y="384" width="507" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1588541866943">
+      <screen x="1366" y="0" width="1680" height="1050" />
+    </state>
+    <state x="1959" y="384" width="507" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/67.27.1299.741/1366.0.1680.1050@1366.0.1680.1050" timestamp="1588541866943" />
+    <state x="2206" y="216" width="611" height="593" key="#xdebugger.evaluate" timestamp="1588815365733">
+      <screen x="1366" y="0" width="1680" height="1050" />
+    </state>
+    <state x="2206" y="216" width="611" height="593" key="#xdebugger.evaluate/67.27.1299.741/1366.0.1680.1050@1366.0.1680.1050" timestamp="1588815365733" />
+    <state width="521" height="466" key="DebuggerActiveHint" timestamp="1588812160876">
+      <screen x="1366" y="0" width="1680" height="1050" />
+    </state>
+    <state width="521" height="466" key="DebuggerActiveHint/67.27.1299.741/1366.0.1680.1050@1366.0.1680.1050" timestamp="1588812160876" />
+    <state x="1828" y="267" width="735" height="513" key="FileChooserDialogImpl" timestamp="1588832926594">
+      <screen x="1366" y="0" width="1680" height="1050" />
+    </state>
+    <state x="1828" y="267" width="735" height="513" key="FileChooserDialogImpl/67.27.1299.741/1366.0.1680.1050@1366.0.1680.1050" timestamp="1588832926594" />
+    <state width="1634" height="432" key="GridCell.Tab.0.bottom" timestamp="1588833273176">
+      <screen x="1366" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1634" height="432" key="GridCell.Tab.0.bottom/67.27.1299.741/1366.0.1680.1050@1366.0.1680.1050" timestamp="1588833273176" />
+    <state width="1634" height="432" key="GridCell.Tab.0.center" timestamp="1588833273176">
+      <screen x="1366" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1634" height="432" key="GridCell.Tab.0.center/67.27.1299.741/1366.0.1680.1050@1366.0.1680.1050" timestamp="1588833273176" />
+    <state width="1634" height="432" key="GridCell.Tab.0.left" timestamp="1588833273176">
+      <screen x="1366" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1634" height="432" key="GridCell.Tab.0.left/67.27.1299.741/1366.0.1680.1050@1366.0.1680.1050" timestamp="1588833273176" />
+    <state width="1634" height="432" key="GridCell.Tab.0.right" timestamp="1588833273176">
+      <screen x="1366" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1634" height="432" key="GridCell.Tab.0.right/67.27.1299.741/1366.0.1680.1050@1366.0.1680.1050" timestamp="1588833273176" />
+    <state width="1680" height="219" key="GridCell.Tab.1.bottom" timestamp="1588833108084">
+      <screen x="1366" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1680" height="219" key="GridCell.Tab.1.bottom/67.27.1299.741/1366.0.1680.1050@1366.0.1680.1050" timestamp="1588833108084" />
+    <state width="1680" height="219" key="GridCell.Tab.1.center" timestamp="1588833108083">
+      <screen x="1366" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1680" height="219" key="GridCell.Tab.1.center/67.27.1299.741/1366.0.1680.1050@1366.0.1680.1050" timestamp="1588833108083" />
+    <state width="1680" height="219" key="GridCell.Tab.1.left" timestamp="1588833108083">
+      <screen x="1366" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1680" height="219" key="GridCell.Tab.1.left/67.27.1299.741/1366.0.1680.1050@1366.0.1680.1050" timestamp="1588833108083" />
+    <state width="1680" height="219" key="GridCell.Tab.1.right" timestamp="1588833108084">
+      <screen x="1366" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1680" height="219" key="GridCell.Tab.1.right/67.27.1299.741/1366.0.1680.1050@1366.0.1680.1050" timestamp="1588833108084" />
+    <state x="1689" y="101" width="1024" height="845" key="SettingsEditor" timestamp="1588832929088">
+      <screen x="1366" y="0" width="1680" height="1050" />
+    </state>
+    <state x="1689" y="101" width="1024" height="845" key="SettingsEditor/67.27.1299.741/1366.0.1680.1050@1366.0.1680.1050" timestamp="1588832929088" />
+    <state x="1862" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1588726028603">
+      <screen x="1366" y="0" width="1680" height="1050" />
+    </state>
+    <state x="1862" y="351" key="com.intellij.ide.util.TipDialog/67.27.1299.741/1366.0.1680.1050@1366.0.1680.1050" timestamp="1588726028603" />
+    <state x="1851" y="260" width="869" height="596" key="find.popup" timestamp="1588540726834">
+      <screen x="1366" y="0" width="1680" height="1050" />
+    </state>
+    <state x="1851" y="260" width="869" height="596" key="find.popup/67.27.1299.741/1366.0.1680.1050@1366.0.1680.1050" timestamp="1588540726834" />
+    <state x="1796" y="186" width="800" height="677" key="scopes" timestamp="1588540990481">
+      <screen x="1366" y="0" width="1680" height="1050" />
+    </state>
+    <state x="1796" y="186" width="800" height="677" key="scopes/67.27.1299.741/1366.0.1680.1050@1366.0.1680.1050" timestamp="1588540990481" />
+  </component>
+</project>
