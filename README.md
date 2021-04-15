@@ -1,154 +1,34 @@
-# Desafío 3: Complemento valores UF
+### Tecnologías
 
-El desafío consiste en lo siguiente:
- - Existe la siguiente librería en el directorio "lib\Generador_Datos_Desafio_Tres-1.0.0.jar" que se encuentra en este proyecto. Este debe ser integrado en la solución.
- - Este jar contiene 2 class que debe ser utilizadas para resolver el desafío
-    - La clase com.previred.desafio.tres.uf.Valores con el método getRango, este retorna una estructura con un rango de fechas y un listado de valores de UF
-    - El método getRango retorna el objeto UFs, este contiene fecha de inicio, fecha de fin del rango, ademas contiene un set de UF que tiene como atributos de: valor de UF y la fecha de la UF
-      - La lista de UF están dentro del rango de fechas (inicio y fin)
-      - La cantidad de valores para uf son máximo 100
-      - El listado entregado con los valores UF no son secuenciales (contiene laguna de valores) y no se encuentra ordenado
-    - La clase com.previred.desafio.tres.uf.DatosUf este es un singleton que contiene 2 métodos
-      - El método getUf retorna el valor UF para una fecha
-      - El método getUfs retorna una lista de valores de UF para un rango dado
+Java 8 streams\
+Gson\
+Maven
 
+### UFs faltantes
 
-1.  Consumir la función getRango de la clase com.previred.desafio.tres.uf.Valores
-2.  Escribir un algoritmo para complementar los valores de UF para las fechas faltantes en la lista contenidas en la clase Ufs que retorna getRango
-3.  Para complementar los valores de UF se pueden utilizar los métodos getUf y getUfs de la clase com.previred.desafio.tres.uf.DatosUf.
-4.  La lista de salida debe esta ordenada de forma descendente.
-5.  Para la implementación debe elegir uno de los siguientes formatos de salida.
+Se itera un rango de fechas creado a partir de las fechas de inicio y de fin.\
+Se aplica un filtro solicitando sólo las fechas que no existen en el set de UFs.\
+A partir de esta fecha se obtiene la UF utilizando el singleton DatosUf.\
+Todas las UFs obtenidas se recolectan en una lista.
 
-### Formato 1
+Finalmente se juntan los datos de la UFs que ya eran conocidas con las que se lograron determinar utilizando streams. Las UFs están ordenadas de forma descendente según su fecha.
 
-Crear un archivo CSV con todos los datos calculados, las columnas deben contemplar el siguiente formato:
- - La primera columna representa el tipo, tipo 1 cabecera y tipo 2 es detalle de las UFs
- - Para las filas de tipo 1 el formato es fecha de inicio y fecha de fin
- - Para las filas de tipo 2 el formato es fecha uf y valor uf
- 
- *Ejemplo*
-```
-1; 2014-04-01; 2015-03-05
-2; 2014-01-04; 23.321,57
-2; 2014-01-05; 23.324,58
-2; 2014-01-06; 23.327,58
-2; 2014-01-07; 23.330,58
-2; 2014-01-08; 23.333,59
-2; 2014-01-09; 23.336,59
-    :
-2; 2014-04-01; 23.610,77
-```
+### Archivo JSON
+El archivo JSON se crea con la misma librería Gson que existe como dependencia en la librería proporcionada para el desafío.
 
-### Formato 2
-Crear un archivo XML que contenga el siguiente formato:
- - Debe contener un tag general llamado valores
- - Dentro de tag valores se deben crear los tag inicio, fin y UFs
- - El tag inicio debe contener la fecha de inicio recibida
- - El tag fin debe contener la fecha de fin recibida
- - El tag UFs debe contener un lista de tag UF con el siguiente formato
- - El tag UF debe contener el tag fecha con la fecha inicial y el tag dato con el valor de la UF
+Con GsonBuilder se realizan cambios sobre la seralización, en lugar de utilizar etiquetas en clases nuevas.
 
-*Ejemplo*
+### Compilación
+Lo mejor es instalar la dependencia entregada en el repositorio local:
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<valores>
-  <inicio>2014-04-01</inicio>
-  <fin>2015-03-05</fin>
-  <UFs>
-    <UF>
-      <fecha>2014-01-04</fecha>
-      <dato>23.321,57</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-05</fecha>
-      <dato>23.324,58</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-06</fecha>
-      <dato>23.327,58</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-07</fecha>
-      <dato>23.330,58</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-08</fecha>
-      <dato>23.333,59</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-09</fecha>
-      <dato>23.336,59</dato>
-    </UF>
+mvn org.apache.maven.plugins:maven-install-plugin:3.0.0-M1:install-file -Dfile=ruta_generador.jar
 
-        :
+En el archivo POM del proyecto se declara la dependencia al generador. Así se pueden obtener la dependencias transitivas
+y así se evitan dependencias externas.
 
-    <UF>
-      <fecha>2014-04-01</fecha>
-      <dato>23.610,77</dato>
-    </UF>
-  </UFs>
-</valores>
-```
+mvn package -> empaqueta y con el plugin declarado en el POM de la solución, se agregan todas la dependencias en el archivo JAR, para así poder ser ejecutado por sí solo.
 
-### Formato 3
-Crear un archivo JSON que contenga el siguiente formato:
- - Debe contener la fecha de inicio “inicio”
- - Debe contener la fecha de fin “fin”
- - La lista de valores de “UFs” con los valores de fecha de uf “fecha” y valor de la uf “dato”
+### Ejecución
+java -jar .\desafio_tres-1.0.jar
 
-*Ejemplo*
-
-```json
-{
-  "inicio":"2014-04-01",
-  "fin":"2015-03-05",
-  "UFs":[
-    {
-      "fecha":"2014-01-04",
-      "dato":"23.321,57"
-    },
-    {
-      "fecha":"2014-01-05",
-      "dato":"23.324,58"
-    },
-    {
-      "fecha":"2014-01-06",
-      "dato":"23.327,58"
-    },
-    {
-      "fecha":"2014-01-07",
-      "dato":"23.330,58"
-    },
-    {
-      "fecha":"2014-01-08",
-      "dato":"23.333,59"
-    },
-    {
-      "fecha":"2014-01-09",
-      "dato":"23.336,59"
-    },
-
-        :
-
-    {
-      "fecha":"2014-04-01",
-      "dato":"23.610,77"
-    }
-  ]
-}
-```
-
- - Se deben implementar las soluciones en Java (con maven, gradle u otro).
- - La solución debe ser enviada vía un pull request a este repositorio.
- - La solución debe contener un README.md con:
-   - Descripción de la implementación
-   - Tecnología y librerías utilizadas
-   - Detalles de compilación y ejecución
- - El archivo de salida debe tener como nombre “valores” con su respectiva extensión y debe ser entregado junto con la solución
- - Por ultimo en el detalle del commit debes indicar los siguientes datos:
-   - Nombre Completo.
-   - Correo Electrónico.
-   - Vía por la que te entérate del desafío. Estas pueden ser: Empresa de outsourcing (indicar cuál), twitter, LinkedIn, etc.
- 
-`NOTA`: Todos los pull requests serán rechazados, esto no quiere decir que ha sido rechazada la solución.
+El archivo JSON se genera en el directorio donde está ubicado el archivo JAR
