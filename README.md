@@ -1,154 +1,52 @@
-# Desafío 3: Complemento valores UF
+# Desafio 3
 
-El desafío consiste en lo siguiente:
- - Existe la siguiente librería en el directorio "lib\Generador_Datos_Desafio_Tres-1.0.0.jar" que se encuentra en este proyecto. Este debe ser integrado en la solución.
- - Este jar contiene 2 class que debe ser utilizadas para resolver el desafío
-    - La clase com.previred.desafio.tres.uf.Valores con el método getRango, este retorna una estructura con un rango de fechas y un listado de valores de UF
-    - El método getRango retorna el objeto UFs, este contiene fecha de inicio, fecha de fin del rango, ademas contiene un set de UF que tiene como atributos de: valor de UF y la fecha de la UF
-      - La lista de UF están dentro del rango de fechas (inicio y fin)
-      - La cantidad de valores para uf son máximo 100
-      - El listado entregado con los valores UF no son secuenciales (contiene laguna de valores) y no se encuentra ordenado
-    - La clase com.previred.desafio.tres.uf.DatosUf este es un singleton que contiene 2 métodos
-      - El método getUf retorna el valor UF para una fecha
-      - El método getUfs retorna una lista de valores de UF para un rango dado
+## Instalacion
 
+El proyecto posee las siguientes dependencias
 
-1.  Consumir la función getRango de la clase com.previred.desafio.tres.uf.Valores
-2.  Escribir un algoritmo para complementar los valores de UF para las fechas faltantes en la lista contenidas en la clase Ufs que retorna getRango
-3.  Para complementar los valores de UF se pueden utilizar los métodos getUf y getUfs de la clase com.previred.desafio.tres.uf.DatosUf.
-4.  La lista de salida debe esta ordenada de forma descendente.
-5.  Para la implementación debe elegir uno de los siguientes formatos de salida.
+* Maven 3.6
+* JDK 11
 
-### Formato 1
+Adicionalmente, la unica dependencia externa que posee el projecto es de `gson`
 
-Crear un archivo CSV con todos los datos calculados, las columnas deben contemplar el siguiente formato:
- - La primera columna representa el tipo, tipo 1 cabecera y tipo 2 es detalle de las UFs
- - Para las filas de tipo 1 el formato es fecha de inicio y fecha de fin
- - Para las filas de tipo 2 el formato es fecha uf y valor uf
- 
- *Ejemplo*
+## Compilacion
+
+Se debe registrar el jar en el repositorio maven
+
 ```
-1; 2014-04-01; 2015-03-05
-2; 2014-01-04; 23.321,57
-2; 2014-01-05; 23.324,58
-2; 2014-01-06; 23.327,58
-2; 2014-01-07; 23.330,58
-2; 2014-01-08; 23.333,59
-2; 2014-01-09; 23.336,59
-    :
-2; 2014-04-01; 23.610,77
+mvn install:install-file -Dfile="./lib/Generador_Datos_Desafio_Tres-1.0.0.jar" -DgroupId=com.previred.desafio.tres -DartifactId=base -Dversion=1.0.0 -Dpackaging=jar
 ```
 
-### Formato 2
-Crear un archivo XML que contenga el siguiente formato:
- - Debe contener un tag general llamado valores
- - Dentro de tag valores se deben crear los tag inicio, fin y UFs
- - El tag inicio debe contener la fecha de inicio recibida
- - El tag fin debe contener la fecha de fin recibida
- - El tag UFs debe contener un lista de tag UF con el siguiente formato
- - El tag UF debe contener el tag fecha con la fecha inicial y el tag dato con el valor de la UF
+Crear el jar con el sistema
 
-*Ejemplo*
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<valores>
-  <inicio>2014-04-01</inicio>
-  <fin>2015-03-05</fin>
-  <UFs>
-    <UF>
-      <fecha>2014-01-04</fecha>
-      <dato>23.321,57</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-05</fecha>
-      <dato>23.324,58</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-06</fecha>
-      <dato>23.327,58</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-07</fecha>
-      <dato>23.330,58</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-08</fecha>
-      <dato>23.333,59</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-09</fecha>
-      <dato>23.336,59</dato>
-    </UF>
-
-        :
-
-    <UF>
-      <fecha>2014-04-01</fecha>
-      <dato>23.610,77</dato>
-    </UF>
-  </UFs>
-</valores>
+```
+mvn package
 ```
 
-### Formato 3
-Crear un archivo JSON que contenga el siguiente formato:
- - Debe contener la fecha de inicio “inicio”
- - Debe contener la fecha de fin “fin”
- - La lista de valores de “UFs” con los valores de fecha de uf “fecha” y valor de la uf “dato”
+## Ejecucion
 
-*Ejemplo*
+Se debe ejecutar el siguiente comando en la raiz del projecto
 
-```json
-{
-  "inicio":"2014-04-01",
-  "fin":"2015-03-05",
-  "UFs":[
-    {
-      "fecha":"2014-01-04",
-      "dato":"23.321,57"
-    },
-    {
-      "fecha":"2014-01-05",
-      "dato":"23.324,58"
-    },
-    {
-      "fecha":"2014-01-06",
-      "dato":"23.327,58"
-    },
-    {
-      "fecha":"2014-01-07",
-      "dato":"23.330,58"
-    },
-    {
-      "fecha":"2014-01-08",
-      "dato":"23.333,59"
-    },
-    {
-      "fecha":"2014-01-09",
-      "dato":"23.336,59"
-    },
-
-        :
-
-    {
-      "fecha":"2014-04-01",
-      "dato":"23.610,77"
-    }
-  ]
-}
+```
+java -jar target/tres-0.0.1-SNAPSHOT.jar
 ```
 
- - Se deben implementar las soluciones en Java (con maven, gradle u otro).
- - La solución debe ser enviada vía un pull request a este repositorio.
- - La solución debe contener un README.md con:
-   - Descripción de la implementación
-   - Tecnología y librerías utilizadas
-   - Detalles de compilación y ejecución
- - El archivo de salida debe tener como nombre “valores” con su respectiva extensión y debe ser entregado junto con la solución
- - Por ultimo en el detalle del commit debes indicar los siguientes datos:
-   - Nombre Completo.
-   - Correo Electrónico.
-   - Vía por la que te entérate del desafío. Estas pueden ser: Empresa de outsourcing (indicar cuál), twitter, LinkedIn, etc.
- 
-`NOTA`: Todos los pull requests serán rechazados, esto no quiere decir que ha sido rechazada la solución.
+Esto va a generar un archivo `output.json` en la raiz del proyecto con el resultado de la ejecucion
+
+## Descripcion de la solucion
+
+### Clase contenedora
+
+La clase contenedora `UFRange` se encarga de recibir una instancia de `UFs`, de ella se extraen los datos de la fecha de inicio, fecha de termino y una lista de `UF`. Para las fechas se utilizan `LocalDate`, la cual permite manipular de mejor manera los tipos de dato `Date` que no poseen hora.
+
+Para el calculo de las `UFs`, se utilizan los registros obtenidos por la instancia de `Ufs` como cache dentro de un `HashMap`, luego se itera desde la fecha de final hasta la fecha de inicio, si el dia se encuentra en el cache, se utiliza este, en caso contrario, se va a buscar el valor de la uf desde `DatosUf.getUf`, posteriormente el valor de la `UF` es ingresado a la lista de `UFs`.
+
+
+### Serializacion
+
+Para la serializacion se crean unos `Adapters` para que sean utilizados por la libreria `gson`. Los adapters son los siguientes:
+
+* LocalDateAdapter: Clase encargada de serializar los datos de tipo `LocalDate` a un formato de fecha `YYYY-MM-DD`
+* UFAdapter: Se debe reconfigurar la estructura de salida utilizada para serializar la `UF`  con las llaves `fecha` y `dato` con los formatos solicitados
+
+
