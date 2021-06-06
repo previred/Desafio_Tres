@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fd5c8bb1-35cd-4882-a629-1a2885ae15df" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/RepoJRPrueba3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../previred_ejercicio_3/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../previred_ejercicio_3/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../previred_ejercicio_3/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../previred_ejercicio_3/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../previred_ejercicio_3/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../previred_ejercicio_3/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../previred_ejercicio_3/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../previred_ejercicio_3/lib/Generador_Datos_Desafio_Tres-1.0.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../previred_ejercicio_3/previred_ejercicio3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../previred_ejercicio_3/src/main/java/com/previred/prueba/configuration/CORSFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../previred_ejercicio_3/src/main/java/com/previred/prueba/configuration/PruebaConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../previred_ejercicio_3/src/main/java/com/previred/prueba/configuration/PruebaInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../previred_ejercicio_3/src/main/java/com/previred/prueba/controllers/PruebaPreviredUfController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../previred_ejercicio_3/src/main/java/com/previred/prueba/request/DatosEntrada.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../previred_ejercicio_3/src/main/java/com/previred/prueba/response/DatosSalida.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../previred_ejercicio_3/src/main/java/com/previred/prueba/response/Uf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../previred_ejercicio_3/src/main/java/com/previred/prueba/response/UfResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../previred_ejercicio_3/src/main/java/com/previred/prueba/response/Ufs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../previred_ejercicio_3/src/main/java/com/previred/prueba/service/DatosUf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../previred_ejercicio_3/src/main/java/com/previred/prueba/service/PruebaPreviredUfService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../previred_ejercicio_3/src/main/java/com/previred/prueba/service/PruebaPreviredUfServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../previred_ejercicio_3/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../previred_ejercicio_3/src/test/java/UfTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1taaJYsxgqUpLxsQhUfeC1ZeOJT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fd5c8bb1-35cd-4882-a629-1a2885ae15df" name="Default Changelist" comment="" />
+      <created>1623009583230</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623009583230</updated>
+      <workItem from="1623009586434" duration="8000" />
+    </task>
+    <servers />
+  </component>
+</project>
