@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "f50f4340-b879-4153-875a-410df50c563f",
+		"name": "Prueba Previred ejercicio 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Obtiene detalle UF",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"inicio\":\"2014-04-01\",\n  \"fin\":\"2015-03-05\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/previred_ejercicio3/uf/detalle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"previred_ejercicio3",
+						"uf",
+						"detalle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtiene detalle UF AWS",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"inicio\":\"2014-04-01\",\n  \"fin\":\"2015-03-05\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "Previredprueba1-env.eba-ekhmsjs2.us-east-1.elasticbeanstalk.com/uf/detalle",
+					"host": [
+						"Previredprueba1-env",
+						"eba-ekhmsjs2",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"uf",
+						"detalle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtiene fecha",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/previred_ejercicio3/fecha",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"previred_ejercicio3",
+						"fecha"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

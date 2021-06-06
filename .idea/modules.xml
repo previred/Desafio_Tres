@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ejerciciosAWSPrevired.iml" filepath="$PROJECT_DIR$/ejerciciosAWSPrevired.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/RepoJRPrueba3.iml" filepath="$PROJECT_DIR$/.idea/RepoJRPrueba3.iml" />
     </modules>
   </component>
 </project>
