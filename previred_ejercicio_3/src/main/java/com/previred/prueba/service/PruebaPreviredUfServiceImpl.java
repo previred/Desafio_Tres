@@ -95,7 +95,6 @@ public class PruebaPreviredUfServiceImpl implements PruebaPreviredUfService {
         }catch (Exception e){
             log.error(e.toString());
             throw e;
-
         }
     }
 

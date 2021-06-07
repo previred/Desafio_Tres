@@ -1,0 +1,95 @@
+---
+swagger: "2.0"
+info:
+  description: Documentacion swagger para ejercicio 3
+  version: 1.0.0
+  title: Ejercicio 3
+  contact:
+    email: jonathan.ramirez.oliva@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+host: virtserver.swaggerhub.com
+basePath: /JRamirez-ltands/Ejercicio-3/1.0.0
+tags:
+- name: admins
+  description: Secured Admin-only calls
+- name: developers
+  description: Operations available to regular developers
+schemes:
+- https
+paths:
+  /uf/detalle:
+    put:
+      tags:
+      - admins
+      summary: adds an inventory item
+      description: Adds an item to the system
+      operationId: addInventory
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: inventoryItem
+        description: Fachas de inicio y termino de busqueda
+        required: false
+        schema:
+          $ref: '#/definitions/Body'
+      responses:
+        "400":
+          description: Invalid ID supplied
+        "404":
+          description: Fecha not found
+        "405":
+          description: Validation exception
+        "500":
+          description: Error Syntaxis exception server
+definitions:
+  Body:
+    type: object
+    required:
+    - fin
+    - inicio
+    properties:
+      inicio:
+        type: string
+        format: yyyy-MM-dd
+      fin:
+        type: string
+        format: yyyy-MM-dd
+  RespuestaServicio:
+    properties:
+      inicio:
+        type: string
+        format: yyyy-MM-dd
+      fin:
+        type: string
+        format: yyyy-MM-dd
+      ufs:
+        type: array
+        description: Listado de fechas.
+        items:
+          $ref: '#/definitions/Ufs'
+      ufsFaltante:
+        type: array
+        description: Listado de fechas.
+        items:
+          $ref: '#/definitions/Ufs'
+  Ufs:
+    type: object
+    properties:
+      fecha:
+        $ref: '#/definitions/Fecha'
+      valor:
+        $ref: '#/definitions/Valor'
+    description: Element.
+  Fecha:
+    type: object
+    format: yyyy-MM-dd
+    description: Element.
+  Valor:
+    type: object
+    format: yyyy-MM-dd
+    description: Element.
