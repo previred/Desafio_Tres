@@ -1,9 +1,10 @@
 ### Desafío 3: Complemento valores UF
 #### Nivel 3
 
-Existe la librería "lib\Generador_Datos_Desafio_Tres-1.0.0.jar" que se encuentra en el repositorio GitHub: https://github.com/previred/Desafio_Tres
+Existe la librería "lib\Generador_Datos_Desafio_Tres-1.0.0.jar"
 
 Esta librería consta de dos clases:
+
 	- com.previred.desafio.tres.uf.DatosUf (Singleton) que contiene dos métodos getUf y getUfs
 	- com.previred.desafio.tres.uf.Valores que contiene al método getRango
 	
@@ -73,7 +74,8 @@ Ejemplo:
 	- La cantidad de valores para UF son máximo 100
 	- El listado entregado con los valores UF no se encuentra ordenado y la secuencia no está completa 
 
-El objetivo de este proyecto "valoresuf" es complementar los valores de la lista de UF, haciendo uso de los métodos getUf y getUfs.
+### Descripción
+El objetivo de este proyecto "Desafio_Tres" es hacer uso de la librería Generador_Datos_Desafio_Tres-1.0.0.jar. Generar y complementar los valores de la lista de UF haciendo uso de los métodos getUf y getUfs.
 Ordenar dicha lista por fecha de forma descendente y generar un archivo llamado "valores.json" con una estructura JSON como sigue:
 
 Ejemplo:
@@ -110,17 +112,15 @@ Ejemplo:
 Java 8 Spring-Boot 2.4.6 Maven 3.6.3
 
 ### Compilar y ejecutar el proyecto
-1.- Para compilar el proyecto se requiere Java y Maven instalado. 
+1.- Para compilar el proyecto se requiere Java y Maven instalado.
 
-2.- Antes de iniciar la ejecución de esta solución, debe realizar la descarga de la librería "lib\Generador_Datos_Desafio_Tres-1.0.0.jar" que se encuentra en el repositorio GitHub: https://github.com/previred/Desafio_Tres
+2.- Ingrese al directorio '/Desafio_Tres/lib'
 
 3.- Instale la librería en el repositorio local haciendo uso de Maven, con el siguiente comando:
 
-mvn install:install-file -Dfile=<ruta-de-libreria> -DgroupId=generador.datos -DartifactId=desafio-tres -Dversion=1.0.0 -Dpackaging=jar
-
-#### Nota: Reemplace <ruta-de-libreria> por la ruta donde se encuentre la libreria: Generador_Datos_Desafio_Tres-1.0.0.jar
+mvn install:install-file -Dfile=Generador_Datos_Desafio_Tres-1.0.0.jar -DgroupId=generador.datos -DartifactId=desafio-tres -Dversion=1.0.0 -Dpackaging=jar
 	
-4.- Ingrese al directorio 'valoresuf' para ejecutar el siguiente comando Maven
+4.- Ingrese al directorio 'Desafio_Tres' para ejecutar el siguiente comando Maven
 
 mvn package
 
@@ -128,4 +128,4 @@ mvn package
 
 java -jar valoresuf-0.0.1.jar
 
-6.- La solución genera un archivo llamado "valores.json" en el directorio "valoresuf/target"
+6.- La solución genera un archivo llamado "valores.json" en el directorio "Desafio_Tres/target"
