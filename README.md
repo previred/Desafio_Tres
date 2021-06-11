@@ -43,28 +43,28 @@ Ejemplo:
   ]
 ```
 
-El método getRango retorna el siguiente objeto
+El método getRango retorna la siguiente estructura de datos
 
 Ejemplo:
 
 ```json
 {
-   "inicio":"2021-01-01",
+   "inicio":"2021-11-01",
    "fin":"2021-12-31",
    "Ufs":[
     {
-      "fecha":"2021-01-04",
+      "fecha":"2021-11-04",
       "valor":"23321.57"
     },
     {
-      "fecha":"2021-01-05",
+      "fecha":"2021-11-05",
       "valor":"23324.58"
     },
 
         :
 
     {
-      "fecha":"2021-11-01",
+      "fecha":"2021-12-21",
       "valor":"23610.77"
     }
   ]    
@@ -82,7 +82,7 @@ Ejemplo:
 
 ```json
 {
-   "inicio":"2021-01-01",
+   "inicio":"2021-11-01",
    "fin":"2021-12-31",
    "Ufs":[
     {
@@ -93,20 +93,21 @@ Ejemplo:
         :
 
     {
-      "fecha":"2021-01-03",
+      "fecha":"2021-11-03",
       "dato":"23.327,59"
     },
     {
-      "fecha":"2021-01-02",
+      "fecha":"2021-11-02",
       "dato":"23.324,58"
     },
     {
-      "fecha":"2021-01-01",
+      "fecha":"2021-11-01",
       "dato":"23.321,57"
     }
   ]    
 }
 ```
+Nota: En el directorio '/Desafio_Tres' se encuentra una muestra del archivo "valores.json"
 
 ### Detalle de los sistemas
 Java 8 Spring-Boot 2.4.6 Maven 3.6.3
