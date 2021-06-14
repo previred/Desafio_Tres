@@ -9,6 +9,7 @@ import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DateFormat;
@@ -29,6 +30,9 @@ public class ValoresUfServicio implements IUtil {
 
     @Autowired
     UfsServicio ufsServicio;
+
+    @Autowired
+    PathWrite p;
 
     public JSONObject getRango() {
 
@@ -101,16 +105,26 @@ public class ValoresUfServicio implements IUtil {
      */
     public void writeFile (JSONObject obj) throws IOException {
 
+        FileWriter file = null;
+
         try {
 
-            FileWriter file = new FileWriter("valores.json");
+            file = new FileWriter(p.stringPath.append(p.getFileName())
+                                              .toString());
+
             file.write(obj.toString());
-            file.flush();
-            file.close();
-            log.info("Escribe archivo \"valores.json\"");
+            log.info("Escribe archivo \"" + p.stringPath.toString() + "\"");
 
         } catch (IOException e) {
-            log.error("Error creating file \"valores.json\"", e);
+            log.error("Error creating file \"" + p.stringPath.toString() + "\"", e);
+            throw e;
+        }
+        finally {
+            p.stringPath.delete(0, p.stringPath.length()-1);
+            if (file != null) {
+                file.flush();
+                file.close();
+            }
         }
     }
 
