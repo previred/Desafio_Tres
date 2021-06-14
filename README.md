@@ -1,6 +1,7 @@
 ### Desafío 3: Complemento valores UF
 #### Nivel 3
 
+### Descripción
 Existe la librería "lib\Generador_Datos_Desafio_Tres-1.0.0.jar"
 
 Esta librería consta de dos clases:
@@ -74,7 +75,6 @@ Ejemplo:
 	- La cantidad de valores para UF son máximo 100
 	- El listado entregado con los valores UF no se encuentra ordenado y la secuencia no está completa 
 
-### Descripción
 El objetivo de este proyecto "Desafio_Tres" es hacer uso de la librería Generador_Datos_Desafio_Tres-1.0.0.jar. Generar y complementar los valores de la lista de UF haciendo uso de los métodos getUf y getUfs.
 Ordenar dicha lista por fecha de forma descendente y generar un archivo llamado "valores.json" con una estructura JSON como sigue:
 
