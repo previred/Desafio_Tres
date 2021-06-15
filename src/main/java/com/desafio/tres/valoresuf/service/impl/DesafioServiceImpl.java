@@ -19,6 +19,7 @@ import java.util.Comparator;
 import java.util.stream.Collectors;
 
 import static com.desafio.tres.valoresuf.util.json.JsonSerdes.jsonfy;
+import static java.lang.String.format;
 
 /**
  * Implementacion de la interfaz {@link DesafioService}
@@ -62,18 +63,14 @@ public class DesafioServiceImpl implements DesafioService {
         String result=jsonfy(new UfsTO().withFin(formateadorFecha.format(rango.getFin())).withInicio(formateadorFecha.format(rango.getInicio())).withUfs(fullList)).replace("ufs","UFs");
         logger.info("Convirtiendo el objeto de los resultados a un String con formato Json");
 
-        try {
-            logger.info("Salvando archivo valores.json");
-            //creando archivo de salida valores.json
-            File file =new File("valores.json");
-            FileWriter fw=new FileWriter(file);
+        //salvando archivo valores.json
+        try(var fw=new FileWriter(new File("valores.json"))){
             fw.write(result);
-            fw.close();
-        } catch (IOException e) {
-            logger.error("Error al tratar de salvar el archivo: "+e.getMessage());
-            e.printStackTrace();
+        }catch (IOException e) {
+            logger.error(format("Error al tratar de salvar el archivo: %s",e.getMessage()));
         }
         logger.info("Terminando desafio");
         return result;
     }
+
 }
