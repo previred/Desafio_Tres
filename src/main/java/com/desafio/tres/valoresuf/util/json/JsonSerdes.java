@@ -16,7 +16,7 @@ import static java.util.stream.Collectors.joining;
 import static org.slf4j.LoggerFactory.getLogger;
 
 public class JsonSerdes {
-    private static final Logger logger = getLogger(com.desafio.tres.valoresuf.util.json.JsonSerdes.class);
+    private static final Logger logger = getLogger(JsonSerdes.class);
     private static final ObjectMapper MAPPER;
 
     static {
