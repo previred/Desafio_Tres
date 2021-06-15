@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<title>Implementacion de desafío</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<body style="text-align: justify;">
+<div class="jumbotron text-center">
+    <h1>Implementando desafío</h1>
+    <p>Este ms da solucion al desafío de la página https://github.com/previred/Desafio_Tres,</p>
+    <p>el siguiente JSON muestra el resultado del algoritmo.</p>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <p th:text="${json}"></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
