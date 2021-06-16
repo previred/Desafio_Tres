@@ -26,7 +26,7 @@ public class DesafioController {
     @GetMapping
     @ApiOperation(value = "Implementacion de algoritmo del desafio", response = ModelAndView.class)
     public ModelAndView desafio() {
-        ModelAndView mav = new ModelAndView();
+        var mav = new ModelAndView();
         //agregando json al modelAndView
         mav.addObject("json", desafioService.desafio());
         mav.setViewName("Index.html");

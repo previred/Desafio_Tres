@@ -1,6 +1,6 @@
 **IMPLEMENTACION DE DESAFIO**
 
-El proyecto con el que dimos solucion al desafio sera una aplicación web en el que añadiremos una controller, que muestra como queda el archivo valores.jason. Por lo tanto, tenemos una aplicacion echa en maven y donde vamosa utilizar Spring Boot.
+El proyecto con el que dimos solucion al desafio sera una aplicación web en el que añadiremos una controller, que muestra como queda el archivo valores.json. Por lo tanto, tenemos una aplicacion echa en maven y donde vamosa utilizar Spring Boot.
 
 Para la implementacion se agregan dependencias como gson, jackson.datatype y spring-boot-starter-thymeleaf, dependencias necesarias para poder trabajar con los datos, convertir los objetos a JSON y poder utilizar el template al cual le insertamos el archivo json resultante.
 
@@ -18,4 +18,8 @@ Esperamos a que se ejecute el servidor y no cerramos la terminal sino se cerrari
  
 Ahora abra el navegador y escribimos en la barra de direcciones http://localhost:8080/ para obtener el resultado de correr el algoritmo. 
 
-La aplicacion tambien cuenta con un swagger que puede ser visualizado en http://localhost:8080/swagger-ui.html#, ademas de controlar cuando el response venga con un code diferente al code 200(code cuando todo esta bien).
+**Observaciones**
+
+La aplicacion cuenta con un swagger que puede ser visualizado en http://localhost:8080/swagger-ui.html#.
+
+Los errores de HttpServlet se capturan y se mustran en la cosola con ayuda de la clase GlobalExceptionHandler,ademas se guardan en un archivo aplication.log.

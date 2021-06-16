@@ -18,6 +18,7 @@ import static org.slf4j.LoggerFactory.getLogger;
 public class JsonSerdes {
     private static final Logger logger = getLogger(JsonSerdes.class);
     private static final ObjectMapper MAPPER;
+    private static String getMsg="Error detected when trying to parse an object from JSON";
 
     static {
         MAPPER = Jackson2ObjectMapperBuilder.json()
@@ -43,7 +44,7 @@ public class JsonSerdes {
      * @param includeQuotes Flag to specified in the quotes are desired or not for the individual elements.
      * @return A string that represents the specified array in json format.
      */
-    static public String jsonfy(String[] array, boolean includeQuotes) {
+    public static String jsonfy(String[] array, boolean includeQuotes) {
         Stream<String> stream = includeQuotes ? stream(array).map(element -> format("\"%s\"", element)) : stream(array);
         return stream.collect(joining(",", "[", "]"));
     }
@@ -55,7 +56,7 @@ public class JsonSerdes {
      * @return A resultant string that is the json representation of the specified object, <b>null</b> in case of face
      * an unexpected error.
      */
-    static public String jsonfy(Object obj) {
+    public static String jsonfy(Object obj) {
         try {
             return MAPPER.writeValueAsString(obj);
         } catch (Exception ex) {
@@ -66,12 +67,12 @@ public class JsonSerdes {
 
     //-- Deserialization Operations
 
-    static public byte[] jsonfyAsBytes(Object obj) {
+    public static byte[] jsonfyAsBytes(Object obj) {
         try {
             return MAPPER.writeValueAsBytes(obj);
         } catch (Exception ex) {
             logger.trace("Error detected when trying to covert an object to JSON (as bytes)", ex);
-            return null;
+            return new byte[0];
         }
     }
 
@@ -83,20 +84,20 @@ public class JsonSerdes {
      * @return The result of the deserialization operation, hopefully with the given type, otherwise. <b>null</b> will
      * be returned.
      */
-    static public <T> T parse(String content, Class<T> clazz) {
+    public static <T> T parse(String content, Class<T> clazz) {
         try {
             return MAPPER.readValue(content, clazz);
         } catch (Exception ex) {
-            logger.trace("Error detected when trying to parse an object from JSON", ex);
+            logger.trace(getMsg, ex);
             return null;
         }
     }
 
-    static public <T> T parse(byte[] content, Class<T> clazz) {
+    public static <T> T parse(byte[] content, Class<T> clazz) {
         try {
             return MAPPER.readValue(content, clazz);
         } catch (Exception ex) {
-            logger.trace("Error detected when trying to parse an object from JSON", ex);
+            logger.trace(getMsg, ex);
             return null;
         }
     }
@@ -110,30 +111,30 @@ public class JsonSerdes {
      * @return The result of the deserialization operation, hopefully with the given type and parameterized sub type,
      * otherwise. <b>null</b> will be returned.
      */
-    static public <T> T parse(String content, TypeReference<?> type) {
+    public static <T> T parse(String content, TypeReference<?> type) {
         try {
             return (T) MAPPER.readValue(content, type);
         } catch (Exception ex) {
-            logger.trace("Error detected when trying to parse an object from JSON", ex);
+            logger.trace(getMsg, ex);
             return null;
         }
     }
 
-    static public <T> T parse(byte[] content, TypeReference<?> type) {
+    public static <T> T parse(byte[] content, TypeReference<?> type) {
         try {
             return (T) MAPPER.readValue(content, type);
         } catch (Exception ex) {
-            logger.trace("Error detected when trying to parse an object from JSON", ex);
+            logger.trace(getMsg, ex);
             return null;
         }
     }
 
     //-- Conversion Operations
-    static public <T> T convert(Object obj, Class<T> type) {
+    public static <T> T convert(Object obj, Class<T> type) {
         return MAPPER.convertValue(obj, type);
     }
 
-    static public <T> T convert(Object obj, TypeReference<T> type) {
+    public static <T> T convert(Object obj, TypeReference<T> type) {
         return MAPPER.convertValue(obj, type);
     }
 
@@ -142,7 +143,7 @@ public class JsonSerdes {
      *
      * @return The configured mapper that is used in the utility operations.
      */
-    static public ObjectMapper mapper() {
+    public static ObjectMapper mapper() {
         return MAPPER;
     }
 }
