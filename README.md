@@ -52,4 +52,3 @@ valores.json en la raíz del proyecto.
 - Para obtener esta descarga, luego de dar click en el link /downloadJson, ir al botón (Try it out, ubicado a la derecha), seguidamente en el botón Execute, 
 y en la sección Desails del Response Body, dar click en el link Download file.
 - De igual manera se puede obtener la descarga a través de la URL del navegador: http://localhost:8010/downloadJson
-
