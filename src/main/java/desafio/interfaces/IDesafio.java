@@ -19,6 +19,4 @@ public interface IDesafio {
     public String stringFromListUfs(List<Uf> listUfs);
 
     public String jsonFromListUfs(List<Uf> listUfs);
-
-    public void showListUfs(List<Uf> listUfs);
 }

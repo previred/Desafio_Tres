@@ -10,6 +10,7 @@ import com.previred.desafio.tres.uf.vo.Uf;
 import com.previred.desafio.tres.uf.vo.Ufs;
 import desafio.enumerators.ConstantesStr;
 import desafio.interfaces.IDesafio;
+import org.springframework.stereotype.Service;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -17,6 +18,7 @@ import java.util.*;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
+@Service
 public class Desafio implements IDesafio {
 
     private Valores valores;
@@ -88,11 +90,5 @@ public class Desafio implements IDesafio {
         String result = this.stringFromListUfs(listUfs);
         JsonElement jsonElement = new JsonParser().parse(result);
         return gsonPretty.toJson(jsonElement);
-    }
-
-    public void showListUfs(List<Uf> listUfs) {
-        for (Uf uf : listUfs) {
-            this.logger.info(uf.toString());
-        }
     }
 }
