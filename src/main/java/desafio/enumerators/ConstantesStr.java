@@ -9,6 +9,7 @@ public enum ConstantesStr {
     SERVER_URL("http://localhost:8010"),
     INIT_URL("/swagger-ui.html"),
     VALUES_URL("/valoresJson"),
+    DOWNLOAD_URL("/downloadJson"),
     COMMAND_OPEN_CHROME("cmd /c start chrome.exe " + SERVER_URL.text + INIT_URL.text);
 
     /**
