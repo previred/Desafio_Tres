@@ -38,14 +38,18 @@ public class DesafioController {
 
     @GetMapping(path="/valoresJson", produces = MediaType.APPLICATION_JSON_VALUE)
     public String createJsonFile(){
-        String info = new StringBuilder(ConstantesMsg.ACCESS_GRANTED.toString() + ConstantesStr.VALUES_URL.toString()).toString();
+        StringBuilder sBuilder = new StringBuilder(ConstantesMsg.ACCESS_GRANTED.toString());
+        sBuilder.append(ConstantesStr.VALUES_URL.toString());
+        String info = sBuilder.toString();
         this.logger.info(info);
         return this.salidaJSON.createJsonFile();
     }
 
     @GetMapping(path="/downloadJson")
     public ResponseEntity<byte[]> downloadJsonFile() {
-        String info = new StringBuilder(ConstantesMsg.ACCESS_GRANTED.toString() + ConstantesStr.DOWNLOAD_URL.toString()).toString();
+        StringBuilder sBuilder = new StringBuilder(ConstantesMsg.ACCESS_GRANTED.toString());
+        sBuilder.append(ConstantesStr.DOWNLOAD_URL.toString());
+        String info = sBuilder.toString();
         this.logger.info(info);
         Path path = Paths.get(ConstantesStr.URL_FILE.toString());
         byte[] isr = new byte[0];

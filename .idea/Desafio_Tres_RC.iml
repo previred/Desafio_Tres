@@ -112,14 +112,6 @@
     <orderEntry type="library" name="Maven: org.springframework.plugin:spring-plugin-metadata:1.2.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.mapstruct:mapstruct:1.2.0.Final" level="project" />
     <orderEntry type="library" name="Maven: io.springfox:springfox-swagger-ui:2.9.2" level="project" />
-    <orderEntry type="module-library">
-      <library name="Maven: com.previred.desafio.tres:Generador_Datos_Desafio_Tres:1.0.0">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/Generador_Datos_Desafio_Tres-1.0.0.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
+    <orderEntry type="library" name="Maven: com.previred.desafio.tres:Generador_Datos_Desafio_Tres:1.0.0" level="project" />
   </component>
 </module>

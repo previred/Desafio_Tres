@@ -38,23 +38,18 @@ public class Desafio implements IDesafio {
 
     //    FUNCION QUE SE IMPLEMENTA PARA COMPLETAR HASTA EL RANGO EXIGIDO LA LISTA DE UFs
     public void completeListUfs(Ufs ufs) {
-        this.logger.info("OBTENIENDO LA LISTA DE UFs EXISTENTE EL REPOSITORIO CON TODOS LOS VALORES");
         List<Uf> repositoryList = DatosUf.getInstance().getUfs(ufs.getInicio(), ufs.getFin());
-        this.logger.info("OBTENIENDO LA LISTA DE UFs REAL QUE SE RECIBE");
         List<Uf> actualList = ufs.getUfs().stream().collect(Collectors.toList());
-        this.logger.info("OBTENIENDO LA DIFERENCIA ENTRE AMBAS LISTAS");
         repositoryList.removeAll(actualList);
         for (Uf uf:repositoryList) {
             ufs.getUfs().add(uf);
         }
     }
 
+    //    FUNCION QUE SE IMPLEMENTA PARA DEVOLVER LA LISTA DE UFs FINAL
     public List<Uf> listUfs(Ufs ufs, String order) {
-        this.logger.info("LLAMANDO AL METODO QUE RELLENA LA LISTA");
         this.completeListUfs(ufs);
-        this.logger.info("GUARDANDO LOS ELEMENTOS EN UNA LISTA PARA SER ORDENADA LUEGO");
         List<Uf> listUfs = ufs.getUfs().stream().collect(Collectors.toList());
-        this.logger.info("ORDENANDO LA LISTA EN DEPENDENCIA DEL PARAMETRO A ORDENAR");
         if (order.equalsIgnoreCase(ConstantesStr.ORDER_VALOR.toString())) {
             Collections.sort(listUfs, (Uf s1, Uf s2) -> s2.getValor().compareTo(s1.getValor()));
         } else {
@@ -63,6 +58,7 @@ public class Desafio implements IDesafio {
         return listUfs;
     }
 
+    //    FUNCION QUE SE IMPLEMENTA PARA CONVERTIR A FORMATO STRING LA LISTA DE UFs
     public String stringFromListUfs(List<Uf> listUfs) {
         StringBuilder result = new StringBuilder();
         if (!listUfs.isEmpty()) {
@@ -85,6 +81,7 @@ public class Desafio implements IDesafio {
         return result.toString();
     }
 
+    //    FUNCION QUE SE IMPLEMENTA PARA TRANSFORMAR EL STRING EN JSON
     public String jsonFromListUfs(List<Uf> listUfs) {
         Gson gsonPretty = new GsonBuilder().setPrettyPrinting().create();
         String result = this.stringFromListUfs(listUfs);

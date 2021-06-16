@@ -16,9 +16,13 @@ public class ErrorRedirectController {
     public String redirect(HttpServletRequest request) {
         String url = request.getRequestURI();
         if (!url.equalsIgnoreCase(ConstantesStr.VALUES_URL.toString())) {
-            String info = new StringBuilder(url + ": (" + ConstantesMsg.ACCESS_DENIED.toString() + ")").toString();
+            StringBuilder sBuilder = new StringBuilder(url);
+            sBuilder.append(": (" + ConstantesMsg.ACCESS_DENIED.toString() + ")");
+            String info = sBuilder.toString();
             this.logger.severe(info);
-            info = new StringBuilder(ConstantesMsg.ACCESS_REDIRECTED.toString() + ConstantesStr.INIT_URL.toString()).toString();
+            sBuilder = new StringBuilder(ConstantesMsg.ACCESS_REDIRECTED.toString());
+            sBuilder.append(ConstantesStr.INIT_URL.toString());
+            info = sBuilder.toString();
             this.logger.info(info);
             return "redirect:" + ConstantesStr.INIT_URL.toString();
         }

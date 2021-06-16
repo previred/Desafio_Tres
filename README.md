@@ -28,6 +28,8 @@ A) public String redirect(HttpServletRequest request) que redirecciona a la URL 
 
 - Se crean objetos de tipo Logger, que constantemente mostrarán los logs de lo que se va ejecutando en la aplicación.
 
+- Se incluyen test units para el controlador DesafioController (una prueba) y para la clase servicio Desafio (dos pruebas)
+
 Tecnología y librerías utilizadas
 
 - Lenguaje: Java
