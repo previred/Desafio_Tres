@@ -13,8 +13,11 @@ E) public String jsonFromListUfs(List<Uf> listUfs), obtiene el JSON a partir del
 - Se creó una clase SalidaJSON que implementa la interfaz ISalidaJSON, donde se implementan los métodos:
 A) public String createJsonFile(), donde se crea el archivo en formato JSON que es copiado en la raíz del proyecto y devuelve el JSON que es mostrado en el navegador.
 
-- Se creó una clase de tipo RestController llamada DesafioController que contiene el método public String createJsonFile() que llama al objeto de tipo ISalidaJSON, atributo de esta clase y a su método del mismo nombre.
+- Se creó una clase de tipo RestController llamada DesafioController que contiene:
+A) el método public String createJsonFile() que llama al objeto de tipo ISalidaJSON, atributo de esta clase y a su método del mismo nombre. 
 (Esta funcionalidad es un RequestMapping de método GET y que devuelve un JSON).
+B) el método public ResponseEntity<byte[]> downloadJsonFile(), que descarga el archivo creado por el método anterior. 
+(Esta funcionalidad es un RequestMapping de método GET y que devuelve un ResponseEntity genérico como array de bytes).
 
 - Se creó la clase Main, como clase principal a iniciar Spring Boot.
 

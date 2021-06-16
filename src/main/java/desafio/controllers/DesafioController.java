@@ -41,7 +41,7 @@ public class DesafioController {
     }
 
     @GetMapping(path="/downloadJson")
-    public ResponseEntity<byte[]> downloadJson() throws Exception {
+    public ResponseEntity<byte[]> downloadJsonFile() throws Exception {
         this.logger.info(ConstantesMsg.ACCESS_GRANTED.toString() + ConstantesStr.DOWNLOAD_URL.toString());
         Path path = Paths.get(ConstantesStr.URL_FILE.toString());
         byte[] isr = Files.readAllBytes(path);
