@@ -26,6 +26,8 @@ A) public String redirect(HttpServletRequest request) que redirecciona a la URL 
 
 - Se creó la clase Main, como clase principal a iniciar Spring Boot.
 
+- Se crean objetos de tipo Logger, que constantemente mostrarán los logs de lo que se va ejecutando en la aplicación.
+
 Tecnología y librerías utilizadas
 
 - Lenguaje: Java

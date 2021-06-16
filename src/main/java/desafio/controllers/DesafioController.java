@@ -12,6 +12,8 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -36,15 +38,22 @@ public class DesafioController {
 
     @GetMapping(path="/valoresJson", produces = MediaType.APPLICATION_JSON_VALUE)
     public String createJsonFile(){
-        this.logger.info(ConstantesMsg.ACCESS_GRANTED.toString() + ConstantesStr.VALUES_URL.toString());
+        String info = new StringBuilder(ConstantesMsg.ACCESS_GRANTED.toString() + ConstantesStr.VALUES_URL.toString()).toString();
+        this.logger.info(info);
         return this.salidaJSON.createJsonFile();
     }
 
     @GetMapping(path="/downloadJson")
-    public ResponseEntity<byte[]> downloadJsonFile() throws Exception {
-        this.logger.info(ConstantesMsg.ACCESS_GRANTED.toString() + ConstantesStr.DOWNLOAD_URL.toString());
+    public ResponseEntity<byte[]> downloadJsonFile() {
+        String info = new StringBuilder(ConstantesMsg.ACCESS_GRANTED.toString() + ConstantesStr.DOWNLOAD_URL.toString()).toString();
+        this.logger.info(info);
         Path path = Paths.get(ConstantesStr.URL_FILE.toString());
-        byte[] isr = Files.readAllBytes(path);
+        byte[] isr = new byte[0];
+        try {
+            isr = Files.readAllBytes(path);
+        } catch (IOException e) {
+            this.logger.severe(e.getMessage());
+        }
         HttpHeaders respHeaders = new HttpHeaders();
         respHeaders.setContentLength(isr.length);
         respHeaders.setContentType(new MediaType("text", "json"));
