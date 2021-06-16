@@ -30,6 +30,8 @@ A) public String redirect(HttpServletRequest request) que redirecciona a la URL 
 
 - Se incluyen test units para el controlador DesafioController (una prueba) y para la clase servicio Desafio (dos pruebas)
 
+- Se incluyen en el pom.xml los valores relacionados con el sonar host, login y pass.
+
 Tecnología y librerías utilizadas
 
 - Lenguaje: Java
