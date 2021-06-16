@@ -33,6 +33,7 @@ import static java.lang.String.format;
 
 @Service("desafioservice")
 public class DesafioServiceImpl implements DesafioService {
+
     private static final Logger logger = LoggerFactory.getLogger(DesafioServiceImpl.class);
 
     Function<Date, String> formateadorFecha = date -> new SimpleDateFormat("yyyy/MM/dd").format(date);
