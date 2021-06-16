@@ -18,7 +18,7 @@ public class SalidaJSON implements ISalidaJSON {
 
     public String createJsonFile() {
         String result = "";
-        try (FileWriter file = new FileWriter("valores.json")) {
+        try (FileWriter file = new FileWriter(ConstantesStr.URL_FILE.toString())) {
             Ufs rango = desafio.getRango();
             String order = ConstantesStr.ORDER_FECHA.toString();
             List<Uf> listUfs = desafio.listUfs(rango, order);
@@ -28,7 +28,7 @@ public class SalidaJSON implements ISalidaJSON {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            return result;
         }
+        return result;
     }
 }

@@ -27,7 +27,7 @@ public class Desafio implements IDesafio {
     }
 
     public Logger getLogger() {
-        return logger;
+        return this.logger;
     }
 
     public Ufs getRango() {
@@ -42,8 +42,8 @@ public class Desafio implements IDesafio {
         List<Uf> actualList = ufs.getUfs().stream().collect(Collectors.toList());
         this.logger.info("OBTENIENDO LA DIFERENCIA ENTRE AMBAS LISTAS");
         repositoryList.removeAll(actualList);
-        for (int i = 0; i < repositoryList.size(); i++) {
-            ufs.getUfs().add(repositoryList.get(i));
+        for (Uf uf:repositoryList) {
+            ufs.getUfs().add(uf);
         }
     }
 
@@ -54,20 +54,16 @@ public class Desafio implements IDesafio {
         List<Uf> listUfs = ufs.getUfs().stream().collect(Collectors.toList());
         this.logger.info("ORDENANDO LA LISTA EN DEPENDENCIA DEL PARAMETRO A ORDENAR");
         if (order.equalsIgnoreCase(ConstantesStr.ORDER_VALOR.toString())) {
-            Collections.sort(listUfs, (Uf s1, Uf s2) -> {
-                return s2.getValor().compareTo(s1.getValor());
-            });
+            Collections.sort(listUfs, (Uf s1, Uf s2) -> s2.getValor().compareTo(s1.getValor()));
         } else {
-            Collections.sort(listUfs, (Uf s1, Uf s2) -> {
-                return s2.getFecha().compareTo(s1.getFecha());
-            });
+            Collections.sort(listUfs, (Uf s1, Uf s2) -> s2.getFecha().compareTo(s1.getFecha()));
         }
         return listUfs;
     }
 
     public String stringFromListUfs(List<Uf> listUfs) {
-        String result = "";
-        if (listUfs.size() > 0) {
+        StringBuilder result = new StringBuilder();
+        if (!listUfs.isEmpty()) {
             String dateIni;
             String dateFin;
             String date;
@@ -75,29 +71,28 @@ public class Desafio implements IDesafio {
             DateFormat format = new SimpleDateFormat(ConstantesStr.FORMAT_FECHA.toString());
             dateFin = format.format(listUfs.get(0).getFecha());
             dateIni = format.format(listUfs.get(listUfs.size() - 1).getFecha());
-            result += "{\"inicio\":\"" + dateIni + "\",\"fin\":\"" + dateFin + "\",\"UFs\":[";
+            result.append("{\"inicio\":\"" + dateIni + "\",\"fin\":\"" + dateFin + "\",\"UFs\":[");
             for (Uf uf : listUfs) {
                 date = format.format(uf.getFecha());
                 valueStr = String.valueOf(uf.getValor());
-                result += "{\"fecha\":\"" + date + "\",\"dato\":\"" + valueStr + "\"},";
+                result.append("{\"fecha\":\"" + date + "\",\"dato\":\"" + valueStr + "\"},");
             }
-            result = result.substring(0, result.length() - 1);
-            result += "]}";
+            result = new StringBuilder(result.substring(0, result.length() - 1));
+            result.append("]}");
         }
-        return result;
+        return result.toString();
     }
 
     public String jsonFromListUfs(List<Uf> listUfs) {
-        Gson gson_pretty = new GsonBuilder().setPrettyPrinting().create();
+        Gson gsonPretty = new GsonBuilder().setPrettyPrinting().create();
         String result = this.stringFromListUfs(listUfs);
         JsonElement jsonElement = new JsonParser().parse(result);
-        String feeds = gson_pretty.toJson(jsonElement);
-        return feeds;
+        return gsonPretty.toJson(jsonElement);
     }
 
     public void showListUfs(List<Uf> listUfs) {
         for (Uf uf : listUfs) {
-            System.out.println(uf.toString());
+            this.logger.info(uf.toString());
         }
     }
 }

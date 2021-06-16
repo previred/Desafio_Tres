@@ -5,8 +5,7 @@ import desafio.dao.SalidaJSON;
 import desafio.interfaces.IDesafio;
 import desafio.interfaces.ISalidaJSON;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -25,9 +24,8 @@ public class DesafioController {
         this.salidaJSON = new SalidaJSON(desafio);
     }
 
-    @RequestMapping(path="/valoresJson", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.GET)
+    @GetMapping(path="/valoresJson", produces = MediaType.APPLICATION_JSON_VALUE)
     public String createJsonFile(){
-        String result = this.salidaJSON.createJsonFile();
-        return result;
+        return this.salidaJSON.createJsonFile();
     }
 }
