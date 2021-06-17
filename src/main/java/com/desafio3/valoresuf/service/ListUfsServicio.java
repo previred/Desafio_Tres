@@ -8,20 +8,20 @@ import java.util.List;
 import java.util.Set;
 
 @Service
-public class UfsServicio {
+public class ListUfsServicio {
 
-    private List<Uf> UFs;
+    private List<Uf> ufs;
 
     //Convert Set<Uf> to List<Uf>
     public void convertSetToList(Set<Uf> setUf) {
-        UFs = new ArrayList<>(setUf);
+        ufs = new ArrayList<>(setUf);
     }
 
-    public List<Uf> getUFs() {
-        return UFs;
+    public List<Uf> getUfs() {
+        return ufs;
     }
 
-    public void setUFs(List<Uf> UFs) {
-        this.UFs = UFs;
+    public void setUfs(List<Uf> ufs) {
+        this.ufs = ufs;
     }
 }

@@ -9,7 +9,7 @@ public class PathWrite {
     @Value("${write.file_name}")
     private String fileName;
 
-    public static StringBuilder stringPath = new StringBuilder();
+    public static final StringBuilder stringPath = new StringBuilder();
 
     public String getFileName() {
         return fileName;
