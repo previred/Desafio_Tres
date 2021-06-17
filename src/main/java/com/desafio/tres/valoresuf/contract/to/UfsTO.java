@@ -46,12 +46,4 @@ public class UfsTO {
         return this;
     }
 
-    @Override
-    public String toString() {
-        return "UfsBind{" +
-                "inicio=" + inicio +
-                ", fin=" + fin +
-                ", UFs=" + ufs +
-                '}';
-    }
 }
