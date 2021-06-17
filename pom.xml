@@ -29,18 +29,14 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.7.9</version>
+                <version>0.8.5</version>
                 <executions>
                     <execution>
                         <goals>
                             <goal>prepare-agent</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>generate-code-coverage-report</id>
-                        <phase>test</phase>
-                        <goals>
+                            <goal>prepare-agent-integration</goal>
                             <goal>report</goal>
+                            <goal>report-integration</goal>
                         </goals>
                     </execution>
                 </executions>
@@ -48,6 +44,11 @@
         </plugins>
     </build>
     <dependencies>
+        <dependency>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
@@ -107,18 +108,5 @@
             <systemPath>${project.basedir}/lib/Generador_Datos_Desafio_Tres-1.0.0.jar</systemPath>
         </dependency>
     </dependencies>
-    <profiles>
-        <profile>
-            <id>sonar</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <sonar.host.url>http://200.111.183.149:8096</sonar.host.url>
-                <sonar.organization>ACL</sonar.organization>
-                <sonar.login>admin</sonar.login>
-                <sonar.password>admin</sonar.password>
-            </properties>
-        </profile>
-    </profiles>
+
 </project>
