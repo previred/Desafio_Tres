@@ -1,0 +1,552 @@
+16/06/2021 21:09:34 [ INFO] (App : 61)  - Method: cargarPropertie 
+16/06/2021 21:09:34 [DEBUG] (App : 46)  - Tamaño de ufs: 97
+16/06/2021 21:09:34 [DEBUG] (App : 49)  - Uf faltantes: 3
+16/06/2021 21:09:34 [ INFO] (CompletarValores : 30)  - Metodo: getValoresfaltantes 
+16/06/2021 21:09:34 [ INFO] (CompletarValores : 35)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+16/06/2021 21:09:34 [DEBUG] (CompletarValores : 36)  - Rango de Fecha -  Fecha inicio: 2011-06-02 Fecha Fin: 2012-12-15
+16/06/2021 21:09:34 [ INFO] (CompletarValores : 46)  - buscando Uf para las fechas faltante
+16/06/2021 21:09:34 [ INFO] (CompletarValores : 46)  - buscando Uf para las fechas faltante
+16/06/2021 21:09:34 [ INFO] (CompletarValores : 48)  - buscando otro UF la lista ya lo tiene
+16/06/2021 21:09:34 [ INFO] (CompletarValores : 48)  - buscando otro UF la lista ya lo tiene
+16/06/2021 21:09:34 [ INFO] (CompletarValores : 46)  - buscando Uf para las fechas faltante
+16/06/2021 21:09:34 [ INFO] (CompletarValores : 48)  - buscando otro UF la lista ya lo tiene
+16/06/2021 21:09:34 [ INFO] (CompletarValores : 48)  - buscando otro UF la lista ya lo tiene
+16/06/2021 21:09:34 [ INFO] (CompletarValores : 48)  - buscando otro UF la lista ya lo tiene
+16/06/2021 21:09:34 [DEBUG] (CompletarValores : 58)  - tamaño lista completada: 100
+16/06/2021 21:09:34 [DEBUG] (App : 51)  - Tamaño de ufs completada: 100
+16/06/2021 21:09:34 [ INFO] (CompletarValores : 23)  - Metodo: ordenarUf 
+16/06/2021 21:09:34 [ INFO] (ExportarCsv : 61)  - Metodo: generarArchivo 
+16/06/2021 21:09:34 [DEBUG] (ExportarCsv : 65)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\desafio.csv
+16/06/2021 21:09:34 [ INFO] (ExportarCsv : 43)  - Metodo: parseListToString 
+16/06/2021 21:09:34 [ INFO] (ExportarCsv : 81)  - Fin de generarArchivo
+16/06/2021 21:09:40 [ INFO] (App : 36)  - Method: main - iniciando Aplicacion 
+16/06/2021 21:09:40 [ INFO] (App : 61)  - Method: cargarPropertie 
+16/06/2021 21:09:40 [DEBUG] (App : 46)  - Tamaño de ufs: 95
+16/06/2021 21:09:40 [DEBUG] (App : 49)  - Uf faltantes: 5
+16/06/2021 21:09:40 [ INFO] (CompletarValores : 30)  - Metodo: getValoresfaltantes 
+16/06/2021 21:09:40 [ INFO] (CompletarValores : 35)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+16/06/2021 21:09:40 [DEBUG] (CompletarValores : 36)  - Rango de Fecha -  Fecha inicio: 2012-03-24 Fecha Fin: 2013-06-08
+16/06/2021 21:09:40 [ INFO] (CompletarValores : 46)  - buscando Uf para las fechas faltante
+16/06/2021 21:09:40 [ INFO] (CompletarValores : 46)  - buscando Uf para las fechas faltante
+16/06/2021 21:09:40 [ INFO] (CompletarValores : 46)  - buscando Uf para las fechas faltante
+16/06/2021 21:09:40 [ INFO] (CompletarValores : 46)  - buscando Uf para las fechas faltante
+16/06/2021 21:09:40 [ INFO] (CompletarValores : 46)  - buscando Uf para las fechas faltante
+16/06/2021 21:09:40 [DEBUG] (CompletarValores : 58)  - tamaño lista completada: 100
+16/06/2021 21:09:40 [DEBUG] (App : 51)  - Tamaño de ufs completada: 100
+16/06/2021 21:09:40 [ INFO] (CompletarValores : 23)  - Metodo: ordenarUf 
+16/06/2021 21:09:40 [ INFO] (ExportarCsv : 61)  - Metodo: generarArchivo 
+16/06/2021 21:09:40 [DEBUG] (ExportarCsv : 65)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\desafio.csv
+16/06/2021 21:09:40 [ INFO] (ExportarCsv : 43)  - Metodo: parseListToString 
+16/06/2021 21:09:40 [ INFO] (ExportarCsv : 81)  - Fin de generarArchivo
+16/06/2021 21:09:43 [ INFO] (App : 36)  - Method: main - iniciando Aplicacion 
+16/06/2021 21:09:43 [ INFO] (App : 61)  - Method: cargarPropertie 
+16/06/2021 21:09:43 [DEBUG] (App : 46)  - Tamaño de ufs: 96
+16/06/2021 21:09:43 [DEBUG] (App : 49)  - Uf faltantes: 4
+16/06/2021 21:09:43 [ INFO] (CompletarValores : 30)  - Metodo: getValoresfaltantes 
+16/06/2021 21:09:43 [ INFO] (CompletarValores : 35)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+16/06/2021 21:09:43 [DEBUG] (CompletarValores : 36)  - Rango de Fecha -  Fecha inicio: 2011-07-27 Fecha Fin: 2013-09-05
+16/06/2021 21:09:43 [ INFO] (CompletarValores : 46)  - buscando Uf para las fechas faltante
+16/06/2021 21:09:43 [ INFO] (CompletarValores : 46)  - buscando Uf para las fechas faltante
+16/06/2021 21:09:43 [ INFO] (CompletarValores : 46)  - buscando Uf para las fechas faltante
+16/06/2021 21:09:43 [ INFO] (CompletarValores : 46)  - buscando Uf para las fechas faltante
+16/06/2021 21:09:43 [DEBUG] (CompletarValores : 58)  - tamaño lista completada: 100
+16/06/2021 21:09:43 [DEBUG] (App : 51)  - Tamaño de ufs completada: 100
+16/06/2021 21:09:43 [ INFO] (CompletarValores : 23)  - Metodo: ordenarUf 
+16/06/2021 21:09:43 [ INFO] (ExportarCsv : 61)  - Metodo: generarArchivo 
+16/06/2021 21:09:43 [DEBUG] (ExportarCsv : 65)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\desafio.csv
+16/06/2021 21:09:43 [ INFO] (ExportarCsv : 43)  - Metodo: parseListToString 
+16/06/2021 21:09:43 [ INFO] (ExportarCsv : 81)  - Fin de generarArchivo
+16/06/2021 21:09:47 [ INFO] (App : 36)  - Method: main - iniciando Aplicacion 
+16/06/2021 21:09:47 [ INFO] (App : 61)  - Method: cargarPropertie 
+16/06/2021 21:09:47 [DEBUG] (App : 46)  - Tamaño de ufs: 100
+16/06/2021 21:09:47 [DEBUG] (App : 49)  - Uf faltantes: 0
+16/06/2021 21:09:47 [ INFO] (CompletarValores : 30)  - Metodo: getValoresfaltantes 
+16/06/2021 21:09:47 [ INFO] (CompletarValores : 35)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+16/06/2021 21:09:47 [DEBUG] (CompletarValores : 36)  - Rango de Fecha -  Fecha inicio: 2010-01-24 Fecha Fin: 2013-06-22
+16/06/2021 21:09:47 [DEBUG] (CompletarValores : 58)  - tamaño lista completada: 100
+16/06/2021 21:09:47 [DEBUG] (App : 51)  - Tamaño de ufs completada: 100
+16/06/2021 21:09:47 [ INFO] (CompletarValores : 23)  - Metodo: ordenarUf 
+16/06/2021 21:09:47 [ INFO] (ExportarCsv : 61)  - Metodo: generarArchivo 
+16/06/2021 21:09:47 [DEBUG] (ExportarCsv : 65)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\desafio.csv
+16/06/2021 21:09:47 [ INFO] (ExportarCsv : 43)  - Metodo: parseListToString 
+16/06/2021 21:09:47 [ INFO] (ExportarCsv : 81)  - Fin de generarArchivo
+16/06/2021 21:09:49 [ INFO] (App : 36)  - Method: main - iniciando Aplicacion 
+16/06/2021 21:09:49 [ INFO] (App : 61)  - Method: cargarPropertie 
+16/06/2021 21:09:49 [DEBUG] (App : 46)  - Tamaño de ufs: 100
+16/06/2021 21:09:49 [DEBUG] (App : 49)  - Uf faltantes: 0
+16/06/2021 21:09:49 [ INFO] (CompletarValores : 30)  - Metodo: getValoresfaltantes 
+16/06/2021 21:09:49 [ INFO] (CompletarValores : 35)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+16/06/2021 21:09:49 [DEBUG] (CompletarValores : 36)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2013-04-16
+16/06/2021 21:09:49 [DEBUG] (CompletarValores : 58)  - tamaño lista completada: 100
+16/06/2021 21:09:49 [DEBUG] (App : 51)  - Tamaño de ufs completada: 100
+16/06/2021 21:09:49 [ INFO] (CompletarValores : 23)  - Metodo: ordenarUf 
+16/06/2021 21:09:49 [ INFO] (ExportarCsv : 61)  - Metodo: generarArchivo 
+16/06/2021 21:09:49 [DEBUG] (ExportarCsv : 65)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\desafio.csv
+16/06/2021 21:09:49 [ INFO] (ExportarCsv : 43)  - Metodo: parseListToString 
+16/06/2021 21:09:49 [ INFO] (ExportarCsv : 81)  - Fin de generarArchivo
+16/06/2021 21:09:50 [ INFO] (App : 36)  - Method: main - iniciando Aplicacion 
+16/06/2021 21:09:50 [ INFO] (App : 61)  - Method: cargarPropertie 
+16/06/2021 21:09:51 [DEBUG] (App : 46)  - Tamaño de ufs: 95
+16/06/2021 21:09:51 [DEBUG] (App : 49)  - Uf faltantes: 5
+16/06/2021 21:09:51 [ INFO] (CompletarValores : 30)  - Metodo: getValoresfaltantes 
+16/06/2021 21:09:51 [ INFO] (CompletarValores : 35)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+16/06/2021 21:09:51 [DEBUG] (CompletarValores : 36)  - Rango de Fecha -  Fecha inicio: 2011-10-15 Fecha Fin: 2013-11-16
+16/06/2021 21:09:51 [ INFO] (CompletarValores : 46)  - buscando Uf para las fechas faltante
+16/06/2021 21:09:51 [ INFO] (CompletarValores : 46)  - buscando Uf para las fechas faltante
+16/06/2021 21:09:51 [ INFO] (CompletarValores : 46)  - buscando Uf para las fechas faltante
+16/06/2021 21:09:51 [ INFO] (CompletarValores : 48)  - buscando otro UF la lista ya lo tiene
+16/06/2021 21:09:51 [ INFO] (CompletarValores : 46)  - buscando Uf para las fechas faltante
+16/06/2021 21:09:51 [ INFO] (CompletarValores : 46)  - buscando Uf para las fechas faltante
+16/06/2021 21:09:51 [DEBUG] (CompletarValores : 58)  - tamaño lista completada: 100
+16/06/2021 21:09:51 [DEBUG] (App : 51)  - Tamaño de ufs completada: 100
+16/06/2021 21:09:51 [ INFO] (CompletarValores : 23)  - Metodo: ordenarUf 
+16/06/2021 21:09:51 [ INFO] (ExportarCsv : 61)  - Metodo: generarArchivo 
+16/06/2021 21:09:51 [DEBUG] (ExportarCsv : 65)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\desafio.csv
+16/06/2021 21:09:51 [ INFO] (ExportarCsv : 43)  - Metodo: parseListToString 
+16/06/2021 21:09:51 [ INFO] (ExportarCsv : 81)  - Fin de generarArchivo
+16/06/2021 21:09:52 [ INFO] (App : 36)  - Method: main - iniciando Aplicacion 
+16/06/2021 21:09:52 [ INFO] (App : 61)  - Method: cargarPropertie 
+16/06/2021 21:09:52 [DEBUG] (App : 46)  - Tamaño de ufs: 93
+16/06/2021 21:09:52 [DEBUG] (App : 49)  - Uf faltantes: 7
+16/06/2021 21:09:52 [ INFO] (CompletarValores : 30)  - Metodo: getValoresfaltantes 
+16/06/2021 21:09:52 [ INFO] (CompletarValores : 35)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+16/06/2021 21:09:52 [DEBUG] (CompletarValores : 36)  - Rango de Fecha -  Fecha inicio: 2010-05-06 Fecha Fin: 2013-02-18
+16/06/2021 21:09:52 [ INFO] (CompletarValores : 46)  - buscando Uf para las fechas faltante
+16/06/2021 21:09:52 [ INFO] (CompletarValores : 46)  - buscando Uf para las fechas faltante
+16/06/2021 21:09:52 [ INFO] (CompletarValores : 46)  - buscando Uf para las fechas faltante
+16/06/2021 21:09:52 [ INFO] (CompletarValores : 46)  - buscando Uf para las fechas faltante
+16/06/2021 21:09:52 [ INFO] (CompletarValores : 46)  - buscando Uf para las fechas faltante
+16/06/2021 21:09:52 [ INFO] (CompletarValores : 46)  - buscando Uf para las fechas faltante
+16/06/2021 21:09:52 [ INFO] (CompletarValores : 46)  - buscando Uf para las fechas faltante
+16/06/2021 21:09:52 [DEBUG] (CompletarValores : 58)  - tamaño lista completada: 100
+16/06/2021 21:09:52 [DEBUG] (App : 51)  - Tamaño de ufs completada: 100
+16/06/2021 21:09:52 [ INFO] (CompletarValores : 23)  - Metodo: ordenarUf 
+16/06/2021 21:09:52 [ INFO] (ExportarCsv : 61)  - Metodo: generarArchivo 
+16/06/2021 21:09:52 [DEBUG] (ExportarCsv : 65)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\desafio.csv
+16/06/2021 21:09:52 [ INFO] (ExportarCsv : 43)  - Metodo: parseListToString 
+16/06/2021 21:09:52 [ INFO] (ExportarCsv : 81)  - Fin de generarArchivo
+16/06/2021 21:09:54 [ INFO] (App : 36)  - Method: main - iniciando Aplicacion 
+16/06/2021 21:09:54 [ INFO] (App : 61)  - Method: cargarPropertie 
+16/06/2021 21:09:54 [DEBUG] (App : 46)  - Tamaño de ufs: 100
+16/06/2021 21:09:54 [DEBUG] (App : 49)  - Uf faltantes: 0
+16/06/2021 21:09:54 [ INFO] (CompletarValores : 30)  - Metodo: getValoresfaltantes 
+16/06/2021 21:09:54 [ INFO] (CompletarValores : 35)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+16/06/2021 21:09:54 [DEBUG] (CompletarValores : 36)  - Rango de Fecha -  Fecha inicio: 2011-01-04 Fecha Fin: 2013-10-01
+16/06/2021 21:09:54 [DEBUG] (CompletarValores : 58)  - tamaño lista completada: 100
+16/06/2021 21:09:54 [DEBUG] (App : 51)  - Tamaño de ufs completada: 100
+16/06/2021 21:09:54 [ INFO] (CompletarValores : 23)  - Metodo: ordenarUf 
+16/06/2021 21:09:54 [ INFO] (ExportarCsv : 61)  - Metodo: generarArchivo 
+16/06/2021 21:09:54 [DEBUG] (ExportarCsv : 65)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\desafio.csv
+16/06/2021 21:09:54 [ INFO] (ExportarCsv : 43)  - Metodo: parseListToString 
+16/06/2021 21:09:54 [ INFO] (ExportarCsv : 81)  - Fin de generarArchivo
+16/06/2021 21:36:41 [ INFO] (App : 36)  - Method: main - iniciando Aplicacion 
+16/06/2021 21:36:41 [ INFO] (App : 61)  - Method: cargarPropertie 
+16/06/2021 21:36:41 [DEBUG] (App : 46)  - Tamaño de ufs: 98
+16/06/2021 21:36:41 [DEBUG] (App : 49)  - Uf faltantes: 2
+16/06/2021 21:36:41 [ INFO] (CompletarValores : 30)  - Metodo: getValoresfaltantes 
+16/06/2021 21:36:41 [ INFO] (CompletarValores : 35)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+16/06/2021 21:36:41 [DEBUG] (CompletarValores : 36)  - Rango de Fecha -  Fecha inicio: 2011-08-08 Fecha Fin: 2013-07-19
+16/06/2021 21:36:41 [DEBUG] (CompletarValores : 56)  - tamaño lista completada: 100
+16/06/2021 21:36:41 [DEBUG] (App : 51)  - Tamaño de ufs completada: 100
+16/06/2021 21:36:41 [ INFO] (CompletarValores : 23)  - Metodo: ordenarUf 
+16/06/2021 21:36:41 [ INFO] (ExportarCsv : 61)  - Metodo: generarArchivo 
+16/06/2021 21:36:41 [DEBUG] (ExportarCsv : 65)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\desafio.csv
+16/06/2021 21:36:41 [ INFO] (ExportarCsv : 43)  - Metodo: parseListToString 
+16/06/2021 21:36:41 [ INFO] (ExportarCsv : 81)  - Fin de generarArchivo
+16/06/2021 21:39:23 [ INFO] (App : 36)  - Method: main - iniciando Aplicacion 
+16/06/2021 21:39:23 [ INFO] (App : 62)  - Method: cargarPropertie 
+16/06/2021 21:39:23 [DEBUG] (App : 46)  - Tamaño de ufs: 91
+16/06/2021 21:39:23 [DEBUG] (App : 49)  - Uf faltantes: 9
+16/06/2021 21:39:23 [ INFO] (CompletarValores : 30)  - Metodo: getValoresfaltantes 
+16/06/2021 21:39:23 [ INFO] (CompletarValores : 35)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+16/06/2021 21:39:23 [DEBUG] (CompletarValores : 36)  - Rango de Fecha -  Fecha inicio: 2011-01-25 Fecha Fin: 2013-06-30
+16/06/2021 21:39:23 [DEBUG] (CompletarValores : 56)  - tamaño lista completada: 100
+16/06/2021 21:39:23 [ INFO] (CompletarValores : 57)  - Metodo: getValoresfaltantes - Ufs completados 
+16/06/2021 21:39:23 [ INFO] (CompletarValores : 23)  - Metodo: ordenarUf 
+16/06/2021 21:39:23 [ INFO] (ExportarCsv : 61)  - Metodo: generarArchivo 
+16/06/2021 21:39:23 [DEBUG] (ExportarCsv : 65)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\desafio.csv
+16/06/2021 21:39:23 [ INFO] (ExportarCsv : 43)  - Metodo: parseListToString 
+16/06/2021 21:39:23 [ INFO] (ExportarCsv : 81)  - Fin de generarArchivo
+16/06/2021 21:39:23 [ INFO] (App : 55)  - Method: main - Fin de Aplicacion 
+16/06/2021 21:50:22 [ INFO] (App : 37)  - Method: main - iniciando Aplicacion 
+16/06/2021 21:50:22 [ INFO] (App : 66)  - Method: cargarPropertie 
+16/06/2021 21:50:22 [DEBUG] (App : 47)  - Tamaño de ufs: 94
+16/06/2021 21:50:22 [DEBUG] (App : 50)  - Uf faltantes: 6
+16/06/2021 21:50:22 [ INFO] (CompletarValores : 49)  - Metodo: getValoresfaltantes 
+16/06/2021 21:50:22 [ INFO] (CompletarValores : 54)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+16/06/2021 21:50:22 [DEBUG] (CompletarValores : 55)  - Rango de Fecha -  Fecha inicio: 2011-06-01 Fecha Fin: 2013-11-06
+16/06/2021 21:50:22 [DEBUG] (CompletarValores : 75)  - tamaño lista completada: 100
+16/06/2021 21:50:22 [ INFO] (CompletarValores : 76)  - Metodo: getValoresfaltantes - Ufs completados 
+16/06/2021 21:50:22 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+16/06/2021 21:50:22 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+16/06/2021 21:50:22 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\desafio.csv
+16/06/2021 21:50:22 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+16/06/2021 21:50:22 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+16/06/2021 21:50:22 [ INFO] (App : 56)  - Method: main - Fin de Aplicacion 
+16/06/2021 22:22:28 [ INFO] (App : 37)  - Method: main - iniciando Aplicacion 
+16/06/2021 22:22:28 [ INFO] (App : 66)  - Method: cargarPropertie 
+16/06/2021 22:22:28 [DEBUG] (App : 47)  - Tamaño de ufs: 91
+16/06/2021 22:22:28 [DEBUG] (App : 50)  - Uf faltantes: 9
+16/06/2021 22:22:28 [ INFO] (CompletarValores : 49)  - Metodo: getValoresfaltantes 
+16/06/2021 22:22:28 [ INFO] (CompletarValores : 54)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+16/06/2021 22:22:28 [DEBUG] (CompletarValores : 55)  - Rango de Fecha -  Fecha inicio: 2010-04-20 Fecha Fin: 2013-01-24
+16/06/2021 22:22:28 [DEBUG] (CompletarValores : 75)  - tamaño lista completada: 100
+16/06/2021 22:22:28 [ INFO] (CompletarValores : 76)  - Metodo: getValoresfaltantes - Ufs completados 
+16/06/2021 22:22:28 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+16/06/2021 22:22:28 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+16/06/2021 22:22:28 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\desafio.csv
+16/06/2021 22:22:28 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+16/06/2021 22:22:28 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+16/06/2021 22:22:28 [ INFO] (App : 56)  - Method: main - Fin de Aplicacion 
+17/06/2021 13:25:47 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 13:27:22 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 13:36:49 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 13:38:32 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 13:45:30 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 15:19:38 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 15:28:05 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 15:41:07 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 15:41:36 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 15:43:55 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 15:45:27 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 15:46:01 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 15:47:05 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 15:48:02 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 15:50:36 [ INFO] (CompletarValores : 49)  - Metodo: getValoresfaltantes 
+17/06/2021 15:50:36 [ INFO] (CompletarValores : 54)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 15:50:36 [DEBUG] (CompletarValores : 55)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 15:50:37 [DEBUG] (CompletarValores : 75)  - tama�o lista completada: 6
+17/06/2021 15:50:37 [ INFO] (CompletarValores : 76)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 15:50:37 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 15:50:37 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 15:50:37 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 15:50:37 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 15:50:37 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 15:51:31 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 15:51:31 [ INFO] (CompletarValores : 49)  - Metodo: getValoresfaltantes 
+17/06/2021 15:51:31 [ INFO] (CompletarValores : 54)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 15:51:31 [DEBUG] (CompletarValores : 55)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 15:51:31 [DEBUG] (CompletarValores : 75)  - tama�o lista completada: 6
+17/06/2021 15:51:31 [ INFO] (CompletarValores : 76)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 15:51:31 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 15:51:31 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 15:51:31 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 15:51:31 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 15:53:05 [ INFO] (CompletarValores : 49)  - Metodo: getValoresfaltantes 
+17/06/2021 15:53:13 [ INFO] (CompletarValores : 54)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 15:53:14 [DEBUG] (CompletarValores : 55)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 15:53:52 [DEBUG] (CompletarValores : 75)  - tamaño lista completada: 6
+17/06/2021 15:53:57 [ INFO] (CompletarValores : 76)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 15:54:06 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 15:56:30 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 15:56:30 [ INFO] (CompletarValores : 49)  - Metodo: getValoresfaltantes 
+17/06/2021 15:56:30 [ INFO] (CompletarValores : 54)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 15:56:30 [DEBUG] (CompletarValores : 55)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 15:56:30 [DEBUG] (CompletarValores : 75)  - tamaño lista completada: 6
+17/06/2021 15:56:30 [ INFO] (CompletarValores : 76)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 15:56:49 [ INFO] (CompletarValores : 49)  - Metodo: getValoresfaltantes 
+17/06/2021 15:56:49 [ INFO] (CompletarValores : 54)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 15:56:49 [DEBUG] (CompletarValores : 55)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 15:56:49 [DEBUG] (CompletarValores : 75)  - tama�o lista completada: 100
+17/06/2021 15:56:49 [ INFO] (CompletarValores : 76)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 15:56:49 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 15:56:49 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 15:56:49 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 15:56:49 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 15:56:49 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 15:57:29 [ INFO] (CompletarValores : 49)  - Metodo: getValoresfaltantes 
+17/06/2021 15:57:30 [ INFO] (CompletarValores : 54)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 15:57:30 [DEBUG] (CompletarValores : 55)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 15:57:49 [DEBUG] (CompletarValores : 75)  - tamaño lista completada: 100
+17/06/2021 15:57:49 [ INFO] (CompletarValores : 76)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 15:57:54 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 15:58:50 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 15:58:50 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 15:58:50 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 15:58:50 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 16:00:15 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 16:00:15 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 16:00:15 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 16:00:15 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 16:00:27 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 16:00:27 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 16:00:27 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 16:00:27 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 16:00:27 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 16:00:27 [ INFO] (CompletarValores : 49)  - Metodo: getValoresfaltantes 
+17/06/2021 16:00:27 [ INFO] (CompletarValores : 54)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:00:27 [DEBUG] (CompletarValores : 55)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 16:00:27 [DEBUG] (CompletarValores : 75)  - tamaño lista completada: 100
+17/06/2021 16:00:27 [ INFO] (CompletarValores : 76)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:01:10 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 16:01:10 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 16:01:10 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 16:01:10 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 16:01:10 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 16:01:10 [ INFO] (CompletarValores : 49)  - Metodo: getValoresfaltantes 
+17/06/2021 16:01:10 [ INFO] (CompletarValores : 54)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:01:10 [DEBUG] (CompletarValores : 55)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 16:01:10 [DEBUG] (CompletarValores : 75)  - tamaño lista completada: 100
+17/06/2021 16:01:10 [ INFO] (CompletarValores : 76)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:01:26 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 16:01:26 [ INFO] (CompletarValores : 49)  - Metodo: getValoresfaltantes 
+17/06/2021 16:01:26 [ INFO] (CompletarValores : 54)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:01:26 [DEBUG] (CompletarValores : 55)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 16:01:26 [DEBUG] (CompletarValores : 75)  - tamaño lista completada: 100
+17/06/2021 16:01:26 [ INFO] (CompletarValores : 76)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:01:41 [ INFO] (CompletarValores : 49)  - Metodo: getValoresfaltantes 
+17/06/2021 16:01:41 [ INFO] (CompletarValores : 54)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:01:41 [DEBUG] (CompletarValores : 55)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 16:01:41 [DEBUG] (CompletarValores : 75)  - tamaño lista completada: 100
+17/06/2021 16:01:41 [ INFO] (CompletarValores : 76)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:01:41 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 16:02:01 [ INFO] (CompletarValores : 49)  - Metodo: getValoresfaltantes 
+17/06/2021 16:02:01 [ INFO] (CompletarValores : 54)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:02:01 [DEBUG] (CompletarValores : 55)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 16:02:03 [DEBUG] (CompletarValores : 75)  - tamaño lista completada: 100
+17/06/2021 16:02:03 [ INFO] (CompletarValores : 76)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:04:15 [ INFO] (CompletarValores : 49)  - Metodo: getValoresfaltantes 
+17/06/2021 16:04:15 [ INFO] (CompletarValores : 54)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:04:15 [DEBUG] (CompletarValores : 55)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 16:04:16 [DEBUG] (CompletarValores : 75)  - tama�o lista completada: 100
+17/06/2021 16:04:16 [ INFO] (CompletarValores : 76)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:04:16 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 16:04:16 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 16:04:16 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 16:04:16 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 16:04:16 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 16:04:36 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 16:04:36 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 16:04:36 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 16:04:36 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 16:04:36 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 16:04:36 [ INFO] (CompletarValores : 49)  - Metodo: getValoresfaltantes 
+17/06/2021 16:04:36 [ INFO] (CompletarValores : 54)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:04:36 [DEBUG] (CompletarValores : 55)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 16:04:36 [DEBUG] (CompletarValores : 75)  - tamaño lista completada: 100
+17/06/2021 16:04:36 [ INFO] (CompletarValores : 76)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:05:07 [ INFO] (CompletarValores : 49)  - Metodo: getValoresfaltantes 
+17/06/2021 16:05:07 [ INFO] (CompletarValores : 54)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:05:07 [DEBUG] (CompletarValores : 55)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 16:05:07 [DEBUG] (CompletarValores : 75)  - tama�o lista completada: 100
+17/06/2021 16:05:07 [ INFO] (CompletarValores : 76)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:05:07 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 16:05:07 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 16:05:07 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 16:05:07 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 16:05:07 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 16:07:09 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 16:07:09 [ INFO] (CompletarValores : 49)  - Metodo: getValoresfaltantes 
+17/06/2021 16:07:09 [ INFO] (CompletarValores : 54)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:07:09 [DEBUG] (CompletarValores : 55)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 16:07:10 [DEBUG] (CompletarValores : 75)  - tama�o lista completada: 100
+17/06/2021 16:07:10 [ INFO] (CompletarValores : 76)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:07:10 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 16:07:10 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 16:07:10 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 16:07:10 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 16:11:41 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 16:11:41 [ INFO] (CompletarValores : 49)  - Metodo: getValoresfaltantes 
+17/06/2021 16:11:41 [ INFO] (CompletarValores : 54)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:11:41 [DEBUG] (CompletarValores : 55)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 16:11:42 [DEBUG] (CompletarValores : 75)  - tama�o lista completada: 100
+17/06/2021 16:11:42 [ INFO] (CompletarValores : 76)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:11:42 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 16:11:42 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 16:11:42 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 16:11:42 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 16:14:23 [ INFO] (CompletarValores : 49)  - Metodo: getValoresfaltantes 
+17/06/2021 16:14:23 [ INFO] (CompletarValores : 54)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:14:23 [DEBUG] (CompletarValores : 55)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 16:14:23 [DEBUG] (CompletarValores : 75)  - tama�o lista completada: 100
+17/06/2021 16:14:23 [ INFO] (CompletarValores : 76)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:14:23 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 16:14:23 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 16:14:23 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 16:14:23 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 16:14:23 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 16:19:14 [ INFO] (CompletarValores : 49)  - Metodo: getValoresfaltantes 
+17/06/2021 16:19:14 [ INFO] (CompletarValores : 54)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:19:14 [DEBUG] (CompletarValores : 55)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 16:19:14 [DEBUG] (CompletarValores : 75)  - tama�o lista completada: 100
+17/06/2021 16:19:14 [ INFO] (CompletarValores : 76)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:19:14 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 16:19:14 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 16:19:14 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 16:19:14 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 16:19:14 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 16:20:30 [ INFO] (CompletarValores : 49)  - Metodo: getValoresfaltantes 
+17/06/2021 16:20:30 [ INFO] (CompletarValores : 54)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:20:30 [DEBUG] (CompletarValores : 55)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 16:20:30 [DEBUG] (CompletarValores : 75)  - tama�o lista completada: 100
+17/06/2021 16:20:30 [ INFO] (CompletarValores : 76)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:20:30 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 16:20:30 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 16:20:30 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 16:20:30 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 16:20:30 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 16:25:23 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 16:25:23 [ INFO] (CompletarValores : 49)  - Metodo: getValoresfaltantes 
+17/06/2021 16:25:23 [ INFO] (CompletarValores : 54)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:25:23 [DEBUG] (CompletarValores : 55)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 16:25:23 [DEBUG] (CompletarValores : 75)  - tama�o lista completada: 100
+17/06/2021 16:25:23 [ INFO] (CompletarValores : 76)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:25:23 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 16:25:23 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 16:25:23 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 16:25:23 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 16:36:01 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 16:36:01 [ INFO] (CompletarValores : 49)  - Metodo: getValoresfaltantes 
+17/06/2021 16:36:01 [ INFO] (CompletarValores : 54)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:36:01 [DEBUG] (CompletarValores : 55)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 16:36:02 [DEBUG] (CompletarValores : 75)  - tama�o lista completada: 100
+17/06/2021 16:36:02 [ INFO] (CompletarValores : 76)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:36:02 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 16:36:02 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 16:36:02 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 16:36:02 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 16:39:28 [ INFO] (CompletarValores : 49)  - Metodo: getValoresfaltantes 
+17/06/2021 16:39:28 [ INFO] (CompletarValores : 54)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:39:28 [DEBUG] (CompletarValores : 55)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 16:39:28 [DEBUG] (CompletarValores : 75)  - tama�o lista completada: 100
+17/06/2021 16:39:28 [ INFO] (CompletarValores : 76)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:39:28 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 16:39:28 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 16:39:28 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 16:39:28 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 16:39:28 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 16:44:00 [ INFO] (CompletarValores : 49)  - Metodo: getValoresfaltantes 
+17/06/2021 16:44:00 [ INFO] (CompletarValores : 53)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:44:00 [DEBUG] (CompletarValores : 54)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 16:44:00 [DEBUG] (CompletarValores : 74)  - tama�o lista completada: 100
+17/06/2021 16:44:00 [ INFO] (CompletarValores : 75)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:44:00 [ INFO] (CompletarValores : 33)  - Metodo: ordenarUf 
+17/06/2021 16:44:00 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 16:44:00 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 16:44:00 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 16:44:00 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 16:46:22 [ INFO] (CompletarValores : 48)  - Metodo: getValoresfaltantes 
+17/06/2021 16:46:22 [ INFO] (CompletarValores : 52)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:46:22 [DEBUG] (CompletarValores : 53)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 16:46:22 [DEBUG] (CompletarValores : 73)  - tama�o lista completada: 100
+17/06/2021 16:46:22 [ INFO] (CompletarValores : 74)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:46:22 [ INFO] (CompletarValores : 32)  - Metodo: ordenarUf 
+17/06/2021 16:46:22 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 16:46:22 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 16:46:22 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 16:46:22 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 16:51:07 [ INFO] (CompletarValores : 48)  - Metodo: getValoresfaltantes 
+17/06/2021 16:51:07 [ INFO] (CompletarValores : 52)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:51:07 [DEBUG] (CompletarValores : 53)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 16:51:07 [DEBUG] (CompletarValores : 73)  - tama�o lista completada: 100
+17/06/2021 16:51:07 [ INFO] (CompletarValores : 74)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:51:07 [ INFO] (CompletarValores : 32)  - Metodo: ordenarUf 
+17/06/2021 16:51:07 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 16:51:07 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 16:51:07 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 16:51:07 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 16:53:01 [ INFO] (CompletarValores : 48)  - Metodo: getValoresfaltantes 
+17/06/2021 16:53:01 [ INFO] (CompletarValores : 52)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:53:01 [DEBUG] (CompletarValores : 53)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 16:53:01 [DEBUG] (CompletarValores : 73)  - tama�o lista completada: 100
+17/06/2021 16:53:01 [ INFO] (CompletarValores : 74)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:53:01 [ INFO] (CompletarValores : 32)  - Metodo: ordenarUf 
+17/06/2021 16:53:01 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 16:53:01 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 16:53:01 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 16:53:01 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 16:54:27 [ INFO] (CompletarValores : 48)  - Metodo: getValoresfaltantes 
+17/06/2021 16:54:27 [ INFO] (CompletarValores : 52)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:54:27 [DEBUG] (CompletarValores : 53)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 16:54:28 [DEBUG] (CompletarValores : 73)  - tama�o lista completada: 100
+17/06/2021 16:54:28 [ INFO] (CompletarValores : 74)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:54:28 [ INFO] (CompletarValores : 32)  - Metodo: ordenarUf 
+17/06/2021 16:54:28 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 16:54:28 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 16:54:28 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 16:54:28 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 16:54:48 [ INFO] (CompletarValores : 48)  - Metodo: getValoresfaltantes 
+17/06/2021 16:54:48 [ INFO] (CompletarValores : 52)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:54:48 [DEBUG] (CompletarValores : 53)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 16:54:48 [DEBUG] (CompletarValores : 73)  - tama�o lista completada: 100
+17/06/2021 16:54:48 [ INFO] (CompletarValores : 74)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:54:48 [ INFO] (CompletarValores : 32)  - Metodo: ordenarUf 
+17/06/2021 16:54:48 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 16:54:48 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 16:54:48 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 16:54:48 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 16:55:21 [ INFO] (CompletarValores : 32)  - Metodo: ordenarUf 
+17/06/2021 16:55:21 [ INFO] (CompletarValores : 48)  - Metodo: getValoresfaltantes 
+17/06/2021 16:55:21 [ INFO] (CompletarValores : 52)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:55:21 [DEBUG] (CompletarValores : 53)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 16:55:21 [DEBUG] (CompletarValores : 73)  - tama�o lista completada: 100
+17/06/2021 16:55:21 [ INFO] (CompletarValores : 74)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:55:21 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 16:55:21 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 16:55:21 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 16:55:21 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 16:57:37 [ INFO] (CompletarValores : 32)  - Metodo: ordenarUf 
+17/06/2021 16:57:37 [ INFO] (CompletarValores : 48)  - Metodo: getValoresfaltantes 
+17/06/2021 16:57:37 [ INFO] (CompletarValores : 52)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:57:37 [DEBUG] (CompletarValores : 53)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 16:57:38 [DEBUG] (CompletarValores : 73)  - tama�o lista completada: 100
+17/06/2021 16:57:38 [ INFO] (CompletarValores : 74)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:57:38 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 16:57:38 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 16:57:38 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 16:57:38 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 16:59:23 [ INFO] (App : 37)  - Method: main - iniciando Aplicacion 
+17/06/2021 16:59:23 [ INFO] (App : 66)  - Method: cargarPropertie 
+17/06/2021 16:59:23 [DEBUG] (App : 47)  - Tamaño de ufs: 97
+17/06/2021 16:59:23 [DEBUG] (App : 50)  - Uf faltantes: 3
+17/06/2021 16:59:23 [ INFO] (CompletarValores : 48)  - Metodo: getValoresfaltantes 
+17/06/2021 16:59:23 [ INFO] (CompletarValores : 52)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:59:23 [DEBUG] (CompletarValores : 53)  - Rango de Fecha -  Fecha inicio: 2010-01-28 Fecha Fin: 2013-10-24
+17/06/2021 16:59:23 [DEBUG] (CompletarValores : 73)  - tamaño lista completada: 100
+17/06/2021 16:59:23 [ INFO] (CompletarValores : 74)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:59:23 [ INFO] (CompletarValores : 32)  - Metodo: ordenarUf 
+17/06/2021 16:59:23 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 16:59:23 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\desafio.csv
+17/06/2021 16:59:23 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 16:59:23 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 16:59:23 [ INFO] (App : 56)  - Method: main - Fin de Aplicacion 
+17/06/2021 16:59:28 [ INFO] (App : 37)  - Method: main - iniciando Aplicacion 
+17/06/2021 16:59:28 [ INFO] (App : 66)  - Method: cargarPropertie 
+17/06/2021 16:59:28 [DEBUG] (App : 47)  - Tamaño de ufs: 93
+17/06/2021 16:59:28 [DEBUG] (App : 50)  - Uf faltantes: 7
+17/06/2021 16:59:28 [ INFO] (CompletarValores : 48)  - Metodo: getValoresfaltantes 
+17/06/2021 16:59:28 [ INFO] (CompletarValores : 52)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 16:59:28 [DEBUG] (CompletarValores : 53)  - Rango de Fecha -  Fecha inicio: 2010-07-15 Fecha Fin: 2013-04-06
+17/06/2021 16:59:28 [DEBUG] (CompletarValores : 73)  - tamaño lista completada: 100
+17/06/2021 16:59:28 [ INFO] (CompletarValores : 74)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 16:59:28 [ INFO] (CompletarValores : 32)  - Metodo: ordenarUf 
+17/06/2021 16:59:28 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 16:59:28 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\desafio.csv
+17/06/2021 16:59:28 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 16:59:28 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 16:59:28 [ INFO] (App : 56)  - Method: main - Fin de Aplicacion 
+17/06/2021 17:02:31 [ INFO] (CompletarValores : 48)  - Metodo: getValoresfaltantes 
+17/06/2021 17:02:31 [ INFO] (CompletarValores : 52)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 17:02:31 [DEBUG] (CompletarValores : 53)  - Rango de Fecha -  Fecha inicio: 2010-06-14 Fecha Fin: 2012-09-22
+17/06/2021 17:02:31 [DEBUG] (CompletarValores : 73)  - tama�o lista completada: 100
+17/06/2021 17:02:31 [ INFO] (CompletarValores : 74)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 17:02:31 [ INFO] (CompletarValores : 32)  - Metodo: ordenarUf 
+17/06/2021 17:02:31 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 17:02:31 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\prueba.csv
+17/06/2021 17:02:31 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 17:02:31 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 17:02:47 [ INFO] (App : 37)  - Method: main - iniciando Aplicacion 
+17/06/2021 17:02:47 [ INFO] (App : 66)  - Method: cargarPropertie 
+17/06/2021 17:02:47 [DEBUG] (App : 47)  - Tamaño de ufs: 100
+17/06/2021 17:02:47 [DEBUG] (App : 50)  - Uf faltantes: 0
+17/06/2021 17:02:47 [ INFO] (CompletarValores : 48)  - Metodo: getValoresfaltantes 
+17/06/2021 17:02:47 [ INFO] (CompletarValores : 52)  - Metodo: getValoresfaltantes - generando fecha aleatoria 
+17/06/2021 17:02:47 [DEBUG] (CompletarValores : 53)  - Rango de Fecha -  Fecha inicio: 2011-11-27 Fecha Fin: 2013-05-18
+17/06/2021 17:02:47 [DEBUG] (CompletarValores : 73)  - tamaño lista completada: 100
+17/06/2021 17:02:47 [ INFO] (CompletarValores : 74)  - Metodo: getValoresfaltantes - Ufs completados 
+17/06/2021 17:02:47 [ INFO] (CompletarValores : 32)  - Metodo: ordenarUf 
+17/06/2021 17:02:47 [ INFO] (ExportarCsv : 88)  - Metodo: generarArchivo 
+17/06/2021 17:02:47 [DEBUG] (ExportarCsv : 92)  - ruta del Archivo: C:\Users\dmedina\git\desafioPrevired\desafio.csv
+17/06/2021 17:02:47 [ INFO] (ExportarCsv : 62)  - Metodo: parseListToString 
+17/06/2021 17:02:47 [ INFO] (ExportarCsv : 108)  - Fin de generarArchivo
+17/06/2021 17:02:47 [ INFO] (App : 56)  - Method: main - Fin de Aplicacion 
