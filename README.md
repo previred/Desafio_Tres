@@ -2,14 +2,15 @@
 #### Nivel 3
 
 ### Descripción
-El directorio "Desafio_Tres/lib" contiene la librería "Generador_Datos_Desafio_Tres-1.0.0.jar" 
+
+Este es el proyecto Desafio_Tres, el cual contiene el directorio "Desafio_Tres/lib" donde se encuentra la librería "Generador_Datos_Desafio_Tres-1.0.0.jar" 
 
 Esta librería contiene dos clases:
 
 	- com.previred.desafio.tres.uf.DatosUf (Singleton) que contiene dos métodos getUf y getUfs
 	- com.previred.desafio.tres.uf.Valores que contiene al método getRango
 	
-El método getUf retorna el valor UF para una fecha
+El método getUf retorna el valor UF en formato JSON para una fecha
 
 Ejemplo:
 
@@ -20,7 +21,7 @@ Ejemplo:
 }
 ```
 
-El método getUfs retorna una lista de valores de UF para un rango de fechas dado
+El método getUfs retorna una lista de valores de UF en formato JSON para un rango de fechas dado
 
 Ejemplo:
 
@@ -44,7 +45,7 @@ Ejemplo:
   ]
 ```
 
-El método getRango retorna la siguiente estructura de datos
+El método getRango retorna la siguiente estructura de datos en formato JSON
 
 Ejemplo:
 
@@ -75,8 +76,8 @@ Ejemplo:
 	- La cantidad de valores para UF son máximo 100
 	- El listado entregado con los valores UF no se encuentra ordenado y la secuencia no está completa 
 
-El objetivo del proyecto "Desafio_Tres" es hacer uso de la librería Generador_Datos_Desafio_Tres-1.0.0.jar. Generar y complementar los valores de la lista de UF haciendo uso de los métodos getUf y getUfs.
-Ordenar dicha lista por fecha de forma descendente y generar un archivo llamado "valores.json" con una estructura JSON como sigue:
+El objetivo del proyecto "Desafio_Tres" es hacer uso de la librería Generador_Datos_Desafio_Tres-1.0.0.jar. para generar y complementar los valores de la lista de UF haciendo uso de los métodos getUf y getUfs.
+Ordenar dicha lista por fecha de forma descendente y generar un archivo llamado "valores.json" con una estructura JSON.
 
 Ejemplo:
 
@@ -133,4 +134,4 @@ mvn package
 
 java -jar respinoza_previred_valoresuf-0.0.1.jar
 
-7.- Una vez culminada, la aplicacion genera un archivo llamado "valores.json" en el directorio "Desafio_Tres/target"
+7.- Una vez culminada, la aplicacion generara el archivo denominado "valores.json" en el directorio "Desafio_Tres/target"
