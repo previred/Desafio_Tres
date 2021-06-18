@@ -77,7 +77,7 @@ Ejemplo:
 	- El listado entregado con los valores UF no se encuentra ordenado y la secuencia no está completa 
 
 El objetivo del proyecto "Desafio_Tres" es hacer uso de la librería Generador_Datos_Desafio_Tres-1.0.0.jar. para generar y complementar los valores de la lista de UF haciendo uso de los métodos getUf y getUfs.
-Ordenar dicha lista por fecha de forma descendente y generar un archivo llamado "valores.json" con una estructura JSON.
+Ordenar dicha lista por fecha de forma descendente y generar un archivo denominado "valores.json" bajo la estructura de datos JSON.
 
 Ejemplo:
 
