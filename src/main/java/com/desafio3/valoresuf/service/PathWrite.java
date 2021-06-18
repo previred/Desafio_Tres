@@ -1,9 +1,9 @@
 package com.desafio3.valoresuf.service;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service
+@Component
 public class PathWrite {
 
     @Value("${write.file_name}")

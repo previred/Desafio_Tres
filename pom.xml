@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.4.6</version>
+		<version>2.5.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.desafio3</groupId>
-	<artifactId>RESPINOZA_previred_valoresuf</artifactId>
+	<artifactId>respinoza_previred_valoresuf</artifactId>
 	<version>0.0.1</version>
-	<name>valoresuf</name>
-	<description>Demo project for Spring Boot</description>
+	<name>respinoza_previred_valoresuf</name>
+	<description>Prueba tecnica</description>
 	<properties>
 		<java.version>1.8</java.version>
 		<gson.version>2.8.7</gson.version>
@@ -24,13 +24,13 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.junit.vintage</groupId>
-			<artifactId>junit-vintage-engine</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 			<exclusions>
 				<exclusion>
-					<groupId>org.hamcrest</groupId>
-					<artifactId>hamcrest-core</artifactId>
+					<groupId>com.vaadin.external.google</groupId>
+					<artifactId>android-json</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
@@ -59,7 +59,7 @@
 			<artifactId>json</artifactId>
 			<version>20190722</version>
 		</dependency>
-
+		
 	</dependencies>
 
 	<build>

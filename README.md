@@ -2,9 +2,9 @@
 #### Nivel 3
 
 ### Descripción
-Existe la librería "lib\Generador_Datos_Desafio_Tres-1.0.0.jar"
+El directorio "Desafio_Tres/lib" contiene la librería "Generador_Datos_Desafio_Tres-1.0.0.jar" 
 
-Esta librería consta de dos clases:
+Esta librería contiene dos clases:
 
 	- com.previred.desafio.tres.uf.DatosUf (Singleton) que contiene dos métodos getUf y getUfs
 	- com.previred.desafio.tres.uf.Valores que contiene al método getRango
@@ -75,7 +75,7 @@ Ejemplo:
 	- La cantidad de valores para UF son máximo 100
 	- El listado entregado con los valores UF no se encuentra ordenado y la secuencia no está completa 
 
-El objetivo de este proyecto "Desafio_Tres" es hacer uso de la librería Generador_Datos_Desafio_Tres-1.0.0.jar. Generar y complementar los valores de la lista de UF haciendo uso de los métodos getUf y getUfs.
+El objetivo del proyecto "Desafio_Tres" es hacer uso de la librería Generador_Datos_Desafio_Tres-1.0.0.jar. Generar y complementar los valores de la lista de UF haciendo uso de los métodos getUf y getUfs.
 Ordenar dicha lista por fecha de forma descendente y generar un archivo llamado "valores.json" con una estructura JSON como sigue:
 
 Ejemplo:
@@ -107,26 +107,30 @@ Ejemplo:
   ]    
 }
 ```
-Nota: En el directorio '/Desafio_Tres' se encuentra una muestra del archivo "valores.json"
+####Nota: En el directorio '/Desafio_Tres' se encuentra una muestra del archivo "valores.json"
 
 ### Detalle de los sistemas
-Java 8 Spring-Boot 2.4.6 Maven 3.6.3
+ - Java 8
+ - Spring-Boot 2.5.1 
+ - Maven 3.6.3
 
 ### Compilar y ejecutar el proyecto
 1.- Para compilar el proyecto se requiere Java y Maven instalado.
 
-2.- Ingrese al directorio '/Desafio_Tres/lib'
+2.- Abra una terminal o consola
 
-3.- Instale la librería en el repositorio local haciendo uso de Maven, con el siguiente comando:
+3.- Ingrese al directorio 'Desafio_Tres/lib'
+
+4.- Instale la librería "Generador_Datos_Desafio_Tres-1.0.0.jar" en el repositorio Maven local haciendo uso del siguiente comando:
 
 mvn install:install-file -Dfile=Generador_Datos_Desafio_Tres-1.0.0.jar -DgroupId=generador.datos -DartifactId=desafio-tres -Dversion=1.0.0 -Dpackaging=jar
 	
-4.- Ingrese al directorio 'Desafio_Tres' para ejecutar el siguiente comando Maven
+5.- Una vez completado el paso anterior, ingrese al directorio 'Desafio_Tres' para compilar el proyecto ejecutando el siguiente comando de Maven
 
 mvn package
 
-5.- Luego de compilar el proyecto ingrese al directorio "target" para ejecutar el siguiente comando Java
+6.- Luego de compilar el proyecto ingrese al directorio "Desafio_Tres/target" para ejecutar el siguiente comando Java (esto ejecutara la aplicacion)
 
-java -jar valoresuf-0.0.1.jar
+java -jar respinoza_previred_valoresuf-0.0.1.jar
 
-6.- La solución genera un archivo llamado "valores.json" en el directorio "Desafio_Tres/target"
+7.- Una vez culminada, la aplicacion genera un archivo llamado "valores.json" en el directorio "Desafio_Tres/target"
