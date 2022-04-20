@@ -23,31 +23,33 @@ Se realiza en base al requerimiento un aplicativo que permite consumir la librer
 
 ## Comenzando 🚀
 La jerarquía de carpetas del proyecto es de la siguiente manera.
-  src/main/java
+```
+src/main/java
 	cl.zco.desafio3 -> lanzador, configuraciones, proveedor de contexto
 	cl.zco.desafio3.dto -> los dto que se utilizaran para la generacion con la estructura deseada
 	cl.zco.desafio3.negocio -> Definicion logica del requerimiento
 	cl.zco.desafio3.util-> las utilidades que se crearon para que el codigo estuviera limpio y fuera mantenible
-  src/test/java
+src/test/java
 	cl.zco.desafio3 -> prueba unitaria lanzador
 	cl.zco.desafio3.negocio -> pruebas unitarias negocio	
 	cl.zco.desafio3.util -> pruebas unitarias de las utilidades
-  lib/
-    Generador_Datos_Desafio_Tres-1.0.0.jar
-  doc/
-  	javadoc > index.html 
-  resumen/cobertura
-    index.html > aqui esta el detalle y resultado de junit + coverage
-  files/
-    valores.json (archivo con la salida en json)
-  evidencia/
-  	imagen1 -> evidencia de cobertura junit
-  	imagen2, imagen3 y imagen4 -> ejecucion desde IDE
-  	imagen5, imagen6 y imagen7 -> ejecucion desde CMD
-  	mvn_install.log -> log de maven install build success
-  	valores.json -> archivo generado
-  jar/
-    desafio3-0.0.1-SNAPSHOT.jar ->ultimo jar compilado con todas las librerias 
+lib/
+	Generador_Datos_Desafio_Tres-1.0.0.jar
+doc/
+	javadoc > index.html 
+resumen/cobertura
+	index.html > aqui esta el detalle y resultado de junit + coverage
+files/
+	valores.json (archivo con la salida en json)
+evidencia/
+	imagen1 -> evidencia de cobertura junit
+	imagen2, imagen3 y imagen4 -> ejecucion desde IDE
+	imagen5, imagen6 y imagen7 -> ejecucion desde CMD
+	mvn_install.log -> log de maven install build success
+	valores.json -> archivo generado
+jar/
+	desafio3-0.0.1-SNAPSHOT.jar ->ultimo jar compilado con todas las librerias 
+```
 
 ## Pre-requisitos. 📋
 
