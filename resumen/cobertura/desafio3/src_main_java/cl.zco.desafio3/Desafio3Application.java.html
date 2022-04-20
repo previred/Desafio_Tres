@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>Desafio3Application.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">desafio3 (20-04-2022 15:54:59)</a> &gt; <a href="../../index.html" class="el_group">desafio3</a> &gt; <a href="../index.html" class="el_bundle">src/main/java</a> &gt; <a href="index.source.html" class="el_package">cl.zco.desafio3</a> &gt; <span class="el_source">Desafio3Application.java</span></div><h1>Desafio3Application.java</h1><pre class="source lang-java linenums">package cl.zco.desafio3;
+
+import javax.swing.JOptionPane;
+
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.PropertySource;
+
+import cl.zco.desafio3.negocio.ConsumirJarPrevired;
+import cl.zco.desafio3.negocio.ManejadorArchivos;
+import cl.zco.desafio3.util.Constantes;
+import cl.zco.desafio3.util.Util;
+
+/**
+ * The Class Desafio3Application.
+ */
+@SpringBootApplication
+@PropertySource(value = {&quot;classpath:desafio3.properties&quot;})
+@EnableConfigurationProperties(value = {Configuracion.class})
+<span class="fc" id="L22">public class Desafio3Application {</span>
+
+	/**
+	 * The main method.
+	 * @param args the arguments
+	 * @throws Throwable the throwable
+	 */
+	public static void main(String[] args) throws Throwable {
+<span class="fc" id="L30">		SpringApplicationBuilder constructor = new SpringApplicationBuilder(Desafio3Application.class);</span>
+<span class="fc" id="L31">		constructor.headless(false);</span>
+<span class="fc" id="L32">		ConfigurableApplicationContext contextoAplicacion = constructor.run(args);</span>
+<span class="fc" id="L33">		Proveedor proveedor = new Proveedor();</span>
+<span class="fc" id="L34">		proveedor.setApplicationContext(contextoAplicacion);</span>
+<span class="nc" id="L35">		iniciarAplicacion();</span>
+<span class="nc" id="L36">	}</span>
+	
+	/**
+	 * Iniciar aplicacion.
+	 * @throws Throwable the throwable
+	 */
+	public static void iniciarAplicacion() throws Throwable {
+<span class="fc" id="L43">		boolean modoDesarrollador = ManejadorArchivos.existeCarpeta(Constantes.RUTA_WKS_JSON);</span>
+<span class="pc bpc" id="L44" title="1 of 2 branches missed.">		if(modoDesarrollador) {</span>
+<span class="nc" id="L45">			Util.controlExcepcion(Constantes.obtenerEtiqueta(&quot;mensaj.portada.desa&quot;));</span>
+<span class="nc" id="L46">		}	else {</span>
+<span class="nc" id="L47">			Util.controlExcepcion(Constantes.obtenerEtiqueta(&quot;mensaj.portada.jar&quot;));</span>
+		}
+		
+<span class="nc" id="L50">		ConsumirJarPrevired consumir = new ConsumirJarPrevired();</span>
+<span class="nc" id="L51">		boolean completado = consumir.iniciar();</span>
+<span class="nc bnc" id="L52" title="All 2 branches missed.">		if(completado) {</span>
+<span class="nc bnc" id="L53" title="All 2 branches missed.">			Util.controlExcepcion(Constantes.obtenerEtiqueta(&quot;mensaj.final.ok.ini&quot;).concat(modoDesarrollador ? Constantes.RUTA_WKS_JSON : Constantes.RUTA_JAR_JSON));</span>
+<span class="nc" id="L54">		}else {</span>
+<span class="nc" id="L55">			Util.controlExcepcion(Constantes.obtenerEtiqueta(&quot;mensaj.final.error&quot;),  JOptionPane.ERROR_MESSAGE);</span>
+		}
+		
+<span class="nc" id="L58">	}</span>
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span>desafio3 (20-04-2022 15:54:59)</div></body></html>

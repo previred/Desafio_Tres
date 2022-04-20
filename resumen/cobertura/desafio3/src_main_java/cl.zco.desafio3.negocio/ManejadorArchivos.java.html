@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>ManejadorArchivos.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">desafio3 (20-04-2022 15:54:59)</a> &gt; <a href="../../index.html" class="el_group">desafio3</a> &gt; <a href="../index.html" class="el_bundle">src/main/java</a> &gt; <a href="index.source.html" class="el_package">cl.zco.desafio3.negocio</a> &gt; <span class="el_source">ManejadorArchivos.java</span></div><h1>ManejadorArchivos.java</h1><pre class="source lang-java linenums">package cl.zco.desafio3.negocio;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.core.NestedExceptionUtils;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import cl.zco.desafio3.dto.FormatoJsonDTO;
+import cl.zco.desafio3.util.Constantes;
+
+/**
+ * Clase que manejará los archivos.
+ * @author Patricio Angel
+ *
+ */
+public class ManejadorArchivos {
+	
+	/** The log. */
+<span class="fc" id="L25">	private static Logger log = LogManager.getLogger(ManejadorArchivos.class);</span>
+
+	/**
+	 * Instantiates a new manejador archivos.
+	 */
+<span class="fc" id="L30">	public ManejadorArchivos() {super();}</span>
+	
+	/**
+	 * Crear fichero json.
+	 * @param jsonDTO the json DTO
+	 * @param destino the destino
+	 * @return true, if successful
+	 */
+	public static boolean crearFicheroJson(FormatoJsonDTO jsonDTO, String destino) {
+<span class="fc" id="L39">		return crearFicheroJson(jsonDTO, destino, false);</span>
+	}
+	
+	/**
+	 * Crear fichero json.
+	 * Metodo que crea el fichero valores.json.
+	 * @param jsonDTO the json DTO
+	 * @param destino the destino
+	 * @param ignorarValidacion the ignorar validacion
+	 * @return true, if successful
+	 */
+	public static boolean crearFicheroJson(FormatoJsonDTO jsonDTO, String destino, boolean ignorarValidacion) {
+		try {
+<span class="fc bfc" id="L52" title="All 4 branches covered.">			if (!ignorarValidacion &amp;&amp; !existeCarpeta(destino)) {</span>
+<span class="fc" id="L53">				destino = Constantes.RUTA_JAR_JSON;</span>
+			}
+<span class="fc" id="L55">		    PrintWriter out = new PrintWriter(destino);</span>
+<span class="fc" id="L56">		    Gson gson = new GsonBuilder().setPrettyPrinting().create();</span>
+<span class="fc" id="L57">		    String json = gson.toJson(jsonDTO);</span>
+<span class="fc" id="L58">		    json = json.replace(Constantes.SIMBOLO_NUEVA_LINEA, System.lineSeparator());</span>
+<span class="fc" id="L59">		    out.println(json);</span>
+<span class="fc" id="L60">		    out.close();</span>
+<span class="fc" id="L61">		    return true;</span>
+<span class="fc" id="L62">		} catch (FileNotFoundException e) {</span>
+<span class="fc" id="L63">			log.error(NestedExceptionUtils.getRootCause(e));</span>
+<span class="fc" id="L64">			return false;</span>
+		}
+	}
+	
+	/**
+	 * Existe carpeta.
+	 * Metodo que valida que exista carpeta segun ruta
+	 * @param ruta the ruta
+	 * @return true, if successful
+	 */
+	public static boolean existeCarpeta(String ruta) {
+<span class="fc" id="L75">		File file = new File(ruta);</span>
+<span class="fc" id="L76">		return file.exists();</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span>desafio3 (20-04-2022 15:54:59)</div></body></html>

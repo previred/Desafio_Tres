@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>DtoTest.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">desafio3 (20-04-2022 15:54:59)</a> &gt; <a href="../../index.html" class="el_group">desafio3</a> &gt; <a href="../index.html" class="el_bundle">src/test/java</a> &gt; <a href="index.source.html" class="el_package">cl.zco.desafio3.util</a> &gt; <span class="el_source">DtoTest.java</span></div><h1>DtoTest.java</h1><pre class="source lang-java linenums">package cl.zco.desafio3.util;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import cl.zco.desafio3.dto.FormatoJsonDTO;
+import cl.zco.desafio3.dto.FormatoUfJsonDTO;
+
+/**
+ * The Class UtilTest.
+ */
+<span class="fc" id="L17">class DtoTest {</span>
+	
+	/** The formato json DTO. */
+	private FormatoJsonDTO formatoJsonDTO;
+	
+	/** The formato uf json DTO. */
+	private FormatoUfJsonDTO formatoUfJsonDTO;
+	
+	/**
+	 * Sets the up.
+	 */
+	@BeforeEach
+	void setUp() {
+<span class="fc" id="L30">		formatoJsonDTO = new FormatoJsonDTO();</span>
+<span class="fc" id="L31">		formatoUfJsonDTO = new FormatoUfJsonDTO(null, null);</span>
+<span class="fc" id="L32">	}</span>
+	
+	/**
+	 * Construye json.
+	 */
+	private void construyeJson() {
+<span class="fc" id="L38">		formatoUfJsonDTO.setFecha(&quot;01/01/1990&quot;);</span>
+<span class="fc" id="L39">		formatoUfJsonDTO.setDato(&quot;22222.11&quot;);</span>
+<span class="fc" id="L40">		List&lt;FormatoUfJsonDTO&gt; listUf = new ArrayList&lt;FormatoUfJsonDTO&gt;();</span>
+<span class="fc" id="L41">		listUf.add(formatoUfJsonDTO);</span>
+		
+<span class="fc" id="L43">		formatoJsonDTO.setInicio(&quot;01/01/1990&quot;);</span>
+<span class="fc" id="L44">		formatoJsonDTO.setFin(&quot;01/01/2000&quot;);</span>
+<span class="fc" id="L45">		formatoJsonDTO.setUFs(listUf);</span>
+<span class="fc" id="L46">	}</span>
+	
+	/**
+	 * Obtener fecha formato.
+	 */
+	@Test
+	void construirJsonDto() {
+<span class="fc" id="L53">		construyeJson();</span>
+<span class="fc" id="L54">		assertNotNull(formatoJsonDTO);</span>
+<span class="fc" id="L55">	}</span>
+	
+	/**
+	 * Obtener datos json dto.
+	 */
+	@Test
+	void obtenerDatosJsonDto() {
+<span class="fc" id="L62">		construyeJson();</span>
+<span class="fc" id="L63">		assertNotNull(formatoJsonDTO.getInicio());</span>
+<span class="fc" id="L64">		assertNotNull(formatoJsonDTO.getFin());</span>
+<span class="fc" id="L65">		assertNotNull(formatoJsonDTO.getUFs());</span>
+<span class="fc" id="L66">		assertNotNull(formatoUfJsonDTO.getDato());</span>
+<span class="fc" id="L67">		assertNotNull(formatoUfJsonDTO.getFecha());</span>
+<span class="fc" id="L68">	}</span>
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span>desafio3 (20-04-2022 15:54:59)</div></body></html>

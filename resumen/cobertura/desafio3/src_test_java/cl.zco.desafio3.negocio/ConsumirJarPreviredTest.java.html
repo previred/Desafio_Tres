@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>ConsumirJarPreviredTest.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">desafio3 (20-04-2022 15:54:59)</a> &gt; <a href="../../index.html" class="el_group">desafio3</a> &gt; <a href="../index.html" class="el_bundle">src/test/java</a> &gt; <a href="index.source.html" class="el_package">cl.zco.desafio3.negocio</a> &gt; <span class="el_source">ConsumirJarPreviredTest.java</span></div><h1>ConsumirJarPreviredTest.java</h1><pre class="source lang-java linenums">package cl.zco.desafio3.negocio;
+
+import static org.assertj.core.api.Assertions.assertThatNoException;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.MockitoAnnotations;
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class ConsumirJarPreviredTest.
+ */
+@SuppressWarnings(&quot;deprecation&quot;)
+<span class="fc" id="L14">class ConsumirJarPreviredTest {</span>
+	
+	/** The jar previred. */
+	private ConsumirJarPrevired jarPrevired;
+	
+	/**
+	 * Sets the up.
+	 */
+	@BeforeEach
+	void setUp() {
+<span class="fc" id="L24">		MockitoAnnotations.initMocks(this);</span>
+<span class="fc" id="L25">		jarPrevired = new ConsumirJarPrevired();</span>
+<span class="fc" id="L26">	}</span>
+	
+	/**
+	 * Obtener fecha formato.
+	 */
+	@Test
+	void obtenerFechaFormato() {
+<span class="fc" id="L33">		jarPrevired.iniciar();</span>
+<span class="fc" id="L34">		assertThatNoException();</span>
+<span class="fc" id="L35">	}</span>
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span>desafio3 (20-04-2022 15:54:59)</div></body></html>

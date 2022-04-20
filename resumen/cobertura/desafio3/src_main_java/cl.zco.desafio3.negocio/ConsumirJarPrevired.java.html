@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>ConsumirJarPrevired.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">desafio3 (20-04-2022 15:54:59)</a> &gt; <a href="../../index.html" class="el_group">desafio3</a> &gt; <a href="../index.html" class="el_bundle">src/main/java</a> &gt; <a href="index.source.html" class="el_package">cl.zco.desafio3.negocio</a> &gt; <span class="el_source">ConsumirJarPrevired.java</span></div><h1>ConsumirJarPrevired.java</h1><pre class="source lang-java linenums">package cl.zco.desafio3.negocio;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.previred.desafio.tres.uf.DatosUf;
+import com.previred.desafio.tres.uf.Valores;
+import com.previred.desafio.tres.uf.vo.Uf;
+import com.previred.desafio.tres.uf.vo.Ufs;
+
+import cl.zco.desafio3.Configuracion;
+import cl.zco.desafio3.Proveedor;
+import cl.zco.desafio3.util.Constantes;
+import cl.zco.desafio3.util.Util;
+
+/**
+ * The Class ConsumirJarPrevired.
+ * @author Patricio Angel
+ */
+<span class="fc" id="L23">public class ConsumirJarPrevired {</span>
+	
+	/** The log. */
+<span class="fc" id="L26">	private static Logger log = LogManager.getLogger(ConsumirJarPrevired.class);</span>
+	
+	/** The max elementos json. */
+<span class="fc" id="L29">	private int maxElementosJson = 0;</span>
+	
+	/**
+	 * Iniciar.
+	 * @return true, if successful
+	 */
+	public boolean iniciar() {
+<span class="fc" id="L36">		cargarConfiguraciones();</span>
+<span class="fc" id="L37">		return obtenerValoresUF();</span>
+	}
+	
+	private void cargarConfiguraciones() {
+<span class="fc" id="L41">		maxElementosJson = Proveedor.getContexto().getBean(Configuracion.class).getCantidadjson();</span>
+<span class="fc" id="L42">	}</span>
+	
+	/**
+	 * Metodo que obtiene los valores de las UF.
+	 * 
+	 * @return true, if successful
+	 */
+	public boolean obtenerValoresUF() {
+<span class="fc" id="L50">		boolean resultado = false;</span>
+		
+		// Punto 1: se obtienen los valores y se consume el jar.
+<span class="fc" id="L53">		Valores valores = new Valores();</span>
+<span class="fc" id="L54">		Ufs ufs = valores.getRango();</span>
+<span class="fc" id="L55">		List&lt;Uf&gt; listUf = new ArrayList&lt;&gt;( ufs.getUfs());</span>
+		
+		/**
+		 *  Punto 2: el algoritmo que entiendo que hay que hacer es llenar las fechas faltantes
+		 *  pero siento que es innesacio hacer un algoritmo para validar si está o no dado que 
+		 *  el singleton que se llena al inicio ya tiene los valores, entonces con solo obtener
+		 *  todo entre el rango deberia bastar.
+		 */
+		// Punto 3: aqui se utiliza el .getUfs() este trae todos los valores.
+<span class="fc" id="L64">		List&lt;Uf&gt; listUfRango = DatosUf.getInstance().getUfs(ufs.getInicio(), ufs.getFin());</span>
+<span class="fc" id="L65">		boolean igualCantidad = Util.validacionElementosEnRango(listUf, listUfRango);</span>
+
+		/**
+		 *  Aqui podemos hacer de 2 maneras para agregar los que faltan entre el rango, una es con la lista 
+		 *  tomar los extremos e ir consultando 1 a 1 y agreando si la fecha no esta, pero revisando es lo 
+		 *  mismo traer la lista completa segun el rango y luego sobre esa lista ordenar.
+		 *  &gt; Validacion: de igual manera se validará que los que se encontraron dentro del rango estén todos en 
+		 *  el ultimo listado.
+		 */
+		// Punto 4: se ordena de forma descendente
+<span class="fc" id="L75">		Util.clasificarColeccion(listUfRango, false, Constantes.ATRIB_FECHA);</span>
+		
+<span class="pc bpc" id="L77" title="1 of 2 branches missed.">		if(igualCantidad) {</span>
+<span class="fc" id="L78">			log.trace(&quot;Todos los elementos de getRange() estan en el listado final.&quot;);</span>
+<span class="fc" id="L79">			resultado = true;</span>
+<span class="fc" id="L80">			resultado &amp;= generarCSV(ufs);			    //FORMATO 1 //TODO: Pendiente para una nueva version</span>
+<span class="fc" id="L81">			resultado &amp;= generarXML(ufs);			    //FORMATO 2 //TODO: Pendiente para una nueva version</span>
+<span class="fc" id="L82">			resultado &amp;= generarJson(ufs, listUfRango); //FORMATO 3</span>
+		}
+		
+<span class="fc" id="L85">		return resultado;</span>
+	}
+	
+	/**
+	 * Metodo para generar los CSV
+	 * @param ufs parametro de entrada con data de ufs
+	 * @return boolean generacion exitosa
+	 */
+	public boolean generarCSV(Ufs ufs) {
+<span class="fc" id="L94">		log.trace(&quot;Se comienza con la generacion del csv&quot;);</span>
+		//TODO: solo era un formato de salida, asique queda pendiente.
+<span class="fc" id="L96">		return true;</span>
+	}
+	
+	/**
+	 * Metodo para generar los XML
+	 * @param ufs parametro de entrada con data de ufs
+	 * @return boolean generacion exitosa
+	 */
+	public boolean generarXML(Ufs ufs) {
+<span class="fc" id="L105">		log.trace(&quot;Se comienza con la generacion del xml&quot;);</span>
+		//TODO: solo era un formato de salida, asique queda pendiente.
+<span class="fc" id="L107">		return true;</span>
+	}
+	
+	/**
+	 * Metodo que genera el json.
+	 * @param ufs parametro de entrada con data de ufs
+	 * @param listUfRango the list uf rango
+	 * @return boolean generacion exitosa
+	 */
+	public boolean generarJson(Ufs ufs, List&lt;Uf&gt; listUfRango) {
+<span class="fc" id="L117">		log.trace(&quot;Se comienza con la generacion del json&quot;);</span>
+<span class="fc" id="L118">		return ManejadorArchivos.crearFicheroJson(Util.convertiraJsonDTO(ufs,listUfRango,maxElementosJson), Constantes.RUTA_WKS_JSON);</span>
+	}
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span>desafio3 (20-04-2022 15:54:59)</div></body></html>

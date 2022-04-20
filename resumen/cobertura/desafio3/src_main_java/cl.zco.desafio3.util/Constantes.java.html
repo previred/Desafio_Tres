@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>Constantes.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">desafio3 (20-04-2022 15:54:59)</a> &gt; <a href="../../index.html" class="el_group">desafio3</a> &gt; <a href="../index.html" class="el_bundle">src/main/java</a> &gt; <a href="index.source.html" class="el_package">cl.zco.desafio3.util</a> &gt; <span class="el_source">Constantes.java</span></div><h1>Constantes.java</h1><pre class="source lang-java linenums">package cl.zco.desafio3.util;
+
+import java.util.HashMap;
+
+// TODO: Auto-generated Javadoc
+/**
+ * Clase que contiene las constantes.
+ * @author Patricio Angel
+ */
+public class Constantes {
+	
+	/** The Constant FORMATO_DD_MMM_YYYY. */
+	public static final String FORMATO_DD_MMM_YYYY = &quot;dd/MM/yyyy&quot;;
+	
+	/** The Constant FORMATO_YYYY_MM_DD. */
+	public static final String FORMATO_YYYY_MM_DD = &quot;yyyy-MM-dd&quot;;
+	
+	/** The Constant RUTA_WKS_JSON. */
+	public static final String RUTA_WKS_JSON = &quot;files/valores.json&quot;;
+	
+	/** The Constant RUTA_JAR_JSON. */
+	public static final String RUTA_JAR_JSON =  &quot;C:\\files\\valores.json&quot;;
+	
+	/** The Constant SIMBOLO_NUEVA_LINEA. */
+	public static final String SIMBOLO_NUEVA_LINEA = &quot;\\n&quot;;
+	
+	/** The Constant ATRIB_FECHA. */
+	public static final String ATRIB_FECHA = &quot;fecha&quot;;
+	
+	/** The Constant VACIO. */
+	public static final String VACIO = &quot;&quot;;
+	
+	/** The etiquetas. */
+<span class="fc" id="L34">	private static HashMap&lt;String,String&gt; etiquetas = new HashMap&lt;&gt;();</span>
+	
+	/**
+	 * Bloque de codigo para inicializar las etiquetas.
+	 */
+	static {
+<span class="fc" id="L40">		etiquetas.put(&quot;mensaj.portada.desa&quot;,&quot;Bienvenido al desafio número 3, el archivo json generado quedará en la ruta /files/valores.json&quot;);</span>
+<span class="fc" id="L41">		etiquetas.put(&quot;mensaj.portada.jar&quot;,&quot;Bienvenido al desafio número 3, no olvidar tener creada la carpeta en C:\\files\\ para poder ver el json resultante&quot;);</span>
+<span class="fc" id="L42">		etiquetas.put(&quot;mensaj.final.ok.desa&quot;,&quot;Se ha creado correctamente el archivo en /files/valores.json&quot;);</span>
+<span class="fc" id="L43">		etiquetas.put(&quot;mensaj.final.ok.jar&quot;,&quot;Se ha creado correctamente el archivo en C:\\files\\valores.json&quot;);</span>
+<span class="fc" id="L44">		etiquetas.put(&quot;mensaj.final.error&quot;,&quot;El proceso de creación a fallado, intente nuevamente&quot;);</span>
+<span class="fc" id="L45">		etiquetas.put(&quot;mensaj.final.ok.ini&quot;,&quot;Se ha creado correctamente el archivo en &quot;);</span>
+<span class="fc" id="L46">	}</span>
+	
+	/**
+	 * Instantiates a new constantes.
+	 */
+<span class="fc" id="L51">	public Constantes() {super();}</span>
+	
+	/**
+	 * Metodo que obtiene la etiqueta mapeaa
+	 * (alternativa rapida concentrar todas las etiquetas, la idea es luego pasar estos codigo
+	 * de etiquetas a i18).
+	 *
+	 * @param codigo the codigo
+	 * @return the string
+	 */
+	public static String obtenerEtiqueta(String codigo) {
+<span class="fc bfc" id="L62" title="All 2 branches covered.">		return etiquetas.get(codigo) == null ? VACIO : etiquetas.get(codigo);</span>
+	} 
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span>desafio3 (20-04-2022 15:54:59)</div></body></html>
