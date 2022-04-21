@@ -18,7 +18,7 @@ Se realiza en base al requerimiento un aplicativo que permite consumir la librer
  - Libreria jar proporcionada por previred para el desafio(Generador_Datos_Desafio_Tres-1.0.0.jar)
  
 ## Pruebas unitarias y calidad de codigo:
- - Se realizan pruebas unitarias, y ejecucion de analisis para verificar covertura, se cumple con los standares minimos de un 90% de covertura del proyecto, se adjunta evidencia en carpeta /evidencia con el detalle de covertura.
+ - Se realizan pruebas unitarias, y ejecucion de analisis para verificar cobertura, se cumple con los standares minimos de un 90% de covertura del proyecto, se adjunta evidencia en carpeta /evidencia con el detalle de covertura.
  - Se realiza analisis con Plugin SonarLint, para reducir deuda tecnica. y cumplir con los standares minimos.
 
 ## Comenzando 🚀
