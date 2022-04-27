@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>UtilTest.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">desafio3 (20-04-2022 15:54:59)</a> &gt; <a href="../../index.html" class="el_group">desafio3</a> &gt; <a href="../index.html" class="el_bundle">src/test/java</a> &gt; <a href="index.source.html" class="el_package">cl.zco.desafio3.util</a> &gt; <span class="el_source">UtilTest.java</span></div><h1>UtilTest.java</h1><pre class="source lang-java linenums">package cl.zco.desafio3.util;
+
+import static org.assertj.core.api.Assertions.assertThatNoException;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.HashSet;
+import java.util.List;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.MockitoAnnotations;
+
+import com.previred.desafio.tres.uf.vo.Uf;
+import com.previred.desafio.tres.uf.vo.Ufs;
+
+import cl.zco.desafio3.Configuracion;
+
+/**
+ * The Class UtilTest.
+ */
+<span class="fc" id="L27">class UtilTest {</span>
+	
+	/** The ufs. */
+	private Ufs ufs; 
+	
+	/**
+	 * Sets the up.
+	 */
+	@SuppressWarnings({ &quot;deprecation&quot;, &quot;unused&quot; })
+	@BeforeEach
+	void setUp() {
+<span class="fc" id="L38">		MockitoAnnotations.initMocks(this);</span>
+<span class="fc" id="L39">		ufs = new Ufs();</span>
+<span class="fc" id="L40">		ufs.setInicio(Calendar.getInstance().getTime());</span>
+<span class="fc" id="L41">		ufs.setFin(Calendar.getInstance().getTime());</span>
+		
+		//Iniciar clases de utilidad
+<span class="fc" id="L44">		Configuracion conf = new Configuracion();</span>
+<span class="fc" id="L45">		Constantes constante = new Constantes();</span>
+<span class="fc" id="L46">		Util util = new Util();</span>
+<span class="fc" id="L47">	}</span>
+	
+	/**
+	 * Obtener fecha formato.
+	 */
+	@Test
+	void obtenerFechaFormato() {
+<span class="fc" id="L54">		assertNotNull(Util.obtenerFechaFormato(Calendar.getInstance().getTime(), Constantes.FORMATO_DD_MMM_YYYY));</span>
+<span class="fc" id="L55">	}</span>
+	
+	/**
+	 * Clasificar coleccion.
+	 */
+	@Test
+	void clasificarColeccion() {
+<span class="fc" id="L62">		Util.clasificarColeccion(new ArrayList&lt;Uf&gt;(), true, Constantes.ATRIB_FECHA );</span>
+<span class="fc" id="L63">		Util.clasificarColeccion(new ArrayList&lt;Uf&gt;(), false, Constantes.ATRIB_FECHA );</span>
+<span class="fc" id="L64">		assertThatNoException();</span>
+<span class="fc" id="L65">	}</span>
+	
+	/**
+	 * Convertira json DTO.
+	 */
+	@Test
+	void convertiraJsonDTO() {
+		
+<span class="fc" id="L73">		assertNotNull(Util.convertiraJsonDTO(ufs,null,1));</span>
+<span class="fc" id="L74">		Uf uf = new Uf();</span>
+<span class="fc" id="L75">		uf.setFecha(Calendar.getInstance().getTime());</span>
+<span class="fc" id="L76">		uf.setValor(0.1d);</span>
+<span class="fc" id="L77">		List&lt;Uf&gt; listuf = new ArrayList&lt;Uf&gt;();</span>
+<span class="fc" id="L78">		listuf.add(uf);</span>
+<span class="fc" id="L79">		ufs.setUfs(new HashSet&lt;Uf&gt;(listuf));</span>
+<span class="fc" id="L80">		assertNotNull(Util.convertiraJsonDTO(ufs,listuf,1));</span>
+<span class="fc" id="L81">	}</span>
+	
+	/**
+	 * Validacion elementos en rango.
+	 */
+	@Test
+	void validacionElementosEnRango() {
+<span class="fc" id="L88">		Uf uf = new Uf();</span>
+<span class="fc" id="L89">		uf.setFecha(Calendar.getInstance().getTime());</span>
+<span class="fc" id="L90">		uf.setValor(0.1d);</span>
+<span class="fc" id="L91">		List&lt;Uf&gt; listuf = new ArrayList&lt;Uf&gt;();</span>
+<span class="fc" id="L92">		listuf.add(uf);</span>
+<span class="fc" id="L93">		ufs.setUfs(new HashSet&lt;Uf&gt;(listuf));</span>
+<span class="fc" id="L94">		List&lt;Uf&gt; listuf2 = new ArrayList&lt;Uf&gt;();</span>
+<span class="fc" id="L95">		assertTrue(Util.validacionElementosEnRango(listuf, listuf)); </span>
+<span class="fc" id="L96">		assertFalse(Util.validacionElementosEnRango(listuf, listuf2)); </span>
+<span class="pc" id="L97">		assertThrows(NullPointerException.class, () -&gt; assertTrue(Util.validacionElementosEnRango(listuf, null)));</span>
+<span class="fc" id="L98">	}</span>
+	
+	/**
+	 * Validacion elementos en rango elemento nulo.
+	 */
+	@Test
+	void validacionElementosEnRangoElementoNulo() {
+<span class="fc" id="L105">		Uf uf = new Uf();</span>
+<span class="fc" id="L106">		uf.setFecha(Calendar.getInstance().getTime());</span>
+<span class="fc" id="L107">		uf.setValor(0.1d);</span>
+<span class="fc" id="L108">		List&lt;Uf&gt; listuf = new ArrayList&lt;Uf&gt;();</span>
+<span class="fc" id="L109">		listuf.add(uf);</span>
+<span class="fc" id="L110">		ufs.setUfs(new HashSet&lt;Uf&gt;(listuf));</span>
+<span class="pc" id="L111">		assertThrows(NullPointerException.class, () -&gt; assertTrue(Util.validacionElementosEnRango(listuf, null)));</span>
+<span class="fc" id="L112">	}</span>
+	
+	/**
+	 * Obtener etiqueta.
+	 */
+	@Test
+	void obtenerEtiqueta() {
+<span class="fc" id="L119">		assertEquals(&quot;Se ha creado correctamente el archivo en &quot;, Constantes.obtenerEtiqueta(&quot;mensaj.final.ok.ini&quot;));</span>
+<span class="fc" id="L120">	}</span>
+	
+	/**
+	 * Obtener etiqueta null.
+	 */
+	@Test
+	void obtenerEtiquetaNull() {
+<span class="fc" id="L127">		assertEquals(Constantes.VACIO, Constantes.obtenerEtiqueta(&quot;mensaj.code&quot;));</span>
+<span class="fc" id="L128">	}</span>
+	
+	/**
+	 * Validar configuraciones.
+	 */
+	@Test
+	void validarConfiguraciones() {
+<span class="fc" id="L135">		Configuracion conf = new Configuracion(100);</span>
+<span class="fc" id="L136">		assertNotNull(conf.toString());</span>
+<span class="fc" id="L137">	}</span>
+	
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span>desafio3 (20-04-2022 15:54:59)</div></body></html>

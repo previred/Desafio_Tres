@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>Desafio3ApplicationTests.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">desafio3 (20-04-2022 15:54:59)</a> &gt; <a href="../../index.html" class="el_group">desafio3</a> &gt; <a href="../index.html" class="el_bundle">src/test/java</a> &gt; <a href="index.source.html" class="el_package">cl.zco.desafio3</a> &gt; <span class="el_source">Desafio3ApplicationTests.java</span></div><h1>Desafio3ApplicationTests.java</h1><pre class="source lang-java linenums">package cl.zco.desafio3;
+
+import static org.junit.Assert.assertThrows;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+/**
+ * The Class Desafio3ApplicationTests.
+ */
+@SpringBootTest
+<span class="fc" id="L12">class Desafio3ApplicationTests {</span>
+
+	/**
+	 * Context loads.
+	 * @throws Throwable 
+	 */
+	@Test
+	void contextLoads() throws Throwable {
+<span class="fc" id="L20">		String[] str = {&quot;str1&quot;,&quot;str2&quot;};</span>
+<span class="pc" id="L21">		assertThrows(Throwable.class, () -&gt; Desafio3Application.main(str) );</span>
+<span class="fc" id="L22">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span>desafio3 (20-04-2022 15:54:59)</div></body></html>

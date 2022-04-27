@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>Proveedor.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">desafio3 (20-04-2022 15:54:59)</a> &gt; <a href="../../index.html" class="el_group">desafio3</a> &gt; <a href="../index.html" class="el_bundle">src/main/java</a> &gt; <a href="index.source.html" class="el_package">cl.zco.desafio3</a> &gt; <span class="el_source">Proveedor.java</span></div><h1>Proveedor.java</h1><pre class="source lang-java linenums">package cl.zco.desafio3;
+
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+import org.springframework.stereotype.Component;
+
+/**
+ * Clase con el proveedor del contexto.
+ * @author Patricio Angel
+ *
+ */
+@Component
+<span class="fc" id="L15">public class Proveedor implements ApplicationContextAware{</span>
+	
+	/** The contexto. */
+	@Autowired
+	private static ApplicationContext contexto;
+
+	/**
+	 * Sets the application context.
+	 * @param applicationContext the new application context
+	 * @throws BeansException the beans exception
+	 */
+	@Override
+	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+<span class="fc" id="L28">		contexto = applicationContext;</span>
+<span class="fc" id="L29">	}</span>
+
+	/**
+	 * Gets the contexto.
+	 * @return the contexto
+	 */
+	public static ApplicationContext getContexto() {
+<span class="fc" id="L36">		return contexto;</span>
+	}
+ 
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span>desafio3 (20-04-2022 15:54:59)</div></body></html>

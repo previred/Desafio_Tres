@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>ManejadorArchivosTest.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">desafio3 (20-04-2022 15:54:59)</a> &gt; <a href="../../index.html" class="el_group">desafio3</a> &gt; <a href="../index.html" class="el_bundle">src/test/java</a> &gt; <a href="index.source.html" class="el_package">cl.zco.desafio3.negocio</a> &gt; <span class="el_source">ManejadorArchivosTest.java</span></div><h1>ManejadorArchivosTest.java</h1><pre class="source lang-java linenums">package cl.zco.desafio3.negocio;
+
+import static org.assertj.core.api.Assertions.assertThatNoException;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.MockitoAnnotations;
+
+import cl.zco.desafio3.dto.FormatoJsonDTO;
+import cl.zco.desafio3.util.Constantes;
+
+/**
+ * The Class ManejadorArchivosTest.
+ */
+@SuppressWarnings({ &quot;unused&quot;, &quot;deprecation&quot; })
+<span class="fc" id="L17">class ManejadorArchivosTest {</span>
+	
+	/** The json DTO. */
+	private FormatoJsonDTO jsonDTO;
+	
+	/**
+	 * Sets the up.
+	 */
+	
+	@BeforeEach
+	void setUp() {
+<span class="fc" id="L28">		MockitoAnnotations.initMocks(this);</span>
+<span class="fc" id="L29">		ManejadorArchivos ma = new ManejadorArchivos();</span>
+<span class="fc" id="L30">		jsonDTO = new FormatoJsonDTO();</span>
+<span class="fc" id="L31">		jsonDTO.setInicio(&quot;&quot;);</span>
+<span class="fc" id="L32">		jsonDTO.setFin(&quot;&quot;);</span>
+		
+<span class="fc" id="L34">	}</span>
+	
+	/**
+	 * Caso cuando se quiere crear un fichero pero con ruta nula.
+	 */
+	@Test
+	void crearFicheroJsonRutaNula() {
+<span class="pc" id="L41">		assertThrows(NullPointerException.class, () -&gt; 	ManejadorArchivos.crearFicheroJson(jsonDTO, null));</span>
+<span class="fc" id="L42">	}</span>
+	
+	/**
+	 * Caso cuando se quiere crear un fichero pero con ruta inexistente.
+	 */
+	@Test
+	void crearFicheroJsonRutaInexistenteNoValidacion() {
+<span class="fc" id="L49">		ManejadorArchivos.crearFicheroJson(jsonDTO, &quot;/nopath&quot;,true);</span>
+<span class="fc" id="L50">		assertThatNoException(); //Excepcion controlada</span>
+<span class="fc" id="L51">	}</span>
+	
+	/**
+	 * Crear fichero json ruta inexistente.
+	 */
+	@Test
+	void crearFicheroJsonRutaInexistente() {
+<span class="fc" id="L58">		ManejadorArchivos.crearFicheroJson(jsonDTO, &quot;/nopath&quot;,false);</span>
+<span class="fc" id="L59">		assertThatNoException(); //Excepcion controlada</span>
+<span class="fc" id="L60">	}</span>
+	
+	/**
+	 * Caso cuando va sin el jsonDTO.
+	 */
+	@Test
+	void crearFicheroJsonSinJsonDTO() {
+<span class="fc" id="L67">		ManejadorArchivos.crearFicheroJson(null, Constantes.RUTA_WKS_JSON);</span>
+<span class="fc" id="L68">		assertThatNoException();</span>
+<span class="fc" id="L69">	}</span>
+	
+	/**
+	 * Caso con todos los parametros.
+	 */
+	@Test
+	void crearFicheroJson() {
+<span class="fc" id="L76">		ManejadorArchivos.crearFicheroJson(jsonDTO, Constantes.RUTA_WKS_JSON);</span>
+<span class="fc" id="L77">		assertThatNoException();</span>
+<span class="fc" id="L78">	}</span>
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span>desafio3 (20-04-2022 15:54:59)</div></body></html>

@@ -1,154 +1,85 @@
-# Desafío 3: Complemento valores UF
+# DESAFIO 3
 
-El desafío consiste en lo siguiente:
- - Existe la siguiente librería en el directorio "lib\Generador_Datos_Desafio_Tres-1.0.0.jar" que se encuentra en este proyecto. Este debe ser integrado en la solución.
- - Este jar contiene 2 class que debe ser utilizadas para resolver el desafío
-    - La clase com.previred.desafio.tres.uf.Valores con el método getRango, este retorna una estructura con un rango de fechas y un listado de valores de UF
-    - El método getRango retorna el objeto UFs, este contiene fecha de inicio, fecha de fin del rango, ademas contiene un set de UF que tiene como atributos de: valor de UF y la fecha de la UF
-      - La lista de UF están dentro del rango de fechas (inicio y fin)
-      - La cantidad de valores para uf son máximo 100
-      - El listado entregado con los valores UF no son secuenciales (contiene laguna de valores) y no se encuentra ordenado
-    - La clase com.previred.desafio.tres.uf.DatosUf este es un singleton que contiene 2 métodos
-      - El método getUf retorna el valor UF para una fecha
-      - El método getUfs retorna una lista de valores de UF para un rango dado
+La siguiente app permite consumir una libreria de previred, obtener las uf
 
+## Descripcion de la implementación:
 
-1.  Consumir la función getRango de la clase com.previred.desafio.tres.uf.Valores
-2.  Escribir un algoritmo para complementar los valores de UF para las fechas faltantes en la lista contenidas en la clase Ufs que retorna getRango
-3.  Para complementar los valores de UF se pueden utilizar los métodos getUf y getUfs de la clase com.previred.desafio.tres.uf.DatosUf.
-4.  La lista de salida debe esta ordenada de forma descendente.
-5.  Para la implementación debe elegir uno de los siguientes formatos de salida.
+Se realiza en base al requerimiento un aplicativo que permite consumir la libreria jar de previred, en el cual por medio de el metodo getRange(), se obtienen valores de uf y la fecha a la que pertenece, estos valores vienen desordenados y no secuenciales hay lagunas muchas veces entre ellos, en base al requerimiento entregado se entiende que en base al rango entregado hay que completar la secuencia hasta obtener todos los valores comprendidos en ese rango, lo que se hace es por medio del metodo getUfs, se obtienen todos los valores, luego  se valida que los encontrados previamente existan en la lista obtenida por rango luego se ordena de manera descendente y finalmente se exporta a un archivo con nombre valores.json que se encuentra en la carpeta files, la libreria esta en la carpeta lib y el detalle de la jerarquia y estructura de carpetas se detalla a continuacion, se agrega logger para ver el trace del aplicativo. se documenta el codigo, se agregan pruebas unitarias y se realiza un scan con sonarlint para asegurar la calidad de codigo.
 
-### Formato 1
-
-Crear un archivo CSV con todos los datos calculados, las columnas deben contemplar el siguiente formato:
- - La primera columna representa el tipo, tipo 1 cabecera y tipo 2 es detalle de las UFs
- - Para las filas de tipo 1 el formato es fecha de inicio y fecha de fin
- - Para las filas de tipo 2 el formato es fecha uf y valor uf
+## Tecnologia utilizada:
+ - Springboot
+ - Java 1.8
+ - Libreria Gson version 2.9.0 (para la gestion de json)
+ - Libreria commons-collections y commons-beansutils ( para el ordenamiento)
+ - Libreria lof4j-springboot (para todo el registro, seguimiento)
+ - Libreria springboot configuration-processor para los configurationProperties.
+ - Libreria mockito y powermock-module (este incorpora alguno assert parael control de excepciones)
+ - Maven para la gestion de repositorio. 
+ - Libreria jar proporcionada por previred para el desafio(Generador_Datos_Desafio_Tres-1.0.0.jar)
  
- *Ejemplo*
+## Pruebas unitarias y calidad de codigo:
+ - Se realizan pruebas unitarias, y ejecucion de analisis para verificar cobertura, se cumple con los standares minimos de un 90% de cobertura del proyecto, se adjunta evidencia en carpeta /evidencia con el detalle de cobrtura.
+ - Se realiza analisis con Plugin SonarLint, para reducir deuda tecnica. y cumplir con los standares minimos.
+
+## Comenzando 🚀
+La jerarquía de carpetas del proyecto es de la siguiente manera.
 ```
-1; 2014-04-01; 2015-03-05
-2; 2014-01-04; 23.321,57
-2; 2014-01-05; 23.324,58
-2; 2014-01-06; 23.327,58
-2; 2014-01-07; 23.330,58
-2; 2014-01-08; 23.333,59
-2; 2014-01-09; 23.336,59
-    :
-2; 2014-04-01; 23.610,77
-```
-
-### Formato 2
-Crear un archivo XML que contenga el siguiente formato:
- - Debe contener un tag general llamado valores
- - Dentro de tag valores se deben crear los tag inicio, fin y UFs
- - El tag inicio debe contener la fecha de inicio recibida
- - El tag fin debe contener la fecha de fin recibida
- - El tag UFs debe contener un lista de tag UF con el siguiente formato
- - El tag UF debe contener el tag fecha con la fecha inicial y el tag dato con el valor de la UF
-
-*Ejemplo*
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<valores>
-  <inicio>2014-04-01</inicio>
-  <fin>2015-03-05</fin>
-  <UFs>
-    <UF>
-      <fecha>2014-01-04</fecha>
-      <dato>23.321,57</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-05</fecha>
-      <dato>23.324,58</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-06</fecha>
-      <dato>23.327,58</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-07</fecha>
-      <dato>23.330,58</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-08</fecha>
-      <dato>23.333,59</dato>
-    </UF>
-    <UF>
-      <fecha>2014-01-09</fecha>
-      <dato>23.336,59</dato>
-    </UF>
-
-        :
-
-    <UF>
-      <fecha>2014-04-01</fecha>
-      <dato>23.610,77</dato>
-    </UF>
-  </UFs>
-</valores>
+src/main/java
+	cl.zco.desafio3 -> lanzador, configuraciones, proveedor de contexto
+	cl.zco.desafio3.dto -> los dto que se utilizaran para la generacion con la estructura deseada
+	cl.zco.desafio3.negocio -> Definicion logica del requerimiento
+	cl.zco.desafio3.util-> las utilidades que se crearon para que el codigo estuviera limpio y fuera mantenible
+src/test/java
+	cl.zco.desafio3 -> prueba unitaria lanzador
+	cl.zco.desafio3.negocio -> pruebas unitarias negocio	
+	cl.zco.desafio3.util -> pruebas unitarias de las utilidades
+lib/
+	Generador_Datos_Desafio_Tres-1.0.0.jar
+doc/
+	javadoc > index.html 
+resumen/cobertura
+	index.html > aqui esta el detalle y resultado de junit + coverage
+files/
+	valores.json (archivo con la salida en json)
+evidencia/
+	imagen1 -> evidencia de cobertura junit
+	imagen2, imagen3 y imagen4 -> ejecucion desde IDE
+	imagen5, imagen6 y imagen7 -> ejecucion desde CMD
+	mvn_install.log -> log de maven install build success
+	valores.json -> archivo generado
+jar/
+	desafio3-0.0.1-SNAPSHOT.jar ->ultimo jar compilado con todas las librerias 
 ```
 
-### Formato 3
-Crear un archivo JSON que contenga el siguiente formato:
- - Debe contener la fecha de inicio “inicio”
- - Debe contener la fecha de fin “fin”
- - La lista de valores de “UFs” con los valores de fecha de uf “fecha” y valor de la uf “dato”
+## Pre-requisitos. 📋
 
-*Ejemplo*
+Java 1.8
+Maven configurado
 
-```json
-{
-  "inicio":"2014-04-01",
-  "fin":"2015-03-05",
-  "UFs":[
-    {
-      "fecha":"2014-01-04",
-      "dato":"23.321,57"
-    },
-    {
-      "fecha":"2014-01-05",
-      "dato":"23.324,58"
-    },
-    {
-      "fecha":"2014-01-06",
-      "dato":"23.327,58"
-    },
-    {
-      "fecha":"2014-01-07",
-      "dato":"23.330,58"
-    },
-    {
-      "fecha":"2014-01-08",
-      "dato":"23.333,59"
-    },
-    {
-      "fecha":"2014-01-09",
-      "dato":"23.336,59"
-    },
+## Configuraciones para arrancar:  📦
+En el problema si indicaba que solo mostraba 100 valores de UF, como la salida es mas extensa se crea una propiedad en el fichero desafio3.properties donde se puede colocar la cantidad maxima de UF de la lista en el json de salida, si se quiere cambiar simplemente se debe modificar el property, si se deja en valor 0 (cero) se mostrará todos los valores de UF dentro del rango.
 
-        :
+Los datos entregados para desplegar la aplicación son:
 
-    {
-      "fecha":"2014-04-01",
-      "dato":"23.610,77"
-    }
-  ]
-}
-```
+### Arrancar directamente desde el jar: 
+1. Ir a la consola (CMD)
+2. Ir a la ruta donde esta el jar
+3. Escribir esta sentencia-> java -jar desafio3-0.0.1-SNAPSHOT.jar
+4. Aparecerá mensaje dando la bienvenida, indicando que es necesario tener una carpeta en C:\files\ porque en esa ubicacion se guardara el archivo 'valores.json'
+5. Al terminar mostrará un mensaje indicando que el proceso a finalizado.
 
- - Se deben implementar las soluciones en Java (con maven, gradle u otro).
- - La solución debe ser enviada vía un pull request a este repositorio.
- - La solución debe contener un README.md con:
-   - Descripción de la implementación
-   - Tecnología y librerías utilizadas
-   - Detalles de compilación y ejecución
- - El archivo de salida debe tener como nombre “valores” con su respectiva extensión y debe ser entregado junto con la solución
- - Por ultimo en el detalle del commit debes indicar los siguientes datos:
-   - Nombre Completo.
-   - Correo Electrónico.
-   - Vía por la que te entérate del desafío. Estas pueden ser: Empresa de outsourcing (indicar cuál), twitter, LinkedIn, etc.
- 
-`NOTA`: Todos los pull requests serán rechazados, esto no quiere decir que ha sido rechazada la solución.
+### Arranchar desde el ambiente de desarrollo (eclipse > SpringToolSuite4)
+1. Sincronizar repositorio
+2. Realizar un maven install
+3. Ir a la clase 'Desafio3Application.java' boton derecho > Run As > Spring Boot App
+4. Aparecerá mensaje dando la bienvenida, indicando que se creará el archivo json en la carpeta /files dentro del workspacecon el nombre solicitado 'valores.json'
+5. Al terminar mostrará un mensaje indicando que el proceso a finalizado.
+
+## Autor ✒️
+**Patricio Angel Astorga Toledo** - *Ingeniería informática* - [mail] pastorgatoledo@gmail.com
+
+---
+
+Patricio Angel Astorga Toledo
+pastorgatoledo@gmail.com
+me enteré del desafio luego de hablar con Maria Paz Coloma

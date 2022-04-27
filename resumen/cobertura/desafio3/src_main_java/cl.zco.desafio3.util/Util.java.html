@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>Util.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">desafio3 (20-04-2022 15:54:59)</a> &gt; <a href="../../index.html" class="el_group">desafio3</a> &gt; <a href="../index.html" class="el_bundle">src/main/java</a> &gt; <a href="index.source.html" class="el_package">cl.zco.desafio3.util</a> &gt; <span class="el_source">Util.java</span></div><h1>Util.java</h1><pre class="source lang-java linenums">package cl.zco.desafio3.util;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.List;
+
+import javax.swing.JOptionPane;
+
+import org.apache.commons.beanutils.BeanComparator;
+import org.apache.commons.collections.ComparatorUtils;
+import org.apache.commons.collections.comparators.NullComparator;
+import org.apache.commons.collections.comparators.ReverseComparator;
+
+import com.previred.desafio.tres.uf.vo.Uf;
+import com.previred.desafio.tres.uf.vo.Ufs;
+
+import cl.zco.desafio3.dto.FormatoJsonDTO;
+import cl.zco.desafio3.dto.FormatoUfJsonDTO;
+
+// TODO: Auto-generated Javadoc
+/**
+ * Clase que contiene las utilidades del aplicativo.
+ */
+<span class="fc" id="L28">public class Util {</span>
+	
+	/**
+	 * Metodo que obtiene la fecha y le da el formato recibido.
+	 *
+	 * @param fecha parametro con la fecha
+	 * @param formato the formato
+	 * @return String con la fecha de salida
+	 */
+	public static String obtenerFechaFormato(Date fecha,String formato) {
+<span class="fc" id="L38">		 SimpleDateFormat formatoFecha =  new SimpleDateFormat(formato);</span>
+<span class="fc" id="L39">		 return formatoFecha.format(fecha);</span>
+	}
+	
+	/**
+	 * Metodo que ordena lo que reciba y en base al nombre del atributo. 
+	 * @param &lt;T&gt; cualquier elemento
+	 * @param list lista del elemento T
+	 * @param esAscendente boolean que indica si la lista sera asc o desc
+	 * @param bean este es el atributo de la clase por el cual se va a ordenar
+	 */
+	@SuppressWarnings(&quot;unchecked&quot;)
+	public static &lt;T&gt; void clasificarColeccion(List&lt;T&gt; list, boolean esAscendente, String... bean) {
+<span class="fc" id="L51">		Comparator&lt;T&gt; nullComparator = new NullComparator(esAscendente);</span>
+<span class="fc" id="L52">		Collection&lt;Comparator&lt;T&gt;&gt; beanComparatorCollection = new ArrayList&lt;&gt;( bean.length);</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">		for (int i = 0; i &lt; bean.length; i++) {</span>
+<span class="fc" id="L54">			beanComparatorCollection.add(new BeanComparator(bean[i], nullComparator));</span>
+		}
+<span class="fc" id="L56">		Comparator&lt;T&gt; finalComparator = ComparatorUtils.chainedComparator(beanComparatorCollection);</span>
+<span class="fc bfc" id="L57" title="All 2 branches covered.">		if (!esAscendente) {</span>
+<span class="fc" id="L58">			finalComparator = new ReverseComparator(finalComparator);</span>
+		}
+<span class="fc" id="L60">		Collections.sort(list, finalComparator);</span>
+<span class="fc" id="L61">	}</span>
+	
+	/**
+	 * Convertir a json DTO. 
+	 * Metodo que convierte el ufs a formato json dto
+	 *
+	 * @param ufs the ufs
+	 * @param listUfRango the list uf rango
+	 * @param maxJson the max json
+	 * @return the formato json DTO
+	 */
+	public static FormatoJsonDTO convertiraJsonDTO(Ufs ufs,List&lt;Uf&gt; listUfRango, int maxJson) {
+<span class="fc" id="L73">		FormatoJsonDTO dto  = new FormatoJsonDTO();</span>
+<span class="fc" id="L74">		dto.setInicio(obtenerFechaFormato(ufs.getInicio(), Constantes.FORMATO_YYYY_MM_DD));</span>
+<span class="fc" id="L75">		dto.setFin(obtenerFechaFormato(ufs.getFin(), Constantes.FORMATO_YYYY_MM_DD));</span>
+<span class="fc bfc" id="L76" title="All 2 branches covered.">		if(listUfRango == null){</span>
+<span class="fc" id="L77">			dto.setUFs(new ArrayList&lt;&gt;());</span>
+<span class="fc" id="L78">		}else {</span>
+<span class="fc" id="L79">			dto.setUFs(convertiraJsonUfDTO(listUfRango, maxJson));</span>
+		}
+<span class="fc" id="L81">		return dto; </span>
+	}
+	
+	/**
+	 * Convertira json uf DTO.
+	  *Metodo que convierte al DTO jsonUF en base al UF recibido.
+	 * @param listUf the list uf
+	 * @param maxJson the max json
+	 * @return the list
+	 */
+	public static List&lt;FormatoUfJsonDTO&gt; convertiraJsonUfDTO( List&lt;Uf&gt; listUf,int maxJson) {
+<span class="fc" id="L92">		List&lt;FormatoUfJsonDTO&gt; listUfDTO = new ArrayList&lt;&gt;();</span>
+<span class="pc bpc" id="L93" title="1 of 4 branches missed.">		if(maxJson != 0 &amp;&amp; listUf.size()&gt;maxJson) {</span>
+<span class="fc" id="L94">			listUf = listUf.subList(0, maxJson);</span>
+		}
+<span class="fc" id="L96">		listUf.forEach(uf -&gt; </span>
+<span class="fc" id="L97">			listUfDTO.add(new FormatoUfJsonDTO(obtenerFechaFormato(uf.getFecha(), Constantes.FORMATO_YYYY_MM_DD),</span>
+<span class="fc" id="L98">					uf.getValor().toString()))</span>
+		);
+<span class="fc" id="L100">		return listUfDTO;</span>
+	}
+	
+	/**
+	 * metodo que valida que los elementos retornados de getRange() esten en la lista.
+	 *
+	 * @param listUf the list uf
+	 * @param listUfRango the list uf rango
+	 * @return verdadero si todos los elementos de la lista a se encuetran en la lista b.
+	 */
+	public static boolean validacionElementosEnRango(List&lt;Uf&gt; listUf, List&lt;Uf&gt; listUfRango) {
+<span class="fc" id="L111">		int cantidad = listUf.size();</span>
+<span class="fc" id="L112">		Long encontrado = listUfRango.stream().filter(uf -&gt; listUf.contains(uf)).count();</span>
+<span class="fc bfc" id="L113" title="All 2 branches covered.">		return cantidad == encontrado.intValue();</span>
+	}
+	
+	/**
+	 * Metodo sobrecargado para controlar la excepcion.
+	 *
+	 * @param msg mensaje a mostrar por pantalla
+	 * @throws Throwable the throwable
+	 */
+	public static void controlExcepcion(String msg) throws Throwable {
+<span class="nc" id="L123">		controlExcepcion(msg, JOptionPane.INFORMATION_MESSAGE);</span>
+<span class="nc" id="L124">	}</span>
+	
+	/**
+	 * Control excepcion.
+	 * Metodo creado para controlar la excepcion en caso de inconveniente
+	 * @param msg the msg
+	 * @param optionMsg the option msg
+	 * @throws Throwable the throwable
+	 */
+	public static void controlExcepcion(String msg , Integer optionMsg) throws Throwable {
+		try {
+<span class="pc" id="L135">			JOptionPane.showMessageDialog(null, msg, </span>
+<span class="pc bpc" id="L136" title="1 of 2 branches missed.">					optionMsg.equals(JOptionPane.INFORMATION_MESSAGE) ? &quot;Información&quot; : &quot;Error&quot;, optionMsg );</span>
+<span class="pc" id="L137">		} catch (Exception e) {</span>
+<span class="fc" id="L138">			throw new Throwable();</span>
+		}
+<span class="nc" id="L140">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span>desafio3 (20-04-2022 15:54:59)</div></body></html>
